@@ -3,7 +3,7 @@ import { VanguardCard } from '../types/card';
 import { DeckStructure } from '../types/deck';
 import { PRECON_DECKS } from '../data/preconGuides';
 import { 
-  ArrowRight, Copy, Check, Sparkles, Search, BookOpen, ChevronDown, ChevronUp, Zap
+  ArrowRight, Copy, Check, Sparkles, Search, BookOpen, ChevronDown, ChevronUp, Layers
 } from 'lucide-react';
 import { playHapticClick } from '../utils/audio';
 
@@ -23,7 +23,7 @@ export const DeckViewer: React.FC<DeckViewerProps> = ({
   const [copied, setCopied] = useState<boolean>(false);
   const [strategyOpen, setStrategyOpen] = useState<boolean>(false);
 
-  const guide = PRECON_DECKS.find(g => g.id === deck.id);
+  const guide = PRECON_DECKS.find(g => g.id === deck.id || (deck.id.includes('blaster') && g.id === 'blaster-blade') || (deck.id.includes('overlord') && g.id === 'overlord') || (deck.id.includes('harri') && g.id === 'harri') || (deck.id.includes('chronojet') && g.id === 'chronojet'));
 
   const handleCopyDecklist = () => {
     playHapticClick(850);
@@ -62,32 +62,32 @@ export const DeckViewer: React.FC<DeckViewerProps> = ({
   return (
     <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-6 space-y-6 animate-in fade-in slide-in-from-bottom">
       
-      {/* Primary Mobile Action Topics: Choose Deck (Glowing & Vibrating) & Search Cards */}
+      {/* Primary Mobile Action Topics: Choose Deck & Search Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
         
-        {/* Choose Deck Button: Glowing and Vibrating */}
+        {/* Choose Deck Button: Solid, Glowing and Vibrating */}
         <button
           onClick={() => {
             playHapticClick(800);
             onOpenDeckCatalog();
           }}
-          className="btn-glow-vibrate w-full flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-amber-500/20 via-orange-500/15 to-amber-600/20 border-2 border-amber-400 text-left transition pressable shadow-lg"
+          className="btn-glow-vibrate w-full flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-[#141824] border-2 border-amber-400 text-left transition pressable shadow-lg"
         >
           <div className="flex items-center gap-3 min-w-0">
-            <div className="w-10 h-10 rounded-xl bg-amber-500/30 border border-amber-400 flex items-center justify-center flex-shrink-0 shadow-inner">
-              <Sparkles className="w-5 h-5 text-amber-300 animate-pulse" />
+            <div className="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-400/50 flex items-center justify-center flex-shrink-0">
+              <Sparkles className="w-5 h-5 text-amber-400" />
             </div>
             <div className="min-w-0">
               <span className="text-[10px] font-mono font-bold tracking-wider text-amber-300 uppercase block truncate">
-                TAP TO SWITCH DECK (4 DECKS)
+                SWITCH DECK (4 AVAILABLE)
               </span>
-              <h3 className="text-base sm:text-lg font-extrabold text-white truncate font-heading">
+              <h3 className="text-base sm:text-lg font-bold text-white truncate">
                 Choose Deck
               </h3>
             </div>
           </div>
           <div className="flex items-center gap-1 text-amber-300 flex-shrink-0 pl-2">
-            <span className="text-xs font-mono font-bold hidden xs:inline">Browse</span>
+            <span className="text-xs font-semibold hidden xs:inline">Browse</span>
             <ArrowRight className="w-4 h-4" />
           </div>
         </button>
@@ -98,17 +98,17 @@ export const DeckViewer: React.FC<DeckViewerProps> = ({
             playHapticClick(700);
             onOpenSearchCards();
           }}
-          className="w-full flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-white/[0.04] hover:bg-white/[0.07] border border-white/[0.12] text-left transition pressable"
+          className="w-full flex items-center justify-between p-3.5 sm:p-4 rounded-2xl bg-[#0f131f] hover:bg-[#151a2b] border border-white/[0.08] text-left transition pressable"
         >
           <div className="flex items-center gap-3 min-w-0">
-            <div className="w-10 h-10 rounded-xl bg-sky-500/20 border border-sky-400/40 flex items-center justify-center flex-shrink-0">
-              <Search className="w-5 h-5 text-sky-300" />
+            <div className="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-400/30 flex items-center justify-center flex-shrink-0">
+              <Search className="w-5 h-5 text-sky-400" />
             </div>
             <div className="min-w-0">
               <span className="text-[10px] font-mono font-bold tracking-wider text-sky-400 uppercase block truncate">
                 DATABASE & RULINGS
               </span>
-              <h3 className="text-base sm:text-lg font-extrabold text-white truncate font-heading">
+              <h3 className="text-base sm:text-lg font-bold text-white truncate">
                 Search Cards
               </h3>
             </div>
@@ -121,24 +121,24 @@ export const DeckViewer: React.FC<DeckViewerProps> = ({
       </div>
 
       {/* Deck Hero Overview Card */}
-      <div className="relative rounded-3xl overflow-hidden border border-white/[0.1] p-4 sm:p-7 shadow-2xl bg-gradient-to-br from-[#0c101d] via-[#0f1526] to-[#080b12]">
+      <div className="relative rounded-3xl overflow-hidden border border-white/[0.08] p-4 sm:p-7 shadow-xl bg-[#0e121d]">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="space-y-2 min-w-0">
             <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
               <span className="px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold bg-amber-500/10 border border-amber-500/30 text-amber-300">
                 {deck.code}
               </span>
-              <span className="px-2.5 py-0.5 rounded-full text-[11px] font-mono text-slate-300 bg-white/[0.05] border border-white/[0.08]">
+              <span className="px-2.5 py-0.5 rounded-full text-[11px] text-slate-300 bg-white/[0.04] border border-white/[0.08]">
                 {deck.nation}
               </span>
               {guide && (
-                <span className="px-2.5 py-0.5 rounded-full text-[11px] font-mono text-slate-400 bg-white/[0.03]">
+                <span className="px-2.5 py-0.5 rounded-full text-[11px] text-slate-400 bg-white/[0.02]">
                   {guide.clan}
                 </span>
               )}
             </div>
 
-            <h2 className="text-xl sm:text-3xl font-extrabold text-white font-heading tracking-wide break-words">
+            <h2 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight break-words">
               {deck.name}
             </h2>
 
@@ -151,12 +151,12 @@ export const DeckViewer: React.FC<DeckViewerProps> = ({
           <div className="flex-shrink-0 pt-2 md:pt-0">
             <button
               onClick={handleCopyDecklist}
-              className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white/[0.06] hover:bg-white/[0.1] text-slate-100 border border-white/[0.12] transition font-medium text-xs sm:text-sm shadow-md pressable"
+              className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] text-slate-200 border border-white/[0.1] transition font-medium text-xs sm:text-sm pressable"
             >
               {copied ? (
                 <>
                   <Check className="w-4 h-4 text-emerald-400" />
-                  <span className="text-emerald-400 font-semibold">Decklist Copied!</span>
+                  <span className="text-emerald-400 font-semibold">Decklist Copied</span>
                 </>
               ) : (
                 <>
@@ -169,39 +169,39 @@ export const DeckViewer: React.FC<DeckViewerProps> = ({
         </div>
 
         {/* Responsive Mobile-Friendly Stats Strip */}
-        <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 mt-5 pt-4 border-t border-white/[0.08]">
-          <div className="bg-black/30 p-2 sm:p-2.5 rounded-xl border border-white/[0.05] text-center min-w-0">
-            <p className="text-[9px] sm:text-[10px] text-slate-400 font-mono uppercase truncate">Total</p>
+        <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 mt-5 pt-4 border-t border-white/[0.06]">
+          <div className="bg-black/20 p-2 sm:p-2.5 rounded-xl border border-white/[0.04] text-center min-w-0">
+            <p className="text-[9px] sm:text-[10px] text-slate-400 uppercase truncate">Total</p>
             <p className="text-sm sm:text-base font-bold text-white font-mono">{deck.statistics.totalCards}</p>
           </div>
-          <div className="bg-black/30 p-2 sm:p-2.5 rounded-xl border border-white/[0.05] text-center min-w-0">
-            <p className="text-[9px] sm:text-[10px] text-slate-400 font-mono uppercase truncate">Main</p>
+          <div className="bg-black/20 p-2 sm:p-2.5 rounded-xl border border-white/[0.04] text-center min-w-0">
+            <p className="text-[9px] sm:text-[10px] text-slate-400 uppercase truncate">Main</p>
             <p className="text-sm sm:text-base font-bold text-amber-400 font-mono">{deck.statistics.mainDeckCount}</p>
           </div>
-          <div className="bg-black/30 p-2 sm:p-2.5 rounded-xl border border-white/[0.05] text-center min-w-0">
-            <p className="text-[9px] sm:text-[10px] text-slate-400 font-mono uppercase truncate">Ride</p>
+          <div className="bg-black/20 p-2 sm:p-2.5 rounded-xl border border-white/[0.04] text-center min-w-0">
+            <p className="text-[9px] sm:text-[10px] text-slate-400 uppercase truncate">Ride</p>
             <p className="text-sm sm:text-base font-bold text-sky-400 font-mono">{deck.statistics.rideDeckCount}</p>
           </div>
-          <div className="bg-black/30 p-2 sm:p-2.5 rounded-xl border border-white/[0.05] text-center min-w-0">
-            <p className="text-[9px] sm:text-[10px] text-slate-400 font-mono uppercase truncate">{deck.gDeck.length > 0 ? 'G-Zone' : 'Crest'}</p>
+          <div className="bg-black/20 p-2 sm:p-2.5 rounded-xl border border-white/[0.04] text-center min-w-0">
+            <p className="text-[9px] sm:text-[10px] text-slate-400 uppercase truncate">{deck.gDeck.length > 0 ? 'G-Zone' : 'Crest'}</p>
             <p className="text-sm sm:text-base font-bold text-rose-400 font-mono">
               {deck.gDeck.length > 0 ? deck.statistics.gDeckCount : (deck.crest ? 1 : 0)}
             </p>
           </div>
-          <div className="bg-black/30 p-2 sm:p-2.5 rounded-xl border border-white/[0.05] text-center min-w-0">
-            <p className="text-[9px] sm:text-[10px] text-slate-400 font-mono uppercase truncate">Triggers</p>
+          <div className="bg-black/20 p-2 sm:p-2.5 rounded-xl border border-white/[0.04] text-center min-w-0">
+            <p className="text-[9px] sm:text-[10px] text-slate-400 uppercase truncate">Triggers</p>
             <p className="text-sm sm:text-base font-bold text-purple-400 font-mono">{deck.statistics.triggerCount}</p>
           </div>
-          <div className="bg-black/30 p-2 sm:p-2.5 rounded-xl border border-white/[0.05] text-center min-w-0 col-span-3 sm:col-span-1">
-            <p className="text-[9px] sm:text-[10px] text-slate-400 font-mono uppercase truncate">Avg Power</p>
+          <div className="bg-black/20 p-2 sm:p-2.5 rounded-xl border border-white/[0.04] text-center min-w-0 col-span-3 sm:col-span-1">
+            <p className="text-[9px] sm:text-[10px] text-slate-400 uppercase truncate">Avg Power</p>
             <p className="text-sm sm:text-base font-bold text-emerald-400 font-mono">{deck.statistics.averagePower.toLocaleString()}</p>
           </div>
         </div>
       </div>
 
-      {/* Strategy Highlights Accordion (Directly accessible without simulators) */}
+      {/* Strategy Highlights Accordion */}
       {guide && (
-        <div className="rounded-2xl bg-[#0d111e] border border-white/[0.08] overflow-hidden shadow-lg">
+        <div className="rounded-2xl bg-[#0e121d] border border-white/[0.08] overflow-hidden shadow-md">
           <button
             onClick={() => {
               playHapticClick(650);
@@ -210,9 +210,9 @@ export const DeckViewer: React.FC<DeckViewerProps> = ({
             className="w-full flex items-center justify-between p-3.5 sm:p-4 text-left hover:bg-white/[0.02] transition"
           >
             <div className="flex items-center gap-2.5 min-w-0">
-              <BookOpen className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+              <BookOpen className="w-4 h-4 text-amber-400 flex-shrink-0" />
               <div className="min-w-0">
-                <h4 className="text-xs sm:text-sm font-bold text-white font-heading truncate">
+                <h4 className="text-xs sm:text-sm font-bold text-white truncate">
                   Deck Strategy & Key Combos
                 </h4>
                 <p className="text-[11px] text-slate-400 truncate">
@@ -221,7 +221,7 @@ export const DeckViewer: React.FC<DeckViewerProps> = ({
               </div>
             </div>
             <div className="flex items-center gap-1.5 text-xs text-slate-400 flex-shrink-0 pl-2">
-              <span className="hidden sm:inline">{strategyOpen ? 'Hide' : 'View'} Tips</span>
+              <span className="hidden sm:inline">{strategyOpen ? 'Hide' : 'View'} Guide</span>
               {strategyOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
             </div>
           </button>
@@ -235,13 +235,13 @@ export const DeckViewer: React.FC<DeckViewerProps> = ({
               {/* Key Combos */}
               {guide.keyCombos && guide.keyCombos.length > 0 && (
                 <div className="space-y-2 pt-2">
-                  <span className="text-[10px] font-mono font-bold text-amber-300 uppercase block tracking-wider flex items-center gap-1">
-                    <Zap className="w-3 h-3 text-amber-400" /> Key Sequence: {guide.keyCombos[0].name}
+                  <span className="text-[11px] font-bold text-amber-300 uppercase block tracking-wider flex items-center gap-1.5">
+                    <Layers className="w-3.5 h-3.5 text-amber-400" /> Turn Sequence: {guide.keyCombos[0].name}
                   </span>
-                  <div className="rounded-xl bg-black/40 border border-white/[0.05] p-3 space-y-1.5">
+                  <div className="rounded-xl bg-black/30 border border-white/[0.05] p-3 space-y-1.5">
                     {guide.keyCombos[0].steps.map((st, sIdx) => (
                       <div key={sIdx} className="flex items-start gap-2">
-                        <span className="w-4 h-4 rounded-full bg-amber-500/20 text-amber-300 font-mono text-[10px] flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="w-4 h-4 rounded-full bg-amber-500/20 text-amber-300 font-mono text-[10px] flex items-center justify-center flex-shrink-0 mt-0.5 font-bold">
                           {sIdx + 1}
                         </span>
                         <p className="text-slate-300 leading-normal">{st}</p>
@@ -260,10 +260,10 @@ export const DeckViewer: React.FC<DeckViewerProps> = ({
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2 min-w-0">
             <span className="w-2.5 h-2.5 rounded-full bg-sky-400 flex-shrink-0"></span>
-            <h3 className="text-base sm:text-lg font-bold text-white font-heading truncate">Ride Deck & Crest Zone</h3>
+            <h3 className="text-base sm:text-lg font-bold text-white tracking-tight truncate">Ride Deck & Crest Zone</h3>
             <span className="text-xs text-slate-400 font-mono">({deck.rideDeck.length + (deck.crest ? 1 : 0)})</span>
           </div>
-          <span className="text-[11px] text-slate-400 font-mono hidden xs:inline">Guaranteed Ride</span>
+          <span className="text-[11px] text-slate-400 hidden xs:inline">Guaranteed Ride</span>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2.5 sm:gap-3.5">
@@ -274,7 +274,7 @@ export const DeckViewer: React.FC<DeckViewerProps> = ({
                 playHapticClick(700);
                 onSelectCard(card);
               }}
-              className="group cursor-pointer rounded-2xl bg-[#0f1322] border border-white/[0.08] hover:border-sky-500/50 p-2 space-y-1.5 card-foil pressable shadow-md"
+              className="group cursor-pointer rounded-2xl bg-[#0e121d] border border-white/[0.07] hover:border-sky-500/50 p-2 space-y-1.5 card-foil pressable shadow-md"
             >
               <div className="relative aspect-[7/10] rounded-xl overflow-hidden bg-slate-900">
                 <img 
@@ -283,7 +283,7 @@ export const DeckViewer: React.FC<DeckViewerProps> = ({
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute top-1 left-1 px-1.5 py-0.2 rounded bg-black/75 backdrop-blur-md border border-white/20 text-[9px] font-mono font-bold text-sky-300">
+                <div className="absolute top-1 left-1 px-1.5 py-0.2 rounded bg-black/80 backdrop-blur-sm border border-white/20 text-[9px] font-mono font-bold text-sky-300">
                   G{card.grade}
                 </div>
                 <div className="absolute top-1 right-1 px-1.5 py-0.2 rounded bg-sky-600/90 text-white text-[8px] font-mono font-bold">
@@ -309,7 +309,7 @@ export const DeckViewer: React.FC<DeckViewerProps> = ({
                 playHapticClick(700);
                 onSelectCard(deck.crest!);
               }}
-              className="group cursor-pointer rounded-2xl bg-[#140e24] border border-purple-500/40 hover:border-purple-400 p-2 space-y-1.5 card-foil pressable shadow-md"
+              className="group cursor-pointer rounded-2xl bg-[#120e1a] border border-purple-500/30 hover:border-purple-400 p-2 space-y-1.5 card-foil pressable shadow-md"
             >
               <div className="relative aspect-[7/10] rounded-xl overflow-hidden bg-purple-950/60">
                 <img 
@@ -318,11 +318,11 @@ export const DeckViewer: React.FC<DeckViewerProps> = ({
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute top-1 left-1 px-1.5 py-0.2 rounded bg-purple-950/80 backdrop-blur-md border border-purple-400/40 text-[9px] font-mono font-bold text-purple-200">
+                <div className="absolute top-1 left-1 px-1.5 py-0.2 rounded bg-purple-950/80 backdrop-blur-sm border border-purple-400/40 text-[9px] font-mono font-bold text-purple-200">
                   CREST
                 </div>
-                <div className="absolute bottom-1 left-1 right-1 px-1 py-0.2 rounded bg-black/75 backdrop-blur-md text-center text-[8px] font-mono text-purple-300">
-                  Permanent Zone
+                <div className="absolute bottom-1 left-1 right-1 px-1 py-0.2 rounded bg-black/80 backdrop-blur-sm text-center text-[8px] font-mono text-purple-300">
+                  Order Zone
                 </div>
               </div>
               <div className="min-w-0">
@@ -345,12 +345,12 @@ export const DeckViewer: React.FC<DeckViewerProps> = ({
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 min-w-0">
               <span className="w-2.5 h-2.5 rounded-full bg-rose-500 flex-shrink-0"></span>
-              <h3 className="text-base sm:text-lg font-bold text-white font-heading truncate">G-Zone / Stride Units</h3>
+              <h3 className="text-base sm:text-lg font-bold text-white tracking-tight truncate">G-Zone / Stride Units</h3>
               <span className="text-xs text-slate-400 font-mono">
                 ({deck.gDeck.reduce((a, b) => a + b.count, 0)})
               </span>
             </div>
-            <span className="text-[11px] text-slate-400 font-mono hidden xs:inline">Stride Phase</span>
+            <span className="text-[11px] text-slate-400 hidden xs:inline">Stride Phase</span>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2.5 sm:gap-3.5">
@@ -361,7 +361,7 @@ export const DeckViewer: React.FC<DeckViewerProps> = ({
                   playHapticClick(700);
                   onSelectCard(slot.card);
                 }}
-                className="group cursor-pointer rounded-2xl bg-[#140b12] border border-rose-900/40 hover:border-rose-500/50 p-2 space-y-1.5 card-foil pressable shadow-md"
+                className="group cursor-pointer rounded-2xl bg-[#140c12] border border-rose-900/30 hover:border-rose-500/50 p-2 space-y-1.5 card-foil pressable shadow-md"
               >
                 <div className="relative aspect-[7/10] rounded-xl overflow-hidden bg-slate-900">
                   <img 
@@ -370,10 +370,10 @@ export const DeckViewer: React.FC<DeckViewerProps> = ({
                     loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute top-1 left-1 px-1.5 py-0.2 rounded bg-red-950/80 backdrop-blur-md border border-red-500/40 text-[9px] font-mono font-bold text-red-300">
+                  <div className="absolute top-1 left-1 px-1.5 py-0.2 rounded bg-red-950/80 backdrop-blur-sm border border-red-500/40 text-[9px] font-mono font-bold text-red-300">
                     G4 / STRIDE
                   </div>
-                  <div className="absolute top-1 right-1 px-1.5 py-0.2 rounded bg-black/80 backdrop-blur-md border border-white/20 text-xs font-mono font-black text-amber-400">
+                  <div className="absolute top-1 right-1 px-1.5 py-0.2 rounded bg-black/80 backdrop-blur-sm border border-white/20 text-xs font-mono font-black text-amber-400">
                     x{slot.count}
                   </div>
                 </div>
@@ -397,7 +397,7 @@ export const DeckViewer: React.FC<DeckViewerProps> = ({
         <div className="flex items-center justify-between border-b border-white/[0.08] pb-2">
           <div className="flex items-center gap-2 min-w-0">
             <span className="w-2.5 h-2.5 rounded-full bg-amber-400 flex-shrink-0"></span>
-            <h3 className="text-base sm:text-lg font-bold text-white font-heading truncate">Main Deck</h3>
+            <h3 className="text-base sm:text-lg font-bold text-white tracking-tight truncate">Main Deck</h3>
             <span className="text-xs text-slate-400 font-mono">({deck.statistics.mainDeckCount} cards)</span>
           </div>
           <span className="text-[11px] text-slate-400">Tap for card skill</span>
@@ -406,7 +406,7 @@ export const DeckViewer: React.FC<DeckViewerProps> = ({
         {/* Grade 3 Units */}
         {grade3Cards.length > 0 && (
           <div className="space-y-2">
-            <span className="text-xs font-bold font-mono text-amber-400 uppercase flex items-center gap-1.5">
+            <span className="text-xs font-bold text-amber-400 uppercase flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
               Grade 3 Units ({grade3Cards.reduce((a, b) => a + b.count, 0)})
             </span>
@@ -421,7 +421,7 @@ export const DeckViewer: React.FC<DeckViewerProps> = ({
         {/* Grade 2 Units */}
         {grade2Cards.length > 0 && (
           <div className="space-y-2">
-            <span className="text-xs font-bold font-mono text-blue-400 uppercase flex items-center gap-1.5">
+            <span className="text-xs font-bold text-blue-400 uppercase flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
               Grade 2 Units ({grade2Cards.reduce((a, b) => a + b.count, 0)})
             </span>
@@ -436,7 +436,7 @@ export const DeckViewer: React.FC<DeckViewerProps> = ({
         {/* Grade 1 Units */}
         {grade1Cards.length > 0 && (
           <div className="space-y-2">
-            <span className="text-xs font-bold font-mono text-emerald-400 uppercase flex items-center gap-1.5">
+            <span className="text-xs font-bold text-emerald-400 uppercase flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
               Grade 1 Units ({grade1Cards.reduce((a, b) => a + b.count, 0)})
             </span>
@@ -451,7 +451,7 @@ export const DeckViewer: React.FC<DeckViewerProps> = ({
         {/* Orders (if present) */}
         {orderCards.length > 0 && (
           <div className="space-y-2">
-            <span className="text-xs font-bold font-mono text-purple-400 uppercase flex items-center gap-1.5">
+            <span className="text-xs font-bold text-purple-400 uppercase flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
               Orders & Regalis Piece ({orderCards.reduce((a, b) => a + b.count, 0)})
             </span>
@@ -466,7 +466,7 @@ export const DeckViewer: React.FC<DeckViewerProps> = ({
         {/* Triggers */}
         {triggerCards.length > 0 && (
           <div className="space-y-2">
-            <span className="text-xs font-bold font-mono text-pink-400 uppercase flex items-center gap-1.5">
+            <span className="text-xs font-bold text-pink-400 uppercase flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-pink-400"></span>
               Triggers & Guardians ({triggerCards.reduce((a, b) => a + b.count, 0)})
             </span>
@@ -497,7 +497,7 @@ const CardSlotTile: React.FC<CardSlotTileProps> = ({ slot, onSelect }) => {
         playHapticClick(700);
         onSelect(card);
       }}
-      className="group cursor-pointer rounded-2xl bg-[#0e1220] border border-white/[0.07] hover:border-white/[0.25] p-2 space-y-1.5 card-foil pressable shadow-md"
+      className="group cursor-pointer rounded-2xl bg-[#0e121d] border border-white/[0.07] hover:border-white/[0.25] p-2 space-y-1.5 card-foil pressable shadow-md"
     >
       <div className="relative aspect-[7/10] rounded-xl overflow-hidden bg-slate-900">
         <img 
@@ -508,12 +508,12 @@ const CardSlotTile: React.FC<CardSlotTileProps> = ({ slot, onSelect }) => {
         />
         
         {/* Count badge */}
-        <div className="absolute top-1 right-1 px-1.5 py-0.2 rounded-lg bg-black/80 backdrop-blur-md border border-white/20 text-[11px] font-mono font-black text-amber-400 shadow-md">
+        <div className="absolute top-1 right-1 px-1.5 py-0.2 rounded-lg bg-black/80 backdrop-blur-sm border border-white/20 text-[11px] font-mono font-black text-amber-400 shadow-md">
           x{count}
         </div>
 
         {/* Grade / Trigger Chip */}
-        <div className="absolute top-1 left-1 px-1.5 py-0.2 rounded bg-black/75 backdrop-blur-md border border-white/20 text-[9px] font-mono font-bold">
+        <div className="absolute top-1 left-1 px-1.5 py-0.2 rounded bg-black/80 backdrop-blur-sm border border-white/20 text-[9px] font-mono font-bold">
           {card.triggerType ? (
             <span className={
               card.triggerType === 'Over' ? 'text-rose-400' :
@@ -533,7 +533,7 @@ const CardSlotTile: React.FC<CardSlotTileProps> = ({ slot, onSelect }) => {
 
         {/* Shield badge if present */}
         {card.shield !== null && card.shield !== undefined && (
-          <div className="absolute bottom-1 right-1 px-1 py-0.2 rounded bg-black/80 backdrop-blur-md border border-white/10 text-[8px] font-mono text-cyan-300">
+          <div className="absolute bottom-1 right-1 px-1 py-0.2 rounded bg-black/80 backdrop-blur-sm border border-white/10 text-[8px] font-mono text-cyan-300">
             +{card.shield.toLocaleString()}
           </div>
         )}

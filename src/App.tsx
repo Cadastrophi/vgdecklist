@@ -7,22 +7,16 @@ import { TipsAndTricks } from './components/TipsAndTricks';
 import { CardModal } from './components/CardModal';
 import { VanguardCard } from './types/card';
 import { getDeckById, allCards, AVAILABLE_DECKS } from './utils/deckBuilder';
-import { getAudioEnabled, toggleAudio, playHapticClick } from './utils/audio';
+import { playHapticClick } from './utils/audio';
 import { Sparkles, ExternalLink } from 'lucide-react';
 
 export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>('deck');
-  const [activeDeckId, setActiveDeckId] = useState<string>('d-ss03-chronojet');
+  // Default to Blaster Blade start deck for first time users
+  const [activeDeckId, setActiveDeckId] = useState<string>('dz-ss14-blaster-blade');
   const [selectedCard, setSelectedCard] = useState<VanguardCard | null>(null);
-  const [soundEnabled, setSoundEnabled] = useState<boolean>(getAudioEnabled());
 
   const deck = getDeckById(activeDeckId);
-
-  // Toggle sound
-  const handleToggleSound = () => {
-    const next = toggleAudio();
-    setSoundEnabled(next);
-  };
 
   // Card modal navigation index
   const currentCardIndex = selectedCard 
@@ -46,7 +40,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-[100dvh] bg-[#07090e] text-slate-100 flex flex-col font-sans selection:bg-amber-500/30 selection:text-amber-200">
+    <div className="min-h-[100dvh] bg-[#090c13] text-slate-100 flex flex-col font-sans selection:bg-amber-500/30 selection:text-amber-200">
       
       {/* Top Navbar with Icon-Only Tab Dock */}
       <Navbar 
@@ -54,8 +48,6 @@ export const App: React.FC = () => {
         setActiveTab={setActiveTab} 
         activeDeckId={activeDeckId}
         totalCards={allCards.length}
-        soundEnabled={soundEnabled}
-        onToggleSound={handleToggleSound}
       />
 
       {/* Main Content Area */}
@@ -85,7 +77,10 @@ export const App: React.FC = () => {
         )}
 
         {activeTab === 'guide' && (
-          <TipsAndTricks />
+          <TipsAndTricks 
+            activeDeckId={activeDeckId}
+            onSelectDeck={(newDeckId) => setActiveDeckId(newDeckId)}
+          />
         )}
       </main>
 
@@ -100,7 +95,7 @@ export const App: React.FC = () => {
       />
 
       {/* Mobile-Friendly Minimalist Footer */}
-      <footer className="mt-12 border-t border-white/[0.06] bg-[#05070a]/90 backdrop-blur-md py-6 pb-safe">
+      <footer className="mt-12 border-t border-white/[0.06] bg-[#07090f]/90 py-6 pb-safe">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400 text-center sm:text-left">
           <div className="flex flex-wrap items-center justify-center gap-1.5">
             <span className="font-bold text-amber-400">VG Decklist</span>
