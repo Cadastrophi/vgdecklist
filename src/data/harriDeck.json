@@ -1,0 +1,134 @@
+{
+  "id": "dz-ss02-harri",
+  "name": "Stride Deckset Harri",
+  "code": "DZ-SS02",
+  "nation": "Dark States",
+  "description": "Step right up to the grand Pale Moon Magia Circus! Command Masked Magician, Harri and Stride into Dragon Masquerade, Harri, orchestrating dazzling soul-calling combos and multi-attacks with the Harri Stride Crest.",
+  "rideDeck": [
+    {
+      "cardNo": "DZ-SS02/004",
+      "name": "Happiness Collector",
+      "grade": 0
+    },
+    {
+      "cardNo": "DZ-SS02/003",
+      "name": "Moonlight Melody Tamer, Betty",
+      "grade": 1
+    },
+    {
+      "cardNo": "DZ-SS02/002",
+      "name": "Card Dealer, Jacqueline",
+      "grade": 2
+    },
+    {
+      "cardNo": "DZ-SS02/001",
+      "name": "Masked Magician, Harri",
+      "grade": 3
+    }
+  ],
+  "crest": {
+    "cardNo": "DZ-SS02/T01",
+    "name": "Masked Magician, Harri (Crest)",
+    "grade": null
+  },
+  "gDeck": [
+    {
+      "cardNo": "DZ-SS02/017",
+      "name": "Dragon Masquerade, Harri",
+      "count": 4,
+      "category": "Stride"
+    },
+    {
+      "cardNo": "DZ-SS02/018",
+      "name": "Jester Demonic Dragon, Lunatec Dragon",
+      "count": 4,
+      "category": "Stride"
+    }
+  ],
+  "mainDeck": [
+    {
+      "cardNo": "DZ-SS02/001",
+      "name": "Masked Magician, Harri",
+      "count": 3,
+      "category": "Grade 3"
+    },
+    {
+      "cardNo": "DZ-SS02/005",
+      "name": "Flying Manticore",
+      "count": 4,
+      "category": "Grade 3"
+    },
+    {
+      "cardNo": "DZ-SS02/002",
+      "name": "Card Dealer, Jacqueline",
+      "count": 3,
+      "category": "Grade 2"
+    },
+    {
+      "cardNo": "DZ-SS02/006",
+      "name": "Direful Doll, Orneta",
+      "count": 4,
+      "category": "Grade 2"
+    },
+    {
+      "cardNo": "DZ-SS02/007",
+      "name": "Darkside Princess",
+      "count": 4,
+      "category": "Grade 2"
+    },
+    {
+      "cardNo": "DZ-SS02/008",
+      "name": "Cutie Paratrooper",
+      "count": 4,
+      "category": "Grade 1"
+    },
+    {
+      "cardNo": "DZ-SS02/009",
+      "name": "Masquerade Bunny",
+      "count": 4,
+      "category": "Grade 1"
+    },
+    {
+      "cardNo": "DZ-SS02/010",
+      "name": "Lunging Assistant",
+      "count": 4,
+      "category": "Grade 1"
+    },
+    {
+      "cardNo": "DZ-SS02/011",
+      "name": "Darkside Mirror Master",
+      "count": 4,
+      "category": "Grade 1 (Sentinel)"
+    },
+    {
+      "cardNo": "DZ-SS02/012",
+      "name": "Hades Dragon Deity of Resentment, Gallmageheld",
+      "count": 1,
+      "category": "Trigger (Over)"
+    },
+    {
+      "cardNo": "DZ-SS02/013",
+      "name": "Swanky Enthraller",
+      "count": 4,
+      "category": "Trigger (Critical)"
+    },
+    {
+      "cardNo": "DZ-SS02/014",
+      "name": "Silky Sky Actress",
+      "count": 4,
+      "category": "Trigger (Draw)"
+    },
+    {
+      "cardNo": "DZ-SS02/015",
+      "name": "Intrepid Spinner",
+      "count": 3,
+      "category": "Trigger (Front)"
+    },
+    {
+      "cardNo": "DZ-SS02/016",
+      "name": "Gambling Juggler",
+      "count": 4,
+      "category": "Trigger (Heal)"
+    }
+  ]
+}

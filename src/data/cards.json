@@ -825,5 +825,2047 @@
     "isGUnit": false,
     "isCrest": true,
     "localImageUrl": "/cards/D-SS03-T03_EN.png"
+  },
+  {
+    "cardNo": "DZ-SS14/001",
+    "name": "King of Knights, Alfred",
+    "kana": "きしおう アルフレッド",
+    "rarity": "SD",
+    "grade": 3,
+    "power": 13000,
+    "shield": null,
+    "critical": 1,
+    "nation": "Keter Sanctuary",
+    "clan": "Royal Paladin",
+    "race": "Human",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Twin Drive",
+    "skillText": "[CONT]:The normal ride of this card from a grade 3 card with an Aichi icon and a different card name from this card also becomes a persona ride.\n[CONT](VC):During your turn, this unit cannot be boosted, and this unit gets [Power]+2000 for each of your rear-guards. If you have three or more rear-guards, this unit gets drive +1, if you have four or more, and you persona rode this turn, this unit gets [Critical]+1.\n[AUTO](VC)[1/Turn]:When this unit attacks, COST [Counter Blast (1)], search your deck for up to two cards with an Aichi icon, call them to (RC) in the same column, and shuffle the deck. If your opponent's vanguard is grade 3 or greater, the called units get [Power]+5000 until end of turn.",
+    "flavorText": "That King of Knights is the foundation of the Sanctuary, and the future.",
+    "package": "DZ-SS14: Break Away Start Deck - Blaster Blade",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/4/4a/DZ-SS13-15thSP01EN_%28Sample%29.png/revision/latest?cb=20260514160919",
+    "localImageUrl": "/cards/DZ-SS14-001_EN.png",
+    "artVariants": [
+      {
+        "rarity": "SD (EN)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/4/4a/DZ-SS13-15thSP01EN_%28Sample%29.png/revision/latest?cb=20260514160919",
+        "localImageUrl": "/cards/DZ-SS14-001_EN.png",
+        "source": "English Release"
+      },
+      {
+        "rarity": "SD (JP)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/9/91/DZ-SS14-001_%28Sample%29.png/revision/latest?cb=20260213040312",
+        "localImageUrl": "/cards/DZ-SS14-001_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How does King of Knights, Alfred's Persona Ride skill work with other Grade 3 cards?",
+        "answer": "Alfred's [CONT] skill specifies that normal riding this card over any Grade 3 unit with an Aichi icon (such as Soul Saver Dragon) also becomes a Persona Ride, triggering the +10,000 power and draw effect!"
+      },
+      {
+        "question": "When Alfred attacks, can I call cards into rear-guard circles that are already occupied?",
+        "answer": "Yes! When calling up to two units with an Aichi icon to the same column, you can call over existing units, which are retired."
+      }
+    ],
+    "isRideDeck": true,
+    "isCrest": false,
+    "rideDeckOrder": 3
+  },
+  {
+    "cardNo": "DZ-SS14/002",
+    "name": "Blaster Blade",
+    "kana": "ブラスター・ブレード",
+    "rarity": "SD",
+    "grade": 2,
+    "power": 10000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Keter Sanctuary",
+    "clan": "Royal Paladin",
+    "race": "Human",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Intercept",
+    "skillText": "[AUTO]:When this unit is placed on (VC) or (RC), choose a grade 3 card with an Aichi icon from your ride deck, and you may reveal it. If you revealed a card, or you have a grade 3 or greater vanguard with an Aichi icon, COST [Counter Blast (1) or Energy Blast (3)], choose one of your opponent's rear-guards, retire it, and if this unit was placed on (VC), draw a card.\n[AUTO](RC)[1/Turn]:When this unit attacks a grade 3 or greater unit, if you have a vanguard with an Aichi icon, this unit gets [Power]+10000 until end of turn.",
+    "flavorText": "Stand up, my avatar! Ride! Blaster Blade!",
+    "package": "DZ-SS14: Break Away Start Deck - Blaster Blade",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/5/5b/DZ-SS13-15thSP02EN_%28Sample%29.png/revision/latest?cb=20260513180553",
+    "localImageUrl": "/cards/DZ-SS14-002_EN.png",
+    "artVariants": [
+      {
+        "rarity": "SD (EN)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/5/5b/DZ-SS13-15thSP02EN_%28Sample%29.png/revision/latest?cb=20260513180553",
+        "localImageUrl": "/cards/DZ-SS14-002_EN.png",
+        "source": "English Release"
+      },
+      {
+        "rarity": "SD (JP)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/3/30/DZ-SS14-002_%28Sample%29.png/revision/latest?cb=20260213040324",
+        "localImageUrl": "/cards/DZ-SS14-002_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can I pay either Counter Blast 1 OR Energy Blast 3 for Blaster Blade's retire skill?",
+        "answer": "Yes! The cost is flexible: {{Cost|Counter Blast (1) or Energy Blast (3)}}. If placed on (VC), you also get to draw a card."
+      },
+      {
+        "question": "Does Blaster Blade's rear-guard skill trigger every time it attacks?",
+        "answer": "It has [1/Turn], triggering when it attacks a grade 3 or greater unit while having an Aichi icon vanguard, giving it +10000 Power for the entire turn."
+      }
+    ],
+    "isRideDeck": true,
+    "isCrest": false,
+    "rideDeckOrder": 2
+  },
+  {
+    "cardNo": "DZ-SS14/003",
+    "name": "Wingal",
+    "kana": "ういんがる",
+    "rarity": "SD",
+    "grade": 1,
+    "power": 8000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Keter Sanctuary",
+    "clan": "Royal Paladin",
+    "race": "High Beast",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Boost",
+    "skillText": "[AUTO]:When this unit is placed on (VC), COST [reveal a grade 3 card with an Aichi icon from ride deck], choose a \"{{DLink|Barcgal}}\" with an Aichi icon from your soul, call it to (RC), and it gets {{RedText|\"[ACT](RC):COST [[Rest] this unit], search your deck for up to one \"{{DLink|Flogal}}\", call it to (RC), and shuffle the deck.\"}} until end of this fight.\n[AUTO](RC):When this unit boosts a \"Blaster Blade\", this unit gets [Power]+5000 until end of that battle.",
+    "flavorText": "The best comrade-in-arms, charging alongside the brave hero.",
+    "package": "DZ-SS14: Break Away Start Deck - Blaster Blade",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/8/89/DZ-SS13-15thSP03EN_%28Sample%29.png/revision/latest?cb=20260513020834",
+    "localImageUrl": "/cards/DZ-SS14-003_EN.png",
+    "artVariants": [
+      {
+        "rarity": "SD (EN)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/8/89/DZ-SS13-15thSP03EN_%28Sample%29.png/revision/latest?cb=20260513020834",
+        "localImageUrl": "/cards/DZ-SS14-003_EN.png",
+        "source": "English Release"
+      },
+      {
+        "rarity": "SD (JP)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/3/36/DZ-SS14-003_%28Sample%29.png/revision/latest?cb=20260213040333",
+        "localImageUrl": "/cards/DZ-SS14-003_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": true,
+    "isCrest": false,
+    "rideDeckOrder": 1
+  },
+  {
+    "cardNo": "DZ-SS14/004",
+    "name": "Barcgal",
+    "kana": "ばーくがる",
+    "rarity": "SD",
+    "grade": 0,
+    "power": 6000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Keter Sanctuary",
+    "clan": "Royal Paladin",
+    "race": "High Beast",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Boost",
+    "skillText": "{{FV|D}}",
+    "flavorText": "A roar echoes across the battlefield, and the heroes rise.",
+    "package": "DZ-SS14: Break Away Start Deck - Blaster Blade",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/7/7b/DZ-SS13-15thSP04EN_%28Sample%29.png/revision/latest?cb=20260512052518",
+    "localImageUrl": "/cards/DZ-SS14-004_EN.png",
+    "artVariants": [
+      {
+        "rarity": "SD (EN)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/7/7b/DZ-SS13-15thSP04EN_%28Sample%29.png/revision/latest?cb=20260512052518",
+        "localImageUrl": "/cards/DZ-SS14-004_EN.png",
+        "source": "English Release"
+      },
+      {
+        "rarity": "SD (JP)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/6/62/DZ-SS14-004_%28Sample%29.png/revision/latest?cb=20260213040343",
+        "localImageUrl": "/cards/DZ-SS14-004_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": true,
+    "isCrest": false,
+    "rideDeckOrder": 0
+  },
+  {
+    "cardNo": "DZ-SS14/005",
+    "name": "Energy Generator",
+    "kana": "エネルギージェネレーター",
+    "rarity": "SD",
+    "grade": null,
+    "power": null,
+    "shield": null,
+    "critical": null,
+    "nation": "Keter Sanctuary",
+    "clan": "Royal Paladin",
+    "race": "Crest",
+    "cardType": "Crest",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillText": "''(You may only have one ride deck crest in a ride deck)''\n[AUTO](Ride Deck):When you ride, put this card into the crest zone, and if you went second, Energy Charge (3).\n[CONT]:You may have up to ten energy.\n[AUTO]:At the beginning of your ride phase, Energy Charge (3).\n[ACT][1/Turn]:COST [Energy Blast (7)], and draw a card.",
+    "flavorText": "",
+    "package": "DZ-SS14: Break Away Start Deck - Blaster Blade",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/c/c8/DZ-TD01-005EN_%28Sample%29.png/revision/latest?cb=20240419182231",
+    "localImageUrl": "/cards/DZ-SS14-005_EN.png",
+    "artVariants": [
+      {
+        "rarity": "SD (EN)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/c/c8/DZ-TD01-005EN_%28Sample%29.png/revision/latest?cb=20240419182231",
+        "localImageUrl": "/cards/DZ-SS14-005_EN.png",
+        "source": "English Release"
+      },
+      {
+        "rarity": "SD (JP)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/f/ff/DZ-SD01-005_%28Sample%29.png/revision/latest?cb=20240120145628",
+        "localImageUrl": "/cards/DZ-SS14-005_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is an Energy Generator Crest?",
+        "answer": "The Energy Generator is placed in your Crest zone at the start of the game if you ride Barcgal. At the start of each of your ride phases and when you go second, you gain Energy counters up to 10 max to pay Energy Blast costs."
+      }
+    ],
+    "isRideDeck": false,
+    "isCrest": true
+  },
+  {
+    "cardNo": "DZ-SS14/006",
+    "name": "Soul Saver Dragon",
+    "kana": "ソウルセイバー・ドラゴン",
+    "rarity": "SD",
+    "grade": 3,
+    "power": 13000,
+    "shield": null,
+    "critical": 1,
+    "nation": "Keter Sanctuary",
+    "clan": "Royal Paladin",
+    "race": "Cosmo Dragon",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Twin Drive",
+    "skillText": "[CONT]:The normal ride of this card from a grade 3 unit with an Aichi icon and a different card name from this card also becomes a persona ride.\n[ACT](VC)[1/Turn]:COST [Counter Blast (1) & Soul Blast (1) grade 3 card with an Aichi icon], this unit gets {{RedText|\"[AUTO](VC)[1/Turn]:When this unit attacks, choose a column, [Stand] all of your rear-guards in that column, and they get [Power]+5000 until end of turn. If you persona rode this turn, choose two instead of one.\"}}, and all of your front row units get [Power]+5000 until end of turn.\n[CONT](GC):If you have a vanguard with an Aichi icon, this unit gets [Shield]+10000.",
+    "flavorText": "Rouse yourself with courage in your heart! Holy Charging Roar!",
+    "package": "DZ-SS14: Break Away Start Deck - Blaster Blade",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/8/89/DZ-SS13-006EN_%28Sample%29.png/revision/latest?cb=20260516022121",
+    "localImageUrl": "/cards/DZ-SS14-006_EN.png",
+    "artVariants": [
+      {
+        "rarity": "SD (EN)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/8/89/DZ-SS13-006EN_%28Sample%29.png/revision/latest?cb=20260516022121",
+        "localImageUrl": "/cards/DZ-SS14-006_EN.png",
+        "source": "English Release"
+      },
+      {
+        "rarity": "SD (JP)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/e/e2/DZ-SS14-006_%28Sample%29.png/revision/latest?cb=20260213040352",
+        "localImageUrl": "/cards/DZ-SS14-006_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How does Soul Saver Dragon's Holy Charging Roar work?",
+        "answer": "When placed on (VC) or (RC), by paying Soul Blast (5) or Energy Blast (5), choose up to five of your rear-guards, and they get [Power]+10000 until end of turn! An incredible multi-column booster."
+      }
+    ],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS14/007",
+    "name": "Knight of Truth, Gordon",
+    "kana": "しんりのきし ゴードン",
+    "rarity": "SD",
+    "grade": 2,
+    "power": 10000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Keter Sanctuary",
+    "clan": "Royal Paladin",
+    "race": "Human",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Intercept",
+    "skillText": "[AUTO]:When this unit is placed on (RC), COST [Counter Blast (1)], and this unit gets [Power]+10000 until end of turn. If it was placed by the ability of \"King of Knights, Alfred\" with an Aichi icon, draw a card.\n[CONT](GC):If you have a vanguard with an Aichi icon, this unit gets [Shield]+5000.",
+    "flavorText": "To exist without ever wavering. That is the definition of truth.",
+    "package": "DZ-SS14: Break Away Start Deck - Blaster Blade",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/3/3a/DZ-SS14-007_%28Sample%29.png/revision/latest?cb=20260213040414",
+    "localImageUrl": "/cards/DZ-SS14-007_JP.png",
+    "artVariants": [
+      {
+        "rarity": "SD (JP)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/3/3a/DZ-SS14-007_%28Sample%29.png/revision/latest?cb=20260213040414",
+        "localImageUrl": "/cards/DZ-SS14-007_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS14/008",
+    "name": "Knight of Silence, Gallatin",
+    "kana": "ちんもくのきし ギャラティン",
+    "rarity": "SD",
+    "grade": 2,
+    "power": 10000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Keter Sanctuary",
+    "clan": "Royal Paladin",
+    "race": "Human",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Intercept",
+    "skillText": "[AUTO](RC):When this unit attacks, if you have a grade 3 or greater vanguard with an Aichi icon, this unit gets [Power]+5000 until end of turn.\n[AUTO](Drop):When your grade 3 or greater vanguard with an Aichi icon is attacked, COST [bind this card], and that unit gets [Power]+10000 until end of battle. You cannot bind cards with the same card name as this card from drop until end of turn.",
+    "flavorText": "The silent sword tells everything through the stroke of its blade.",
+    "package": "DZ-SS14: Break Away Start Deck - Blaster Blade",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/a/a0/DZ-SS14-008_%28Sample%29.png/revision/latest?cb=20260213040422",
+    "localImageUrl": "/cards/DZ-SS14-008_JP.png",
+    "artVariants": [
+      {
+        "rarity": "SD (JP)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/a/a0/DZ-SS14-008_%28Sample%29.png/revision/latest?cb=20260213040422",
+        "localImageUrl": "/cards/DZ-SS14-008_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS14/009",
+    "name": "Cerrgaon",
+    "kana": "せるがおん",
+    "rarity": "SD",
+    "grade": 1,
+    "power": 8000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Keter Sanctuary",
+    "clan": "Royal Paladin",
+    "race": "High Beast",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Boost",
+    "skillText": "[AUTO](RC):When this unit boosts, if you have more rear-guards than your opponent, or you played an order this turn, this unit gets [Power]+5000 until end of that battle, and at the end of that battle, COST [retire this unit], look at the top two cards of your deck, choose a card from among them, put it into hand, and put the rest on the bottom of the deck.",
+    "flavorText": "The fangs of proud loyalty that crosses the icy plains.",
+    "package": "DZ-SS14: Break Away Start Deck - Blaster Blade",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/5/5f/D-PR389EN_%28Sample%29.png/revision/latest?cb=20250329035334",
+    "localImageUrl": "/cards/DZ-SS14-009_EN.png",
+    "artVariants": [
+      {
+        "rarity": "SD (EN)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/5/5f/D-PR389EN_%28Sample%29.png/revision/latest?cb=20250329035334",
+        "localImageUrl": "/cards/DZ-SS14-009_EN.png",
+        "source": "English Release"
+      },
+      {
+        "rarity": "SD (JP)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/d/d8/D-PR-707_%28Sample%29.png/revision/latest?cb=20231031030614",
+        "localImageUrl": "/cards/DZ-SS14-009_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS14/010",
+    "name": "Little Sage, Marron",
+    "kana": "ちいさなけんじゃ マロン",
+    "rarity": "SD",
+    "grade": 1,
+    "power": 8000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Keter Sanctuary",
+    "clan": "Royal Paladin",
+    "race": "Giant",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Boost",
+    "skillText": "[AUTO]:If this unit was ridden from hand, the Soul Blast you pay for this cost is reduced by (1). When this unit is placed on (VC), COST [Soul Blast (1) & reveal a grade 3 card with an Aichi icon from ride deck], and when you would ride a card from ride deck during the ride phase of your next turn, you can ride without discarding a card from hand.\n[AUTO]:When this unit is placed on (RC), if you have a vanguard with an Aichi icon, COST [put a non-sentinel normal unit with only «Royal Paladin» for its clan from drop on the bottom of the deck], and this unit gets [Power]+5000 until end of turn.",
+    "flavorText": "That's right! We need your power for this operation!",
+    "package": "DZ-SS14: Break Away Start Deck - Blaster Blade",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/f/fa/DZ-SS14-010_%28Sample%29.png/revision/latest?cb=20260213040434",
+    "localImageUrl": "/cards/DZ-SS14-010_JP.png",
+    "artVariants": [
+      {
+        "rarity": "SD (JP)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/f/fa/DZ-SS14-010_%28Sample%29.png/revision/latest?cb=20260213040434",
+        "localImageUrl": "/cards/DZ-SS14-010_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS14/011",
+    "name": "Lake Maiden, Lien",
+    "kana": "みずうみのみこ",
+    "rarity": "SD",
+    "grade": 1,
+    "power": 8000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Keter Sanctuary",
+    "clan": "Royal Paladin",
+    "race": "Elf",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Boost",
+    "skillText": "[AUTO]:When this card is discarded from hand during your ride phase, perform one of the following.\n•Call this card to (RC) as [Rest].\n•COST [Soul Blast (1)], and call this card to (RC).\n[AUTO]:When this unit is placed on (RC), you may draw a card. If you do, choose a card from your hand, and discard it.",
+    "flavorText": "This sword is fitting for you, honest person.",
+    "package": "DZ-SS14: Break Away Start Deck - Blaster Blade",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/3/36/DZ-SS14-011_%28Sample%29.png/revision/latest?cb=20260213040444",
+    "localImageUrl": "/cards/DZ-SS14-011_JP.png",
+    "artVariants": [
+      {
+        "rarity": "SD (JP)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/3/36/DZ-SS14-011_%28Sample%29.png/revision/latest?cb=20260213040444",
+        "localImageUrl": "/cards/DZ-SS14-011_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS14/012",
+    "name": "Flash Shield, Iseult",
+    "kana": "せんこのたて イゾルデ",
+    "rarity": "SD",
+    "grade": 1,
+    "power": 6000,
+    "shield": 0,
+    "critical": 1,
+    "nation": "Keter Sanctuary",
+    "clan": "Royal Paladin",
+    "race": "Human",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Boost",
+    "skillText": "{{Perfect Guard|D2}}",
+    "flavorText": "The flash shield illuminates the darkness and protects the people's hope.",
+    "package": "DZ-SS14: Break Away Start Deck - Blaster Blade",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/a/a1/DZ-SS14-012_%28Sample%29.png/revision/latest?cb=20260213040453",
+    "localImageUrl": "/cards/DZ-SS14-012_JP.png",
+    "artVariants": [
+      {
+        "rarity": "SD (JP)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/a/a1/DZ-SS14-012_%28Sample%29.png/revision/latest?cb=20260213040453",
+        "localImageUrl": "/cards/DZ-SS14-012_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS14/013",
+    "name": "Light Dragon Deity of Honors, Amartinoa",
+    "kana": "えいてんのこうりゅうしん アマルティノア",
+    "rarity": "SD",
+    "grade": 0,
+    "power": 5000,
+    "shield": 50000,
+    "critical": 1,
+    "nation": "Keter Sanctuary",
+    "clan": "Royal Paladin",
+    "race": "Cosmo Dragon",
+    "cardType": "Trigger Unit",
+    "triggerType": "Over",
+    "triggerEffect": "Over Trigger: During that drive check, remove this card, draw a card, choose one of your units, and it gets [Power]+100 Million until end of turn! If revealed on drive check, activate its additional effect: [CONT]: During this turn, your vanguard drive check gives all your rear-guards [Power]+10000 and additional drive checks!",
+    "skillIcon": "Boost",
+    "skillText": "{{Over}}\n'''Additional Effect''' - Until end of turn, you also perform drive checks for the battles your rear-guards attack!",
+    "flavorText": "(D-BT01): Rouse yourself with courage. Everyone has the capability to be a hero.\n(D-BT06): Countless heroes are created by the eras, and numerous tales of their glory are etched in history.",
+    "package": "DZ-SS14: Break Away Start Deck - Blaster Blade",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/9/96/D-BT01-022EN-ORR_%28Sample%29.png/revision/latest?cb=20210604035437",
+    "localImageUrl": "/cards/DZ-SS14-013_EN.png",
+    "artVariants": [
+      {
+        "rarity": "SD (EN)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/9/96/D-BT01-022EN-ORR_%28Sample%29.png/revision/latest?cb=20210604035437",
+        "localImageUrl": "/cards/DZ-SS14-013_EN.png",
+        "source": "English Release"
+      },
+      {
+        "rarity": "SD (JP)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/8/83/D-PR-431_%28Sample%29.png/revision/latest?cb=20230308210040",
+        "localImageUrl": "/cards/DZ-SS14-013_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS14/014",
+    "name": "Bringer of Good Luck, Epona",
+    "kana": "こううんのはこびて エポナ",
+    "rarity": "SD",
+    "grade": 0,
+    "power": 5000,
+    "shield": 15000,
+    "critical": 1,
+    "nation": "Keter Sanctuary",
+    "clan": "Royal Paladin",
+    "race": "Sylph",
+    "cardType": "Trigger Unit",
+    "triggerType": "Critical",
+    "triggerEffect": "Critical +1 and Power +10000 to one unit.",
+    "skillIcon": "Boost",
+    "skillText": "''(When revealed as a trigger, choose one of your units, and it gets [Critical]+1 until end of turn! Then, choose one of your units, and it gets [Power]+10000 until end of turn!)''",
+    "flavorText": "Nice! Jackpot!",
+    "package": "DZ-SS14: Break Away Start Deck - Blaster Blade",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/2/26/DZ-SS14-014_%28Sample%29.png/revision/latest?cb=20260213040526",
+    "localImageUrl": "/cards/DZ-SS14-014_JP.png",
+    "artVariants": [
+      {
+        "rarity": "SD (JP)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/2/26/DZ-SS14-014_%28Sample%29.png/revision/latest?cb=20260213040526",
+        "localImageUrl": "/cards/DZ-SS14-014_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS14/015",
+    "name": "Flogal",
+    "kana": "ふろうがる",
+    "rarity": "SD",
+    "grade": 0,
+    "power": 5000,
+    "shield": 15000,
+    "critical": 1,
+    "nation": "Keter Sanctuary",
+    "clan": "Royal Paladin",
+    "race": "High Beast",
+    "cardType": "Trigger Unit",
+    "triggerType": "Critical",
+    "triggerEffect": "Critical +1 and Power +10000 to one unit.",
+    "skillIcon": "Boost",
+    "skillText": "''(When revealed as a trigger, choose one of your units, and it gets [Critical]+1 until end of turn! Then, choose one of your units, and it gets [Power]+10000 until end of turn!)''",
+    "flavorText": "I can't always come to your rescue! Pull yourself together!",
+    "package": "DZ-SS14: Break Away Start Deck - Blaster Blade",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/0/04/DZ-SS14-015_%28Sample%29.png/revision/latest?cb=20260213040532",
+    "localImageUrl": "/cards/DZ-SS14-015_JP.png",
+    "artVariants": [
+      {
+        "rarity": "SD (JP)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/0/04/DZ-SS14-015_%28Sample%29.png/revision/latest?cb=20260213040532",
+        "localImageUrl": "/cards/DZ-SS14-015_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS14/016",
+    "name": "Margal",
+    "kana": "まぁるがる",
+    "rarity": "SD",
+    "grade": 0,
+    "power": 5000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Keter Sanctuary",
+    "clan": "Royal Paladin",
+    "race": "High Beast",
+    "cardType": "Trigger Unit",
+    "triggerType": "Draw",
+    "triggerEffect": "Draw 1 card and Power +10000 to one unit.",
+    "skillIcon": "Boost",
+    "skillText": "''(When revealed as a trigger, draw a card! Then, choose one of your units, and it gets [Power]+10000 until end of turn!)''",
+    "flavorText": "The high dog is looking one move ahead.",
+    "package": "DZ-SS14: Break Away Start Deck - Blaster Blade",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/6/6c/DZ-SS14-016_%28Sample%29.png/revision/latest?cb=20260213040541",
+    "localImageUrl": "/cards/DZ-SS14-016_JP.png",
+    "artVariants": [
+      {
+        "rarity": "SD (JP)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/6/6c/DZ-SS14-016_%28Sample%29.png/revision/latest?cb=20260213040541",
+        "localImageUrl": "/cards/DZ-SS14-016_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS14/017",
+    "name": "Yggdrasil Maiden, Elaine",
+    "kana": "せかいじゅのみこ エレイン",
+    "rarity": "SD",
+    "grade": 0,
+    "power": 5000,
+    "shield": 15000,
+    "critical": 1,
+    "nation": "Keter Sanctuary",
+    "clan": "Royal Paladin",
+    "race": "Elf",
+    "cardType": "Trigger Unit",
+    "triggerType": "Heal",
+    "triggerEffect": "If you have equal or more damage than your opponent, heal 1 damage! Also Power +10000 to one unit.",
+    "skillIcon": "Boost",
+    "skillText": "''(You may only have up to four [Heal] triggers in a deck. When revealed as a trigger, choose one of your units, and it gets [Power] +10000 until end of turn! Then, if the number of cards in your damage zone is equal to or more than your opponent's, choose a card from your damage zone, and heal it!)''",
+    "flavorText": "It's okay, I'll heal your wounds.",
+    "package": "DZ-SS14: Break Away Start Deck - Blaster Blade",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/e/eb/DZ-SS14-017_%28Sample%29.png/revision/latest?cb=20260213040548",
+    "localImageUrl": "/cards/DZ-SS14-017_JP.png",
+    "artVariants": [
+      {
+        "rarity": "SD (JP)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/e/eb/DZ-SS14-017_%28Sample%29.png/revision/latest?cb=20260213040548",
+        "localImageUrl": "/cards/DZ-SS14-017_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS14/018",
+    "name": "Protection: Twincast",
+    "kana": "プロテクション：ツインキャスト",
+    "rarity": "SD",
+    "grade": 2,
+    "power": null,
+    "shield": null,
+    "critical": null,
+    "nation": "Keter Sanctuary",
+    "clan": "Royal Paladin",
+    "race": "Human",
+    "cardType": "Blitz Order",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Intercept",
+    "skillText": "{{RegalisPiece}}\n----\nChoose one of your units being attacked, and it gets [Power]+10000 until end of that battle.\n----\n[CONT]:This card's [AUTO] ability can be resolved even if you have resolved a ['''Regalis Piece'''] ability this fight.\n[AUTO](Drop):When your unit is attacked, COST [remove this card from drop], choose one of your units being attacked, and it gets [Power]+5000 until end of that battle for each grade of that unit.",
+    "flavorText": "We'll protect everyone! With a double stance!",
+    "package": "DZ-SS14: Break Away Start Deck - Blaster Blade",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/9/97/DZ-BT03-043EN-RR_%28Sample%29.png/revision/latest?cb=20240717183115",
+    "localImageUrl": "/cards/DZ-SS14-018_EN.png",
+    "artVariants": [
+      {
+        "rarity": "SD (EN)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/9/97/DZ-BT03-043EN-RR_%28Sample%29.png/revision/latest?cb=20240717183115",
+        "localImageUrl": "/cards/DZ-SS14-018_EN.png",
+        "source": "English Release"
+      },
+      {
+        "rarity": "SD (JP)",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/f/f8/DZ-BT03-043-RR_%28Sample%29.png/revision/latest?cb=20240605030413",
+        "localImageUrl": "/cards/DZ-SS14-018_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS15/001",
+    "name": "Dragonic Overlord",
+    "kana": "ドラゴニック・オーバーロード",
+    "rarity": "TD",
+    "grade": 3,
+    "power": 13000,
+    "shield": null,
+    "critical": 1,
+    "nation": "Dragon Empire",
+    "clan": "Kagero",
+    "race": "Flame Dragon",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Twin Drive",
+    "skillText": "[CONT]:The normal ride of this card from a grade 3 card with a Kai icon and a different card name from this card also becomes a persona ride.\n[AUTO](VC)[1/Turn]:At the end of the battle this unit attacked, COST [Counter Blast (1)], [Stand] this unit, and until end of turn, it gets drive -1. If you persona rode this turn, COST [put a card from hand into soul], until end of turn, this unit gets drive +1, and all of your front row units get [Power]+5000.\n[AUTO](RC)[1/Turn]:At the end of the battle this unit attacked a rear-guard, if you have a vanguard with a Kai icon, COST [Energy Blast (3)], and [Stand] this unit.",
+    "flavorText": "This is my true form. Ride the Vanguard!",
+    "package": "DZ-SS15: Break Away Start Deck - Dragonic Overlord",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/a/a2/DZ-SS14-15thSP01EN_%28Sample%29.png/revision/latest?cb=20260521182430",
+    "localImageUrl": "/cards/DZ-SS15-001_EN.png",
+    "artVariants": [
+      {
+        "rarity": "EN Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/a/a2/DZ-SS14-15thSP01EN_%28Sample%29.png/revision/latest?cb=20260521182430",
+        "localImageUrl": "/cards/DZ-SS15-001_EN.png",
+        "source": "English Official"
+      },
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/9/98/DZ-SS15-001_%28Sample%29.png/revision/latest?cb=20260123031518",
+        "localImageUrl": "/cards/DZ-SS15-001_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": true,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS15/002",
+    "name": "Dragon Knight, Nehalem",
+    "kana": "ドラゴンナイト ネハーレン",
+    "rarity": "TD",
+    "grade": 2,
+    "power": 10000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dragon Empire",
+    "clan": "Kagero",
+    "race": "Human",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Intercept",
+    "skillText": "[AUTO]:When this unit is placed on (VC), look at the top seven cards of your deck, choose up to one non-sentinel unit card with a Kai icon from among them, reveal it and put it into hand, and shuffle the deck. If this unit was placed from hand, this unit gets [Power]+5000 until end of turn.\n[AUTO](Drop):When your grade 3 or greater vanguard with a Kai icon is placed, perform one of the following.\n•If you do not have a rear-guard with the same card name as this card, you may call this card to (RC). If you called a card, your vanguard and this unit get [Power]+5000 until end of turn.\n•COST [Bind this card], choose one of your vanguard's [AUTO] abilities, and reduce its next Counter Blast cost you pay by (1) until end of turn.",
+    "flavorText": "His strides was truly like a lion's.",
+    "package": "DZ-SS15: Break Away Start Deck - Dragonic Overlord",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/0/07/DZ-SS14-002EN_%28Sample%29.png/revision/latest?cb=20260522121122",
+    "localImageUrl": "/cards/DZ-SS15-002_EN.png",
+    "artVariants": [
+      {
+        "rarity": "EN Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/0/07/DZ-SS14-002EN_%28Sample%29.png/revision/latest?cb=20260522121122",
+        "localImageUrl": "/cards/DZ-SS15-002_EN.png",
+        "source": "English Official"
+      },
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/a/a6/DZ-SS15-002_%28Sample%29.png/revision/latest?cb=20260123031527",
+        "localImageUrl": "/cards/DZ-SS15-002_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": true,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS15/003",
+    "name": "Embodiment of Armor, Bahr",
+    "kana": "よろいのけしん バー",
+    "rarity": "TD",
+    "grade": 1,
+    "power": 8000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dragon Empire",
+    "clan": "Kagero",
+    "race": "Demon",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Boost",
+    "skillText": "[AUTO]:When this unit is placed on (VC), COST [reveal a grade 3 card with a Kai icon from ride deck], choose a \"{{DLink|Lizard Soldier, Conroe}}\" with a Kai icon from your soul, call it to (RC), and it gets {{RedText|\"[ACT](RC):COST [Retire this unit], search your deck for up to one grade 1 card, reveal it and put it into hand, and shuffle the deck.\"}} until end of this fight.\n[AUTO](Back Row Center RC):When your vanguard with a Kai icon [Stand] by your card's ability, you may [Stand] this unit. If you do, put this unit into soul at the end of that turn.",
+    "flavorText": "It is the demonic armor, which consumes the heart in exchange for power.",
+    "package": "DZ-SS15: Break Away Start Deck - Dragonic Overlord",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/d/db/DZ-SS14-15thSP03EN_%28Sample%29.png/revision/latest?cb=20260519181311",
+    "localImageUrl": "/cards/DZ-SS15-003_EN.png",
+    "artVariants": [
+      {
+        "rarity": "EN Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/d/db/DZ-SS14-15thSP03EN_%28Sample%29.png/revision/latest?cb=20260519181311",
+        "localImageUrl": "/cards/DZ-SS15-003_EN.png",
+        "source": "English Official"
+      },
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/c/c5/DZ-SS15-003_%28Sample%29.png/revision/latest?cb=20260123031532",
+        "localImageUrl": "/cards/DZ-SS15-003_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": true,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS15/004",
+    "name": "Lizard Soldier, Conroe",
+    "kana": "リザードソルジャー コンロー",
+    "rarity": "TD",
+    "grade": 0,
+    "power": 6000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dragon Empire",
+    "clan": "Kagero",
+    "race": "Dragonman",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Boost",
+    "skillText": "{{FV|D}}",
+    "flavorText": "The brave warrior wields his blade, seeking to become a dragon.",
+    "package": "DZ-SS15: Break Away Start Deck - Dragonic Overlord",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/1/17/DZ-SS14-15thSP04EN_%28Sample%29.png/revision/latest?cb=20260517171640",
+    "localImageUrl": "/cards/DZ-SS15-004_EN.png",
+    "artVariants": [
+      {
+        "rarity": "EN Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/1/17/DZ-SS14-15thSP04EN_%28Sample%29.png/revision/latest?cb=20260517171640",
+        "localImageUrl": "/cards/DZ-SS15-004_EN.png",
+        "source": "English Official"
+      },
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/2/28/DZ-SS15-004_%28Sample%29.png/revision/latest?cb=20260123031538",
+        "localImageUrl": "/cards/DZ-SS15-004_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": true,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS15/005",
+    "name": "Energy Generator",
+    "kana": "エネルギージェネレーター",
+    "rarity": "TD",
+    "grade": null,
+    "power": null,
+    "shield": null,
+    "critical": null,
+    "nation": "Dragon Empire",
+    "clan": "Kagero",
+    "race": "Crest",
+    "cardType": "Crest",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillText": "''(You may only have one ride deck crest in a ride deck)''\n[AUTO](Ride Deck):When you ride, put this card into the crest zone, and if you went second, Energy Charge (3).\n[CONT]:You may have up to ten energy.\n[AUTO]:At the beginning of your ride phase, Energy Charge (3).\n[ACT][1/Turn]:COST [Energy Blast (7)], and draw a card.",
+    "flavorText": "",
+    "package": "DZ-SS15: Break Away Start Deck - Dragonic Overlord",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/c/c8/DZ-TD01-005EN_%28Sample%29.png/revision/latest?cb=20240419182231",
+    "localImageUrl": "/cards/DZ-SS15-005_EN.png",
+    "artVariants": [
+      {
+        "rarity": "EN Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/c/c8/DZ-TD01-005EN_%28Sample%29.png/revision/latest?cb=20240419182231",
+        "localImageUrl": "/cards/DZ-SS15-005_EN.png",
+        "source": "English Official"
+      },
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/f/ff/DZ-SD01-005_%28Sample%29.png/revision/latest?cb=20240120145628",
+        "localImageUrl": "/cards/DZ-SS15-005_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": true
+  },
+  {
+    "cardNo": "DZ-SS15/006",
+    "name": "Vortex Dragon",
+    "kana": "ボーテックス・ドラゴン",
+    "rarity": "TD",
+    "grade": 3,
+    "power": 13000,
+    "shield": null,
+    "critical": 1,
+    "nation": "Dragon Empire",
+    "clan": "Kagero",
+    "race": "Flame Dragon",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Twin Drive",
+    "skillText": "[CONT]:The normal ride of this card from a grade 3 card with a Kai icon and a different card name from this card also becomes a persona ride.\n[ACT](VC)[1/Turn]:COST [Counter Blast (1) & Soul Blast (1) grade 3 card with a Kai icon], retire all of your opponent's front row rear-guards, and this unit gets {{RedText|\"[AUTO](VC)[1/Turn]:When this unit attacks, choose a column, [Stand] all of your rear-guards in that column, and they get [Power]+5000 until end of turn. If you persona rode this turn, choose two columns instead of one.\"}} until end of turn.\n[CONT](VC/RC):During your turn, if you have a vanguard with a Kai icon, and your opponent's vanguard is grade 3 or greater, if your vanguard attacked two or more times this turn, or your opponent's rear-guard was retired this turn, this unit gets [Power]+10000.\n[CONT](GC):If you have a vanguard with a Kai icon, this unit gets [Shield]+10000.",
+    "flavorText": "The hellfire that swirls through the battlefield, Burning Hell!",
+    "package": "DZ-SS15: Break Away Start Deck - Dragonic Overlord",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/5/52/DZ-SS14-006EN_%28Sample%29.png/revision/latest?cb=20260522183853",
+    "localImageUrl": "/cards/DZ-SS15-006_EN.png",
+    "artVariants": [
+      {
+        "rarity": "EN Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/5/52/DZ-SS14-006EN_%28Sample%29.png/revision/latest?cb=20260522183853",
+        "localImageUrl": "/cards/DZ-SS15-006_EN.png",
+        "source": "English Official"
+      },
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/6/64/DZ-SS15-006_%28Sample%29.png/revision/latest?cb=20260123031621",
+        "localImageUrl": "/cards/DZ-SS15-006_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS15/007",
+    "name": "Great Flame Axe of Ambitious Scales, Colgaflan",
+    "kana": "そうりんのだいえんふ カルガフラン",
+    "rarity": "TD",
+    "grade": 2,
+    "power": 10000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dragon Empire",
+    "clan": "Kagero",
+    "race": "Dragoroid",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Intercept",
+    "skillText": "[AUTO]:When this card is discarded from hand during your ride phase, COST [Soul Blast (1) & put this card on the bottom of deck], and draw a card.\n[AUTO]:When this unit is placed on (RC), if you persona rode this turn, COST [Counter Blast (1)], and retire all of your opponent's rear-guards in the same column as this unit.",
+    "flavorText": "On whose authority are all of you standing before me!!",
+    "package": "DZ-SS15: Break Away Start Deck - Dragonic Overlord",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/c/c1/D-BT10-002EN-RRR_%28Sample%29.png/revision/latest?cb=20230709234453",
+    "localImageUrl": "/cards/DZ-SS15-007_EN.png",
+    "artVariants": [
+      {
+        "rarity": "EN Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/c/c1/D-BT10-002EN-RRR_%28Sample%29.png/revision/latest?cb=20230709234453",
+        "localImageUrl": "/cards/DZ-SS15-007_EN.png",
+        "source": "English Official"
+      },
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/9/9f/D-BT10-FFR02-FFR_%28Sample%29.png/revision/latest?cb=20230420054433",
+        "localImageUrl": "/cards/DZ-SS15-007_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS15/008",
+    "name": "Berserk Dragon",
+    "kana": "バーサーク・ドラゴン",
+    "rarity": "TD",
+    "grade": 2,
+    "power": 10000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dragon Empire",
+    "clan": "Kagero",
+    "race": "Flame Dragon",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Intercept",
+    "skillText": "[AUTO]:If this unit was ridden from hand, this cost disappears. When this unit is placed on (VC) or (RC), if you have a vanguard with a Kai icon, COST [Counter Blast (1) or Soul Blast (2)], and perform one of the following. If your vanguard is grade 3 or greater, this unit gets [Power]+5000 until end of turn.\n•Draw a card.\n•Choose one of your opponent's rear-guards, and retire it.\n[CONT](RC):During your turn, if you have a grade 3 or greater vanguard with a Kai icon, this unit gets [Power]+5000. If your opponent's vanguard is grade 3 or greater, it gets [Power]+10000 instead of +5000.",
+    "flavorText": "If you value your life, do not even think of stopping a rampaging dragon.",
+    "package": "DZ-SS15: Break Away Start Deck - Dragonic Overlord",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/c/ce/DZ-SS15-008_%28Sample%29.png/revision/latest?cb=20260123031705",
+    "localImageUrl": "/cards/DZ-SS15-008_JP.png",
+    "artVariants": [
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/c/ce/DZ-SS15-008_%28Sample%29.png/revision/latest?cb=20260123031705",
+        "localImageUrl": "/cards/DZ-SS15-008_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS15/009",
+    "name": "Wyvern Strike, Tejas",
+    "kana": "ワイバーンストライク テージャス",
+    "rarity": "TD",
+    "grade": 2,
+    "power": 10000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dragon Empire",
+    "clan": "Kagero",
+    "race": "Winged Dragon",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Intercept",
+    "skillText": "[CONT](RC/GC):If you have a vanguard with a Kai icon, this unit gets [Power]+5000/[Shield]+5000, and when this unit would attack a rear-guard, it attacks all of your opponent's rear-guards in the same column as that unit. ''(Active on opponent's turn too)''",
+    "flavorText": "The wyvern never fails to slay its enemy.",
+    "package": "DZ-SS15: Break Away Start Deck - Dragonic Overlord",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/8/8d/DZ-SS15-009_%28Sample%29.png/revision/latest?cb=20260123031712",
+    "localImageUrl": "/cards/DZ-SS15-009_JP.png",
+    "artVariants": [
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/8/8d/DZ-SS15-009_%28Sample%29.png/revision/latest?cb=20260123031712",
+        "localImageUrl": "/cards/DZ-SS15-009_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS15/010",
+    "name": "Dragon Monk, Gojo",
+    "kana": "ドラゴンモンク ゴジョー",
+    "rarity": "TD",
+    "grade": 1,
+    "power": 8000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dragon Empire",
+    "clan": "Kagero",
+    "race": "Gillman",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Boost",
+    "skillText": "[AUTO]:When this card is discarded from hand during your ride phase, perform one of the following.\n•Call this card to (RC) as [Rest].\n•COST [Soul Blast (1)], and call this card to (RC)\n[AUTO]:When this unit is placed on (RC), you may draw a card. If you do, choose a card from your hand, and discard it.",
+    "flavorText": "Confront your own weakness. Only beyond that lies the path forward.",
+    "package": "DZ-SS15: Break Away Start Deck - Dragonic Overlord",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/4/44/DZ-SS15-010_%28Sample%29.png/revision/latest?cb=20260123031724",
+    "localImageUrl": "/cards/DZ-SS15-010_JP.png",
+    "artVariants": [
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/4/44/DZ-SS15-010_%28Sample%29.png/revision/latest?cb=20260123031724",
+        "localImageUrl": "/cards/DZ-SS15-010_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS15/011",
+    "name": "Wyvern Strike, Jarran",
+    "kana": "ワイバーンストライク ジャラン",
+    "rarity": "TD",
+    "grade": 1,
+    "power": 8000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dragon Empire",
+    "clan": "Kagero",
+    "race": "Winged Dragon",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Boost",
+    "skillText": "[AUTO]:When this unit is placed on (RC), COST [Counter Blast (1)], look at the top five cards of your deck, choose up to one non-sentinel unit card with a Kai icon from among them, reveal it and put it into hand, and shuffle the deck. If you did not reveal a card, Counter Charge (1).\n[AUTO](RC):When this unit boosts \"{{DLink|Wyvern Strike, Tejas}}\", this unit gets [Power]+5000 until end of that battle",
+    "flavorText": "Look up. Behold the sky ruled by us, the \"Kagero\"!",
+    "package": "DZ-SS15: Break Away Start Deck - Dragonic Overlord",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/4/47/DZ-SS15-011_%28Sample%29.png/revision/latest?cb=20260123031753",
+    "localImageUrl": "/cards/DZ-SS15-011_JP.png",
+    "artVariants": [
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/4/47/DZ-SS15-011_%28Sample%29.png/revision/latest?cb=20260123031753",
+        "localImageUrl": "/cards/DZ-SS15-011_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS15/012",
+    "name": "Wyvern Guard, Barri",
+    "kana": "ワイバーンガード バリィ",
+    "rarity": "TD",
+    "grade": 1,
+    "power": 6000,
+    "shield": 0,
+    "critical": 1,
+    "nation": "Dragon Empire",
+    "clan": "Kagero",
+    "race": "Dragonman",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Boost",
+    "skillText": "{{Perfect Guard|D2}}",
+    "flavorText": "I serve to protect the sky of the empire. Thus, no one can violate it.",
+    "package": "DZ-SS15: Break Away Start Deck - Dragonic Overlord",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/e/eb/DZ-SS15-012_%28Sample%29.png/revision/latest?cb=20260123031759",
+    "localImageUrl": "/cards/DZ-SS15-012_JP.png",
+    "artVariants": [
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/e/eb/DZ-SS15-012_%28Sample%29.png/revision/latest?cb=20260123031759",
+        "localImageUrl": "/cards/DZ-SS15-012_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS15/013",
+    "name": "Dragon Deity King of Resurgence, Dragveda",
+    "kana": "さいきのりゅうしんおう ドラグヴェーダ",
+    "rarity": "TD",
+    "grade": 0,
+    "power": 5000,
+    "shield": 50000,
+    "critical": 1,
+    "nation": "Dragon Empire",
+    "clan": "Kagero",
+    "race": "Plasma Dragon",
+    "cardType": "Trigger Unit",
+    "triggerType": "Over",
+    "triggerEffect": "Over Trigger: During that drive check, remove this card, draw a card, choose one of your units, and it gets [Power]+100 Million until end of turn! Additional Effect: Stand your vanguard!",
+    "skillIcon": "Boost",
+    "skillText": "{{Over}}\n'''Additional Effect''' - Choose one of your vanguards, and [Stand] it!",
+    "flavorText": "(D-BT01): Stand up.\nNever giving up is the way to open the path forward.\n(D-BT06): As though it is an inextinguishable fire. The fighting will stood without wavering.\n(DZ-BT01): Overcome your faltering heart. Beyond that lies the view you seek.",
+    "package": "DZ-SS15: Break Away Start Deck - Dragonic Overlord",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/e/e6/D-BT01-013EN-ORR_%28Sample%29.png/revision/latest?cb=20210604034724",
+    "localImageUrl": "/cards/DZ-SS15-013_EN.png",
+    "artVariants": [
+      {
+        "rarity": "EN Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/e/e6/D-BT01-013EN-ORR_%28Sample%29.png/revision/latest?cb=20210604034724",
+        "localImageUrl": "/cards/DZ-SS15-013_EN.png",
+        "source": "English Official"
+      },
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/6/69/D-BT01-SP13-SP_%28Sample%29.png/revision/latest?cb=20210412092441",
+        "localImageUrl": "/cards/DZ-SS15-013_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS15/014",
+    "name": "Demonic Dragon Mage, Rakshasa",
+    "kana": "まりゅうどうし ラクシャ",
+    "rarity": "TD",
+    "grade": 0,
+    "power": 5000,
+    "shield": 15000,
+    "critical": 1,
+    "nation": "Dragon Empire",
+    "clan": "Kagero",
+    "race": "Dragonman",
+    "cardType": "Trigger Unit",
+    "triggerType": "Critical",
+    "triggerEffect": "Critical +1 and Power +10000 to one unit.",
+    "skillIcon": "Boost",
+    "skillText": "''(When revealed as a trigger, choose one of your units, and it gets [Critical]+1 until end of turn! Then, choose one of your units, and it gets [Power]+10000 until end of turn.)''",
+    "flavorText": "Perish utterly!",
+    "package": "DZ-SS15: Break Away Start Deck - Dragonic Overlord",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/8/81/DZ-SS15-014_%28Sample%29.png/revision/latest?cb=20260123031808",
+    "localImageUrl": "/cards/DZ-SS15-014_JP.png",
+    "artVariants": [
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/8/81/DZ-SS15-014_%28Sample%29.png/revision/latest?cb=20260123031808",
+        "localImageUrl": "/cards/DZ-SS15-014_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS15/015",
+    "name": "Embodiment of Spear, Tahr",
+    "kana": "やりのけしん ター",
+    "rarity": "TD",
+    "grade": 0,
+    "power": 5000,
+    "shield": 15000,
+    "critical": 1,
+    "nation": "Dragon Empire",
+    "clan": "Kagero",
+    "race": "Demon",
+    "cardType": "Trigger Unit",
+    "triggerType": "Critical",
+    "triggerEffect": "Critical +1 and Power +10000 to one unit.",
+    "skillIcon": "Boost",
+    "skillText": "''(When revealed as a trigger, choose one of your units, and it gets [Critical]+1 until end of turn! Then, choose one of your units, and it gets [Power]+10000 until end of turn.)''",
+    "flavorText": "Pierce through!",
+    "package": "DZ-SS15: Break Away Start Deck - Dragonic Overlord",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/a/ac/DZ-SS15-015_%28Sample%29.png/revision/latest?cb=20260123031816",
+    "localImageUrl": "/cards/DZ-SS15-015_JP.png",
+    "artVariants": [
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/a/ac/DZ-SS15-015_%28Sample%29.png/revision/latest?cb=20260123031816",
+        "localImageUrl": "/cards/DZ-SS15-015_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS15/016",
+    "name": "Dragon Dancer, Monica",
+    "kana": "ドラゴンダンサー モニカ",
+    "rarity": "TD",
+    "grade": 0,
+    "power": 5000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dragon Empire",
+    "clan": "Kagero",
+    "race": "Human",
+    "cardType": "Trigger Unit",
+    "triggerType": "Draw",
+    "triggerEffect": "Draw 1 card and Power +10000 to one unit.",
+    "skillIcon": "Boost",
+    "skillText": "''(When revealed as a trigger, draw a card! Then, choose one of your units, and it gets [Power] +10000 until end of turn!)''",
+    "flavorText": "Hey, aren't you going to dance too?",
+    "package": "DZ-SS15: Break Away Start Deck - Dragonic Overlord",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/a/a6/DZ-SS15-016_%28Sample%29.png/revision/latest?cb=20260123031840",
+    "localImageUrl": "/cards/DZ-SS15-016_JP.png",
+    "artVariants": [
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/a/a6/DZ-SS15-016_%28Sample%29.png/revision/latest?cb=20260123031840",
+        "localImageUrl": "/cards/DZ-SS15-016_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS15/017",
+    "name": "Dragon Monk, Genjo",
+    "kana": "ドラゴンモンク ゲンジョウ",
+    "rarity": "TD",
+    "grade": 0,
+    "power": 5000,
+    "shield": 15000,
+    "critical": 1,
+    "nation": "Dragon Empire",
+    "clan": "Kagero",
+    "race": "Human",
+    "cardType": "Trigger Unit",
+    "triggerType": "Heal",
+    "triggerEffect": "If you have equal or more damage than your opponent, heal 1 damage! Also Power +10000 to one unit.",
+    "skillIcon": "Boost",
+    "skillText": "{{Heal|Long}}",
+    "flavorText": "Let's save all sentient beings.",
+    "package": "DZ-SS15: Break Away Start Deck - Dragonic Overlord",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/8/8f/DZ-SS15-017_%28Sample%29.png/revision/latest?cb=20260123031844",
+    "localImageUrl": "/cards/DZ-SS15-017_JP.png",
+    "artVariants": [
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/8/8f/DZ-SS15-017_%28Sample%29.png/revision/latest?cb=20260123031844",
+        "localImageUrl": "/cards/DZ-SS15-017_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS15/018",
+    "name": "Forbidoll Surrogate",
+    "kana": "フォービドォル・サラゲイト",
+    "rarity": "TD",
+    "grade": 3,
+    "power": null,
+    "shield": null,
+    "critical": null,
+    "nation": "Dragon Empire",
+    "clan": "Kagero",
+    "race": "Dragon",
+    "cardType": "Normal Order",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Twin Drive",
+    "skillText": "{{RegalisPiece}}\n----\nSearch your deck or drop for up to a total of two grade 3 or 4 unit cards with different card names and reveal them, call all revealed grade 3 cards to (RC), and put all revealed grade 4 cards into hand. If you searched the deck, shuffle the deck. ''(You may also search for only one card)''",
+    "flavorText": "I'll help thread on any kind of soul... on this substitute.",
+    "package": "DZ-SS15: Break Away Start Deck - Dragonic Overlord",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/9/99/D-SS05-003EN-ORRR_%28Sample%29.png/revision/latest?cb=20230614174816",
+    "localImageUrl": "/cards/DZ-SS15-018_EN.png",
+    "artVariants": [
+      {
+        "rarity": "EN Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/9/99/D-SS05-003EN-ORRR_%28Sample%29.png/revision/latest?cb=20230614174816",
+        "localImageUrl": "/cards/DZ-SS15-018_EN.png",
+        "source": "English Official"
+      },
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/3/37/D-SS05-003-ORRR_%28Sample%29.png/revision/latest?cb=20230419032445",
+        "localImageUrl": "/cards/DZ-SS15-018_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS02/001",
+    "name": "Masked Magician, Harri",
+    "kana": "マスク・マジシャン ハリー",
+    "rarity": "TD",
+    "grade": 3,
+    "power": 11000,
+    "shield": null,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Pale Moon",
+    "race": "Elf",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Twin Drive",
+    "skillText": "{{GB|2|AUTO|V|-|NoText}}:When this unit attacks a vanguard, choose up to one card from your soul, call it to (RC), and until end of turn, that unit and this unit get [Power]+3000.\n{{Magia}}{{StrideBonus|35|cost=Counter Blast (1)}} Soul Charge (1), choose up to one card from your soul, call it to (RC), and it gets [Power]+5000 until end of turn. At the end of that turn, put that called unit into your soul.",
+    "flavorText": "On a night of a radiant crescent moon, there was an magician who showed dreams beyond imagination",
+    "package": "DZ-SS02: Stride Deckset Harri",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/1/1e/DZ-SS02-001EN_%28Sample%29.png/revision/latest?cb=20241129194426",
+    "localImageUrl": "/cards/DZ-SS02-001_EN.png",
+    "artVariants": [
+      {
+        "rarity": "EN Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/1/1e/DZ-SS02-001EN_%28Sample%29.png/revision/latest?cb=20241129194426",
+        "localImageUrl": "/cards/DZ-SS02-001_EN.png",
+        "source": "English Official"
+      },
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/8/8a/DZ-SS02-001_%28Sample%29.png/revision/latest?cb=20240814030507",
+        "localImageUrl": "/cards/DZ-SS02-001_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": true,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS02/002",
+    "name": "Card Dealer, Jacqueline",
+    "kana": "カード・ディーラー ジャクリーン",
+    "rarity": "TD",
+    "grade": 2,
+    "power": 10000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Pale Moon",
+    "race": "Human",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Intercept",
+    "skillText": "[AUTO]:When this unit is rode upon by a grade 3 card with \"Harri\" in its card name, COST [Soul Blast (1)], look at the top seven cards of your deck, choose up to two normal units without sentinel from among them, reveal them, choose one of the revealed cards, put it into hand, put the rest of the revealed cards into soul, and shuffle the deck.\n[AUTO]:When this unit is placed on (RC) from soul, this unit gets [Power] +5000 until end of turn.",
+    "flavorText": "The dealer manipulated the fates on stage at will.",
+    "package": "DZ-SS02: Stride Deckset Harri",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/3/33/DZ-SS02-002EN_%28Sample%29.png/revision/latest?cb=20241128192957",
+    "localImageUrl": "/cards/DZ-SS02-002_EN.png",
+    "artVariants": [
+      {
+        "rarity": "EN Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/3/33/DZ-SS02-002EN_%28Sample%29.png/revision/latest?cb=20241128192957",
+        "localImageUrl": "/cards/DZ-SS02-002_EN.png",
+        "source": "English Official"
+      },
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/1/15/DZ-SS02-002_%28Sample%29.png/revision/latest?cb=20240814030514",
+        "localImageUrl": "/cards/DZ-SS02-002_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": true,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS02/003",
+    "name": "Moonlight Melody Tamer, Betty",
+    "kana": "ムーンライト・メロディテイマー ベティ",
+    "rarity": "TD",
+    "grade": 1,
+    "power": 8000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Pale Moon",
+    "race": "Warbeast",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Boost",
+    "skillText": "[AUTO]:When this unit is placed by riding from \"{{DLink|Happiness Collector}}\", draw a card, and you get a \"Masked Magician, Harri\" crest.",
+    "flavorText": "It is said that even the pale moon was enchanted by the marvelous singing voice.",
+    "package": "DZ-SS02: Stride Deckset Harri",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/0/00/DZ-SS02-003EN_%28Sample%29.png/revision/latest?cb=20241126182613",
+    "localImageUrl": "/cards/DZ-SS02-003_EN.png",
+    "artVariants": [
+      {
+        "rarity": "EN Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/0/00/DZ-SS02-003EN_%28Sample%29.png/revision/latest?cb=20241126182613",
+        "localImageUrl": "/cards/DZ-SS02-003_EN.png",
+        "source": "English Official"
+      },
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/d/de/DZ-SS02-003_%28Sample%29.png/revision/latest?cb=20240814030544",
+        "localImageUrl": "/cards/DZ-SS02-003_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": true,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS02/004",
+    "name": "Happiness Collector",
+    "kana": "ハピネス・コレクター",
+    "rarity": "TD",
+    "grade": 0,
+    "power": 6000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Pale Moon",
+    "race": "Warbeast",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Boost",
+    "skillText": "{{FV|D}}",
+    "flavorText": "The crowded audience was invited to special seats on an unforgettable night.",
+    "package": "DZ-SS02: Stride Deckset Harri",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/d/d9/DZ-SS02-004EN_%28Sample%29.png/revision/latest?cb=20241125193941",
+    "localImageUrl": "/cards/DZ-SS02-004_EN.png",
+    "artVariants": [
+      {
+        "rarity": "EN Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/d/d9/DZ-SS02-004EN_%28Sample%29.png/revision/latest?cb=20241125193941",
+        "localImageUrl": "/cards/DZ-SS02-004_EN.png",
+        "source": "English Official"
+      },
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/1/1d/DZ-SS02-004_%28Sample%29.png/revision/latest?cb=20240814030600",
+        "localImageUrl": "/cards/DZ-SS02-004_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": true,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS02/005",
+    "name": "Flying Manticore",
+    "kana": "フライング・マンティコア",
+    "rarity": "TD",
+    "grade": 3,
+    "power": 13000,
+    "shield": null,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Pale Moon",
+    "race": "Chimera",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Twin Drive",
+    "skillText": "[CONT]:If you have a grade 3 or greater vanguard with \"Harri\" in its card name, this card gets all of the following.\n•{{Magia}}{{GB|1|AUTO|R||NoText}}:At the end of the battle this unit attacked, if you did not call a unit from your soul during the battle phase this turn, COST [Counter Blast (1) & put this unit into soul], choose up to one card with a different card name from this card from your soul, and call it to (RC). At the end of that turn, put that called unit into the soul.\n•[AUTO]:When this card is discarded from hand while paying the cost for '''Stride''', draw a card.",
+    "flavorText": "It is said that numerous perfected techniques surpassed magic.",
+    "package": "DZ-SS02: Stride Deckset Harri",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/0/08/DZ-SS02-005_%28Sample%29.png/revision/latest?cb=20240821033017",
+    "localImageUrl": "/cards/DZ-SS02-005_JP.png",
+    "artVariants": [
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/0/08/DZ-SS02-005_%28Sample%29.png/revision/latest?cb=20240821033017",
+        "localImageUrl": "/cards/DZ-SS02-005_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS02/006",
+    "name": "Direful Doll, Orneta",
+    "kana": "ダイアフルドール おるねーた",
+    "rarity": "TD",
+    "grade": 2,
+    "power": 10000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Pale Moon",
+    "race": "Workeroid",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Intercept",
+    "skillText": "[AUTO]:When this unit is placed on (RC) from hand, if you have a \"Masked Magician, Harri\" crest, look at the top five cards of your deck, choose up to one card from among them, put it into soul, and shuffle the deck.\n[AUTO]:When this unit is put on (GC), if you have a \"Masked Magician, Harri\" crest, you may Soul Charge (1).",
+    "flavorText": "More freely than anyone else, the doll dance wildly in the sky.",
+    "package": "DZ-SS02: Stride Deckset Harri",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/1/10/DZ-SS02-006_%28Sample%29.png/revision/latest?cb=20240821033039",
+    "localImageUrl": "/cards/DZ-SS02-006_JP.png",
+    "artVariants": [
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/1/10/DZ-SS02-006_%28Sample%29.png/revision/latest?cb=20240821033039",
+        "localImageUrl": "/cards/DZ-SS02-006_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS02/007",
+    "name": "Darkside Princess",
+    "kana": "ダークサイド・プリンセス",
+    "rarity": "TD",
+    "grade": 2,
+    "power": 10000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Pale Moon",
+    "race": "Human",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Intercept",
+    "skillText": "[AUTO](RC):At the end of the battle this unit attacked, you may put this unit into soul.\n{{GB|1|AUTO|-||NoText}}:When this unit is placed on (RC) from soul, if you have a grade 3 or greater vanguard with \"Harri\" in its card name, this unit gets [Power]+10000 until end of turn. If you have two or more face up cards in your G zone, it gets [Power]+15000 instead of +10000.",
+    "flavorText": "In her dreams, the girl became a princess.",
+    "package": "DZ-SS02: Stride Deckset Harri",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/6/67/DZ-SS02-007EN_%28Sample%29.png/revision/latest?cb=20241205192747",
+    "localImageUrl": "/cards/DZ-SS02-007_EN.png",
+    "artVariants": [
+      {
+        "rarity": "EN Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/6/67/DZ-SS02-007EN_%28Sample%29.png/revision/latest?cb=20241205192747",
+        "localImageUrl": "/cards/DZ-SS02-007_EN.png",
+        "source": "English Official"
+      },
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/e/e5/DZ-SS02-007_%28Sample%29.png/revision/latest?cb=20240904032825",
+        "localImageUrl": "/cards/DZ-SS02-007_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS02/008",
+    "name": "Cutie Paratrooper",
+    "kana": "キューティ・パラトルーパー",
+    "rarity": "TD",
+    "grade": 1,
+    "power": 8000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Pale Moon",
+    "race": "Human",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Boost",
+    "skillText": "{{Magia}}[AUTO]:When this unit is placed on (RC) other than during the battle phase, if you have a grade 3 or greater vanguard with \"Harri\" in its card name, COST [put a rear-guard with a different card name from this unit into soul], choose a card with a different card name from the card put for this cost from your soul, and you may call it to (RC). At the end of that turn, put that called unit into the soul.",
+    "flavorText": "The performances of the Pale Moon Circus have always been sold out in any era.",
+    "package": "DZ-SS02: Stride Deckset Harri",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/1/1e/DZ-SS02-008EN_%28Sample%29.png/revision/latest?cb=20241204191336",
+    "localImageUrl": "/cards/DZ-SS02-008_EN.png",
+    "artVariants": [
+      {
+        "rarity": "EN Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/1/1e/DZ-SS02-008EN_%28Sample%29.png/revision/latest?cb=20241204191336",
+        "localImageUrl": "/cards/DZ-SS02-008_EN.png",
+        "source": "English Official"
+      },
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/f/fc/DZ-SS02-008_%28Sample%29.png/revision/latest?cb=20240814030617",
+        "localImageUrl": "/cards/DZ-SS02-008_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS02/009",
+    "name": "Masquerade Bunny",
+    "kana": "マスカレード・バニー",
+    "rarity": "TD",
+    "grade": 1,
+    "power": 8000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Pale Moon",
+    "race": "Warbeast",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Boost",
+    "skillText": "[CONT](Hand):While you are paying the cost for '''Stride''', this card may be discarded as a grade 3.\n[ACT](Hand):If you have a \"Masked Magician, Harri\" crest, COST [discard this card], search your deck or drop for up to one grade 3 card with \"Harri\" in its card name, reveal it and put it into hand, and if you searched the deck, shuffle the deck.",
+    "flavorText": "Amid the lively cheers, the bunny always had a smile.",
+    "package": "DZ-SS02: Stride Deckset Harri",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/4/47/DZ-SS02-009EN_%28Sample%29.png/revision/latest?cb=20241203181213",
+    "localImageUrl": "/cards/DZ-SS02-009_EN.png",
+    "artVariants": [
+      {
+        "rarity": "EN Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/4/47/DZ-SS02-009EN_%28Sample%29.png/revision/latest?cb=20241203181213",
+        "localImageUrl": "/cards/DZ-SS02-009_EN.png",
+        "source": "English Official"
+      },
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/7/74/DZ-SS02-009_%28Sample%29.png/revision/latest?cb=20240821033054",
+        "localImageUrl": "/cards/DZ-SS02-009_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS02/010",
+    "name": "Lunging Assistant",
+    "kana": "ランジング・アシスタント",
+    "rarity": "TD",
+    "grade": 1,
+    "power": 8000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Pale Moon",
+    "race": "Elf",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Boost",
+    "skillText": "[AUTO]:When this unit is placed on (RC) from hand, if you have a \"Masked Magician, Harri\" crest, Soul Charge (2).",
+    "flavorText": "Our illusions has no seeds or tricks☆",
+    "package": "DZ-SS02: Stride Deckset Harri",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/f/fa/DZ-SS02-010_%28Sample%29.png/revision/latest?cb=20240814030643",
+    "localImageUrl": "/cards/DZ-SS02-010_JP.png",
+    "artVariants": [
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/f/fa/DZ-SS02-010_%28Sample%29.png/revision/latest?cb=20240814030643",
+        "localImageUrl": "/cards/DZ-SS02-010_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS02/011",
+    "name": "Darkside Mirror Master",
+    "kana": "ダークサイド・ミラーマスター",
+    "rarity": "TD",
+    "grade": 1,
+    "power": 6000,
+    "shield": 0,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Pale Moon",
+    "race": "Succubus",
+    "cardType": "Normal Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Boost",
+    "skillText": "{{Perfect Guard|D2}}",
+    "flavorText": "50% chance of going missing...... A magician's choice is always absolute.",
+    "package": "DZ-SS02: Stride Deckset Harri",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/3/32/DZ-SS02-011_%28Sample%29.png/revision/latest?cb=20240821033107",
+    "localImageUrl": "/cards/DZ-SS02-011_JP.png",
+    "artVariants": [
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/3/32/DZ-SS02-011_%28Sample%29.png/revision/latest?cb=20240821033107",
+        "localImageUrl": "/cards/DZ-SS02-011_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS02/012",
+    "name": "Hades Dragon Deity of Resentment, Gallmageheld",
+    "kana": "えんこんのめいりゅうしん ゴルマギエルド",
+    "rarity": "TD",
+    "grade": 0,
+    "power": 5000,
+    "shield": 50000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Pale Moon",
+    "race": "Abyss Dragon",
+    "cardType": "Trigger Unit",
+    "triggerType": "Over",
+    "triggerEffect": "Over Trigger: During that drive check, remove this card, draw a card, choose one of your units, and it gets [Power]+100 Million until end of turn! Additional Effect: Choose one of your vanguards, and until end of turn, it gets [Critical]+1 and your opponent cannot call cards from hand to (GC)!",
+    "skillIcon": "Boost",
+    "skillText": "{{Over}}\n'''Additional Effect''' - You get {{AddedAbility|\"During your turn, all of your vanguards get [Power]+10000/[Critical]+1\"}} until end of this fight!",
+    "flavorText": "(D-BT01): Once resentment is planted, it will remain across eras as the root of evil.\n(D-BT06): Death for all ages to come. That is your unavoidable destiny.\n(D-SS03): No matter the future, there will always be grudges that remain unsettled.",
+    "package": "DZ-SS02: Stride Deckset Harri",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/7/7f/D-BT01-016EN-ORR_%28Sample%29.png/revision/latest?cb=20210604035150",
+    "localImageUrl": "/cards/DZ-SS02-012_EN.png",
+    "artVariants": [
+      {
+        "rarity": "EN Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/7/7f/D-BT01-016EN-ORR_%28Sample%29.png/revision/latest?cb=20210604035150",
+        "localImageUrl": "/cards/DZ-SS02-012_EN.png",
+        "source": "English Official"
+      },
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/9/96/D-BT01-SP16-SP_%28Sample%29.png/revision/latest?cb=20210412092447",
+        "localImageUrl": "/cards/DZ-SS02-012_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS02/013",
+    "name": "Swanky Enthraller",
+    "kana": "スワンキィ・エンスローラー",
+    "rarity": "TD",
+    "grade": 0,
+    "power": 5000,
+    "shield": 15000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Pale Moon",
+    "race": "Elf",
+    "cardType": "Trigger Unit",
+    "triggerType": "Critical",
+    "triggerEffect": "Critical +1 and Power +10000 to one unit.",
+    "skillIcon": "Boost",
+    "skillText": "",
+    "flavorText": "Dancing frivolously, a single meteor steals your gaze.",
+    "package": "DZ-SS02: Stride Deckset Harri",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/b/b7/D-SS05-040EN-C_%28Sample%29.png/revision/latest?cb=20230724130834",
+    "localImageUrl": "/cards/DZ-SS02-013_EN.png",
+    "artVariants": [
+      {
+        "rarity": "EN Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/b/b7/D-SS05-040EN-C_%28Sample%29.png/revision/latest?cb=20230724130834",
+        "localImageUrl": "/cards/DZ-SS02-013_EN.png",
+        "source": "English Official"
+      },
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/e/e2/D-SS05-040-C_%28Sample%29.png/revision/latest?cb=20230508044318",
+        "localImageUrl": "/cards/DZ-SS02-013_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS02/014",
+    "name": "Silky Sky Actress",
+    "kana": "シルキィスカイ・アクトレス",
+    "rarity": "TD",
+    "grade": 0,
+    "power": 5000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Pale Moon",
+    "race": "Elf",
+    "cardType": "Trigger Unit",
+    "triggerType": "Draw",
+    "triggerEffect": "Draw 1 card and Power +10000 to one unit.",
+    "skillIcon": "Boost",
+    "skillText": "",
+    "flavorText": "The large flowers blooming in the night sky will be surrounded by applause again this evening.",
+    "package": "DZ-SS02: Stride Deckset Harri",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/7/78/D-SS05-041EN-C_%28Sample%29.png/revision/latest?cb=20230724130840",
+    "localImageUrl": "/cards/DZ-SS02-014_EN.png",
+    "artVariants": [
+      {
+        "rarity": "EN Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/7/78/D-SS05-041EN-C_%28Sample%29.png/revision/latest?cb=20230724130840",
+        "localImageUrl": "/cards/DZ-SS02-014_EN.png",
+        "source": "English Official"
+      },
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/c/cd/D-SS05-041-C_%28Sample%29.png/revision/latest?cb=20230508044318",
+        "localImageUrl": "/cards/DZ-SS02-014_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS02/015",
+    "name": "Intrepid Spinner",
+    "kana": "イントレピッド・スピナー",
+    "rarity": "TD",
+    "grade": 0,
+    "power": 5000,
+    "shield": 15000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Pale Moon",
+    "race": "Warbeast",
+    "cardType": "Trigger Unit",
+    "triggerType": "Front",
+    "triggerEffect": "All front row units get Power +10000 until end of turn.",
+    "skillIcon": "Boost",
+    "skillText": "",
+    "flavorText": "I'm going to spin a few more than usual~!",
+    "package": "DZ-SS02: Stride Deckset Harri",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/a/ad/D-SS05-042EN-C_%28Sample%29.png/revision/latest?cb=20230724130924",
+    "localImageUrl": "/cards/DZ-SS02-015_EN.png",
+    "artVariants": [
+      {
+        "rarity": "EN Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/a/ad/D-SS05-042EN-C_%28Sample%29.png/revision/latest?cb=20230724130924",
+        "localImageUrl": "/cards/DZ-SS02-015_EN.png",
+        "source": "English Official"
+      },
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/3/31/D-SS05-042-C_%28Sample%29.png/revision/latest?cb=20230508044318",
+        "localImageUrl": "/cards/DZ-SS02-015_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS02/016",
+    "name": "Gambling Juggler",
+    "kana": "ギャンブリング・ジャグラー",
+    "rarity": "TD",
+    "grade": 0,
+    "power": 5000,
+    "shield": 15000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Pale Moon",
+    "race": "Elf",
+    "cardType": "Trigger Unit",
+    "triggerType": "Heal",
+    "triggerEffect": "If you have equal or more damage than your opponent, heal 1 damage! Also Power +10000 to one unit.",
+    "skillIcon": "Boost",
+    "skillText": "{{Heal|Short}}",
+    "flavorText": "Without the thrill, it wouldn't be any fun at all, would it?",
+    "package": "DZ-SS02: Stride Deckset Harri",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/9/9a/D-SS05-043EN-C_%28Sample%29.png/revision/latest?cb=20230724131002",
+    "localImageUrl": "/cards/DZ-SS02-016_EN.png",
+    "artVariants": [
+      {
+        "rarity": "EN Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/9/9a/D-SS05-043EN-C_%28Sample%29.png/revision/latest?cb=20230724131002",
+        "localImageUrl": "/cards/DZ-SS02-016_EN.png",
+        "source": "English Official"
+      },
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/3/33/D-SS05-043-C_%28Sample%29.png/revision/latest?cb=20230508044317",
+        "localImageUrl": "/cards/DZ-SS02-016_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS02/017",
+    "name": "Dragon Masquerade, Harri",
+    "kana": "ドラゴン・マスカレード ハリー",
+    "rarity": "TD",
+    "grade": 4,
+    "power": 15000,
+    "shield": null,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Pale Moon",
+    "race": "Elf",
+    "cardType": "G Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Triple Drive",
+    "skillText": "{{Stride|D2|Harri}}\n{{Magia}}{{GB|2|AUTO|V||NoText}}:When this unit attacks a vanguard, COST [Counter Blast (1) & put two rear-guards into soul], choose up to two cards with different card names from your soul, call them to (RC), choose up to two of your opponent's rear-guards, and put them into soul. At the end of that turn, put that called unit into the soul.",
+    "flavorText": "The top hat, that was the symbol of the legendary magician's invincibility.",
+    "package": "DZ-SS02: Stride Deckset Harri",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/b/b6/DZ-SS02-017EN_%28Sample%29.png/revision/latest?cb=20241206194224",
+    "localImageUrl": "/cards/DZ-SS02-017_EN.png",
+    "artVariants": [
+      {
+        "rarity": "EN Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/b/b6/DZ-SS02-017EN_%28Sample%29.png/revision/latest?cb=20241206194224",
+        "localImageUrl": "/cards/DZ-SS02-017_EN.png",
+        "source": "English Official"
+      },
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/7/7e/DZ-SS02-017_%28Sample%29.png/revision/latest?cb=20240904032832",
+        "localImageUrl": "/cards/DZ-SS02-017_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS02/018",
+    "name": "Jester Demonic Dragon, Lunatec Dragon",
+    "kana": "どうけまりゅう ルナテック・ドラゴン",
+    "rarity": "TD",
+    "grade": 4,
+    "power": 15000,
+    "shield": null,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Pale Moon",
+    "race": "Abyss Dragon",
+    "cardType": "G Unit",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillIcon": "Triple Drive",
+    "skillText": "{{Stride|D}}\n{{Magia}}[ACT](VC)[1/Turn]:COST [Turn a card from G zone face up], look at the top five cards of your deck, choose up to one card from among them, put it into soul, and shuffle the deck. Choose up to one card from your soul, and call it to (RC). At the end of that turn, put that called unit into the soul.",
+    "flavorText": "What the magic dragon loved most were candies and children's smiles.",
+    "package": "DZ-SS02: Stride Deckset Harri",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/4/4d/DZ-SS02-018EN_%28Sample%29.png/revision/latest?cb=20241202193031",
+    "localImageUrl": "/cards/DZ-SS02-018_EN.png",
+    "artVariants": [
+      {
+        "rarity": "EN Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/4/4d/DZ-SS02-018EN_%28Sample%29.png/revision/latest?cb=20241202193031",
+        "localImageUrl": "/cards/DZ-SS02-018_EN.png",
+        "source": "English Official"
+      },
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/f/f1/DZ-SS02-018_%28Sample%29.png/revision/latest?cb=20240821033124",
+        "localImageUrl": "/cards/DZ-SS02-018_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": false
+  },
+  {
+    "cardNo": "DZ-SS02/T01",
+    "name": "Masked Magician, Harri",
+    "kana": "マスク・マジシャン ハリー",
+    "rarity": "TD",
+    "grade": null,
+    "power": null,
+    "shield": null,
+    "critical": null,
+    "nation": "Dark States",
+    "clan": "Pale Moon",
+    "race": "Crest",
+    "cardType": "Crest",
+    "triggerType": null,
+    "triggerEffect": null,
+    "skillText": "[CONT]:You can perform '''Stride''', and cannot ride grade 3 or greater cards without \"Harri\" in their card names.\n[CONT]:The original [Power] of your grade 3 cards with \"Harri\" in their card names become 13000. ''(Including Heart cards)''\n[CONT]:During your turn, if you have a grade 3 or greater vanguard with \"Harri\" in its card name, all of your front row units get [Power]+5000 for each face up card in your G zone.\n{{GB|2|AUTO|-||NoText}}:At the end of your turn, if two or more of your cards were put into soul during the end phase this turn, you may draw a card.",
+    "flavorText": "",
+    "package": "DZ-SS02: Stride Deckset Harri",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/e/e1/DZ-SS02-T01EN_%28Sample%29.png/revision/latest?cb=20241127193856",
+    "localImageUrl": "/cards/DZ-SS02-T01_EN.png",
+    "artVariants": [
+      {
+        "rarity": "EN Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/e/e1/DZ-SS02-T01EN_%28Sample%29.png/revision/latest?cb=20241127193856",
+        "localImageUrl": "/cards/DZ-SS02-T01_EN.png",
+        "source": "English Official"
+      },
+      {
+        "rarity": "JP Edition",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/7/7b/DZ-SS02-T01_%28Sample%29.png/revision/latest?cb=20240814030654",
+        "localImageUrl": "/cards/DZ-SS02-T01_JP.png",
+        "source": "Japanese Release"
+      }
+    ],
+    "faqs": [],
+    "isRideDeck": false,
+    "isCrest": true
   }
 ]

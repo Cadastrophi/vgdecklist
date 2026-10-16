@@ -1,6 +1,7 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { VanguardCard } from '../types/card';
-import { Search, Swords, Shield, Eye, RotateCcw } from 'lucide-react';
+import { Search, RotateCcw, LayoutGrid, List } from 'lucide-react';
+import { playHapticClick } from '../utils/audio';
 
 interface CardExplorerProps {
   cards: VanguardCard[];
@@ -9,34 +10,45 @@ interface CardExplorerProps {
 
 export const CardExplorer: React.FC<CardExplorerProps> = ({ cards, onSelectCard }) => {
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedDeck, setSelectedDeck] = useState<string>('all');
   const [selectedGrade, setSelectedGrade] = useState<string>('all');
   const [selectedType, setSelectedType] = useState<string>('all');
-  const [selectedTrigger, setSelectedTrigger] = useState<string>('all');
-  const [selectedRace, setSelectedRace] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<'grade-desc' | 'grade-asc' | 'power-desc' | 'shield-desc' | 'name-asc'>('grade-desc');
+  const [selectedClan, setSelectedClan] = useState<string>('all');
+  const [viewMode, setViewMode] = useState<'grid' | 'table'>('grid');
 
-  // Extract unique races for dropdown filter
-  const allRaces = useMemo(() => {
-    const set = new Set<string>();
-    cards.forEach(c => {
-      if (c.race) {
-        c.race.split(' / ').forEach(r => set.add(r.trim()));
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
+  // Global hotkey '/' to focus search input
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === '/' && document.activeElement !== searchInputRef.current) {
+        e.preventDefault();
+        searchInputRef.current?.focus();
       }
-    });
-    return Array.from(set).sort();
-  }, [cards]);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
-  // Filtered and sorted cards
   const filteredCards = useMemo(() => {
     return cards.filter(card => {
-      // Search query matches name, cardNo, skillText, or race
+      // Search query matches name, cardNo, skillText, race, clan
       const q = searchQuery.toLowerCase().trim();
       if (q) {
         const matchName = card.name.toLowerCase().includes(q);
         const matchNo = card.cardNo.toLowerCase().includes(q);
         const matchSkill = card.skillText.toLowerCase().includes(q);
         const matchRace = card.race.toLowerCase().includes(q);
-        if (!matchName && !matchNo && !matchSkill && !matchRace) return false;
+        const matchClan = card.clan.toLowerCase().includes(q);
+        if (!matchName && !matchNo && !matchSkill && !matchRace && !matchClan) return false;
+      }
+
+      // Deck Package filter
+      if (selectedDeck !== 'all') {
+        if (selectedDeck === 'chronojet' && !card.cardNo.startsWith('D-SS03')) return false;
+        if (selectedDeck === 'blaster' && !card.cardNo.startsWith('DZ-SS14')) return false;
+        if (selectedDeck === 'overlord' && !card.cardNo.startsWith('DZ-SS15')) return false;
+        if (selectedDeck === 'harri' && !card.cardNo.startsWith('DZ-SS02')) return false;
       }
 
       // Grade filter
@@ -51,103 +63,101 @@ export const CardExplorer: React.FC<CardExplorerProps> = ({ cards, onSelectCard 
 
       // Card Type filter
       if (selectedType !== 'all') {
-        if (card.cardType !== selectedType) return false;
+        if (selectedType === 'Trigger') {
+          if (card.cardType !== 'Trigger Unit') return false;
+        } else if (selectedType === 'Normal') {
+          if (card.cardType !== 'Normal Unit') return false;
+        } else if (selectedType === 'G Unit') {
+          if (card.cardType !== 'G Unit') return false;
+        } else if (selectedType === 'Crest') {
+          if (card.cardType !== 'Crest') return false;
+        } else if (selectedType === 'Order') {
+          if (!card.cardType.includes('Order')) return false;
+        }
       }
 
-      // Trigger Type filter
-      if (selectedTrigger !== 'all') {
-        if (selectedTrigger === 'none' && card.triggerType) return false;
-        if (selectedTrigger !== 'none' && card.triggerType !== selectedTrigger) return false;
-      }
-
-      // Race filter
-      if (selectedRace !== 'all') {
-        if (!card.race.includes(selectedRace)) return false;
+      // Clan filter
+      if (selectedClan !== 'all' && card.clan !== selectedClan) {
+        return false;
       }
 
       return true;
-    }).sort((a, b) => {
-      switch (sortBy) {
-        case 'grade-desc': {
-          const ga = a.grade ?? -1;
-          const gb = b.grade ?? -1;
-          return gb - ga;
-        }
-        case 'grade-asc': {
-          const ga = a.grade ?? -1;
-          const gb = b.grade ?? -1;
-          return ga - gb;
-        }
-        case 'power-desc': {
-          const pa = a.power ?? 0;
-          const pb = b.power ?? 0;
-          return pb - pa;
-        }
-        case 'shield-desc': {
-          const sa = a.shield ?? 0;
-          const sb = b.shield ?? 0;
-          return sb - sa;
-        }
-        case 'name-asc':
-          return a.name.localeCompare(b.name);
-        default:
-          return 0;
-      }
     });
-  }, [cards, searchQuery, selectedGrade, selectedType, selectedTrigger, selectedRace, sortBy]);
+  }, [cards, searchQuery, selectedDeck, selectedGrade, selectedType, selectedClan]);
 
-  const resetFilters = () => {
+  const uniqueClans = useMemo(() => {
+    const clans = new Set<string>();
+    cards.forEach(c => {
+      if (c.clan) clans.add(c.clan);
+    });
+    return Array.from(clans).sort();
+  }, [cards]);
+
+  const handleResetFilters = () => {
+    playHapticClick(600);
     setSearchQuery('');
+    setSelectedDeck('all');
     setSelectedGrade('all');
     setSelectedType('all');
-    setSelectedTrigger('all');
-    setSelectedRace('all');
-    setSortBy('grade-desc');
+    setSelectedClan('all');
   };
 
-  const hasActiveFilters = 
-    searchQuery !== '' || 
-    selectedGrade !== 'all' || 
-    selectedType !== 'all' || 
-    selectedTrigger !== 'all' || 
-    selectedRace !== 'all';
-
   return (
-    <div className="space-y-6 pb-16">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6 animate-fade-in">
       
-      {/* Search and Filter Panel */}
-      <div className="bg-slate-900/80 rounded-2xl p-5 border border-purple-900/30 shadow-xl space-y-4">
+      {/* Search and Filters Header */}
+      <div className="rounded-3xl bg-[#0c101d] border border-white/[0.08] p-5 sm:p-6 shadow-2xl space-y-4">
         
-        {/* Main Search Bar */}
+        {/* Search input with '/' badge */}
         <div className="relative">
-          <Search className="w-5 h-5 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
           <input
+            ref={searchInputRef}
             type="text"
+            placeholder="Search card by name, card number, ability text, clan, or race..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search by card name, card number (e.g. D-SS03/001), ability text, or race..."
-            className="w-full bg-slate-950/90 text-white pl-11 pr-4 py-3 rounded-xl border border-slate-700/80 focus:border-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500 text-sm transition placeholder:text-slate-500"
+            className="w-full pl-12 pr-16 py-3.5 rounded-2xl bg-white/[0.03] border border-white/[0.1] text-white placeholder-slate-400 focus:outline-none focus:border-amber-400/80 focus:bg-white/[0.05] transition-all text-sm sm:text-base font-normal"
           />
-          {searchQuery && (
-            <button
-              onClick={() => setSearchQuery('')}
-              className="absolute right-3.5 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-white px-2 py-0.5 rounded bg-slate-800"
-            >
-              Clear
-            </button>
-          )}
+          <div className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center gap-1.5 pointer-events-none">
+            <kbd className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-mono text-slate-400 bg-white/[0.06] border border-white/[0.1] rounded shadow-sm">
+              /
+            </kbd>
+          </div>
         </div>
 
-        {/* Filter Controls Row */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 pt-2">
+        {/* Filter Controls Bar */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 pt-2 border-t border-white/[0.06]">
           
-          {/* Grade Selector */}
+          {/* Deck Package Filter */}
           <div>
-            <label className="block text-[11px] font-mono text-slate-400 mb-1">GRADE</label>
+            <label className="text-[10px] font-mono text-slate-400 block mb-1 uppercase">Decklist</label>
+            <select
+              value={selectedDeck}
+              onChange={(e) => {
+                playHapticClick(650);
+                setSelectedDeck(e.target.value);
+              }}
+              className="w-full py-2 px-2.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-xs text-slate-200 focus:outline-none focus:border-amber-400 transition"
+            >
+              <option value="all">All Decks ({cards.length})</option>
+              <option value="chronojet">Chronojet (D-SS03)</option>
+              <option value="blaster">Blaster Blade (DZ-SS14)</option>
+              <option value="overlord">Dragonic Overlord (DZ-SS15)</option>
+              <option value="harri">Harri (DZ-SS02)</option>
+            </select>
+          </div>
+
+          {/* Grade Filter */}
+          <div>
+            <label className="text-[10px] font-mono text-slate-400 block mb-1 uppercase">Grade</label>
             <select
               value={selectedGrade}
-              onChange={(e) => setSelectedGrade(e.target.value)}
-              className="w-full bg-slate-950 text-slate-200 text-xs px-2.5 py-2 rounded-lg border border-slate-700 focus:border-purple-500 focus:outline-none"
+              onChange={(e) => {
+                playHapticClick(650);
+                setSelectedGrade(e.target.value);
+              }}
+              className="w-full py-2 px-2.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-xs text-slate-200 focus:outline-none focus:border-amber-400 transition"
             >
               <option value="all">All Grades</option>
               <option value="4">Grade 4 (Stride)</option>
@@ -159,198 +169,231 @@ export const CardExplorer: React.FC<CardExplorerProps> = ({ cards, onSelectCard 
             </select>
           </div>
 
-          {/* Card Type Selector */}
+          {/* Card Type Filter */}
           <div>
-            <label className="block text-[11px] font-mono text-slate-400 mb-1">CARD TYPE</label>
+            <label className="text-[10px] font-mono text-slate-400 block mb-1 uppercase">Type</label>
             <select
               value={selectedType}
-              onChange={(e) => setSelectedType(e.target.value)}
-              className="w-full bg-slate-950 text-slate-200 text-xs px-2.5 py-2 rounded-lg border border-slate-700 focus:border-purple-500 focus:outline-none"
+              onChange={(e) => {
+                playHapticClick(650);
+                setSelectedType(e.target.value);
+              }}
+              className="w-full py-2 px-2.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-xs text-slate-200 focus:outline-none focus:border-amber-400 transition"
             >
               <option value="all">All Types</option>
-              <option value="Normal Unit">Normal Unit</option>
-              <option value="Trigger Unit">Trigger Unit</option>
+              <option value="Normal">Normal Unit</option>
+              <option value="Trigger">Trigger Unit</option>
               <option value="G Unit">G Unit (Stride)</option>
               <option value="Crest">Crest</option>
+              <option value="Order">Order Card</option>
             </select>
           </div>
 
-          {/* Trigger Type Selector */}
+          {/* Clan Filter */}
           <div>
-            <label className="block text-[11px] font-mono text-slate-400 mb-1">TRIGGER</label>
+            <label className="text-[10px] font-mono text-slate-400 block mb-1 uppercase">Clan</label>
             <select
-              value={selectedTrigger}
-              onChange={(e) => setSelectedTrigger(e.target.value)}
-              className="w-full bg-slate-950 text-slate-200 text-xs px-2.5 py-2 rounded-lg border border-slate-700 focus:border-purple-500 focus:outline-none"
+              value={selectedClan}
+              onChange={(e) => {
+                playHapticClick(650);
+                setSelectedClan(e.target.value);
+              }}
+              className="w-full py-2 px-2.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-xs text-slate-200 focus:outline-none focus:border-amber-400 transition"
             >
-              <option value="all">All Triggers</option>
-              <option value="Critical">Critical</option>
-              <option value="Draw">Draw</option>
-              <option value="Front">Front</option>
-              <option value="Heal">Heal</option>
-              <option value="Over">Over Trigger</option>
-              <option value="none">No Trigger</option>
-            </select>
-          </div>
-
-          {/* Race Selector */}
-          <div>
-            <label className="block text-[11px] font-mono text-slate-400 mb-1">RACE</label>
-            <select
-              value={selectedRace}
-              onChange={(e) => setSelectedRace(e.target.value)}
-              className="w-full bg-slate-950 text-slate-200 text-xs px-2.5 py-2 rounded-lg border border-slate-700 focus:border-purple-500 focus:outline-none"
-            >
-              <option value="all">All Races</option>
-              {allRaces.map(race => (
-                <option key={race} value={race}>{race}</option>
+              <option value="all">All Clans</option>
+              {uniqueClans.map(clan => (
+                <option key={clan} value={clan}>{clan}</option>
               ))}
             </select>
           </div>
 
-          {/* Sort By Selector */}
+          {/* View Mode Toggle */}
           <div>
-            <label className="block text-[11px] font-mono text-slate-400 mb-1">SORT BY</label>
-            <select
-              value={sortBy}
-              onChange={(e: any) => setSortBy(e.target.value)}
-              className="w-full bg-slate-950 text-slate-200 text-xs px-2.5 py-2 rounded-lg border border-slate-700 focus:border-purple-500 focus:outline-none"
-            >
-              <option value="grade-desc">Grade (Highest First)</option>
-              <option value="grade-asc">Grade (Lowest First)</option>
-              <option value="power-desc">Power (Highest First)</option>
-              <option value="shield-desc">Shield (Highest First)</option>
-              <option value="name-asc">Name (A-Z)</option>
-            </select>
+            <label className="text-[10px] font-mono text-slate-400 block mb-1 uppercase">Layout</label>
+            <div className="flex rounded-xl bg-white/[0.04] border border-white/[0.08] p-0.5">
+              <button
+                onClick={() => {
+                  playHapticClick(650);
+                  setViewMode('grid');
+                }}
+                className={`flex-1 flex items-center justify-center gap-1 py-1.5 rounded-lg text-xs font-mono transition ${
+                  viewMode === 'grid'
+                    ? 'bg-amber-500/20 text-amber-300 font-bold border border-amber-500/40 shadow-sm'
+                    : 'text-slate-400 hover:text-slate-200'
+                }`}
+              >
+                <LayoutGrid className="w-3.5 h-3.5" />
+                <span>Grid</span>
+              </button>
+              <button
+                onClick={() => {
+                  playHapticClick(650);
+                  setViewMode('table');
+                }}
+                className={`flex-1 flex items-center justify-center gap-1 py-1.5 rounded-lg text-xs font-mono transition ${
+                  viewMode === 'table'
+                    ? 'bg-amber-500/20 text-amber-300 font-bold border border-amber-500/40 shadow-sm'
+                    : 'text-slate-400 hover:text-slate-200'
+                }`}
+              >
+                <List className="w-3.5 h-3.5" />
+                <span>Table</span>
+              </button>
+            </div>
           </div>
 
-          {/* Reset Filters Button */}
+          {/* Reset Filters */}
           <div className="flex items-end">
             <button
-              onClick={resetFilters}
-              disabled={!hasActiveFilters}
-              className={`w-full text-xs font-semibold py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 transition-colors ${
-                hasActiveFilters
-                  ? 'bg-rose-950/70 hover:bg-rose-900 text-rose-300 border border-rose-800'
-                  : 'bg-slate-950 text-slate-600 border border-slate-800 cursor-not-allowed'
-              }`}
+              onClick={handleResetFilters}
+              className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] text-slate-300 border border-white/[0.08] text-xs font-mono transition pressable"
             >
-              <RotateCcw className="w-3.5 h-3.5" />
-              Reset Filters
+              <RotateCcw className="w-3 h-3 text-slate-400" />
+              <span>Reset</span>
             </button>
           </div>
 
         </div>
 
-        {/* Results Bar */}
-        <div className="flex items-center justify-between text-xs text-slate-400 font-mono pt-3 border-t border-slate-800/80">
-          <span>
-            Showing <strong className="text-white">{filteredCards.length}</strong> of <strong className="text-white">{cards.length}</strong> cards
-          </span>
-          <div className="flex items-center gap-3">
-            <span className="flex items-center gap-1">
-              <span className="w-2 h-2 rounded-full bg-amber-400" /> D-SS03 Chronojet Set
-            </span>
+        {/* Results Counter */}
+        <div className="flex items-center justify-between pt-2 border-t border-white/[0.04] text-xs font-mono text-slate-400">
+          <div>
+            Showing <strong className="text-amber-400 font-bold">{filteredCards.length}</strong> of {cards.length} authentic cards
+          </div>
+          <div className="hidden sm:block text-[11px] text-slate-500">
+            Use arrow keys or click card for rulings & art switcher
           </div>
         </div>
 
       </div>
 
-      {/* Cards Grid */}
-      {filteredCards.length > 0 ? (
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-          {filteredCards.map((card) => {
-            return (
-              <div
-                key={card.cardNo}
-                onClick={() => onSelectCard(card)}
-                className="group bg-slate-900/70 hover:bg-slate-900 rounded-xl p-3 border border-slate-800 hover:border-purple-500/60 transition-all duration-200 cursor-pointer shadow-lg hover:shadow-purple-500/20 flex flex-col justify-between"
-              >
-                {/* Image container */}
-                <div className="relative aspect-[5/7] rounded-lg overflow-hidden mb-2.5 bg-slate-950">
-                  <img
-                    src={card.localImageUrl || card.imageUrl}
-                    alt={card.name}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-
-                  {/* Top Badges */}
-                  <div className="absolute top-1.5 left-1.5 flex flex-col gap-1">
-                    {card.grade !== null ? (
-                      <span className="px-1.5 py-0.5 text-[9px] font-mono font-bold rounded bg-slate-950/90 text-amber-300 border border-amber-500/40">
-                        G{card.grade}
-                      </span>
-                    ) : (
-                      <span className="px-1.5 py-0.5 text-[9px] font-mono font-bold rounded bg-purple-950/90 text-purple-300 border border-purple-500/40">
-                        CREST
-                      </span>
-                    )}
-
-                    {card.isRideDeck && (
-                      <span className="px-1.5 py-0.5 text-[8px] font-mono font-bold rounded bg-cyan-950/90 text-cyan-300 border border-cyan-500/40">
-                        RIDE
-                      </span>
-                    )}
-
-                    {card.isGUnit && (
-                      <span className="px-1.5 py-0.5 text-[8px] font-mono font-bold rounded bg-red-950/90 text-red-300 border border-red-500/40">
-                        STRIDE
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Trigger Badge */}
-                  {card.triggerType && (
-                    <span className="absolute bottom-1.5 left-1.5 px-2 py-0.5 text-[9px] font-bold rounded bg-slate-950/90 text-amber-300 border border-amber-500/50 shadow-md">
-                      {card.triggerType}
-                    </span>
-                  )}
-
-                  {/* Inspect Icon Hover Overlay */}
-                  <div className="absolute inset-0 bg-purple-950/30 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
-                    <span className="px-2.5 py-1 rounded-full bg-slate-950/90 text-white text-xs font-semibold flex items-center gap-1 shadow-lg border border-purple-400">
-                      <Eye className="w-3.5 h-3.5 text-purple-400" />
-                      View Card
-                    </span>
-                  </div>
+      {/* Grid View */}
+      {viewMode === 'grid' ? (
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3.5 sm:gap-4">
+          {filteredCards.map((card) => (
+            <div
+              key={card.cardNo}
+              onClick={() => {
+                playHapticClick(700);
+                onSelectCard(card);
+              }}
+              className="group cursor-pointer rounded-2xl bg-[#0f1322] border border-white/[0.08] hover:border-amber-400/50 p-2.5 space-y-2 card-foil pressable shadow-lg"
+            >
+              <div className="relative aspect-[7/10] rounded-xl overflow-hidden bg-slate-900">
+                <img
+                  src={card.localImageUrl || card.imageUrl}
+                  alt={card.name}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                
+                {/* Grade Badge */}
+                <div className="absolute top-1.5 left-1.5 px-2 py-0.5 rounded bg-black/80 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold">
+                  {card.grade !== null ? `G${card.grade}` : 'CREST'}
                 </div>
 
-                {/* Card Meta */}
-                <div>
-                  <div className="flex items-center justify-between text-[10px] font-mono text-slate-400 mb-0.5">
-                    <span className="text-purple-400 font-semibold">{card.cardNo}</span>
-                    <span className="text-slate-400">{card.rarity}</span>
+                {/* Trigger Chip */}
+                {card.triggerType && (
+                  <div className="absolute top-1.5 right-1.5 px-1.5 py-0.5 rounded bg-rose-600/90 text-white text-[9px] font-mono font-bold">
+                    {card.triggerType}
                   </div>
+                )}
 
-                  <h4 className="text-xs sm:text-sm font-bold text-white group-hover:text-purple-300 transition-colors line-clamp-1">
-                    {card.name}
-                  </h4>
-                  <p className="text-[10px] text-slate-400 line-clamp-1 mt-0.5">
-                    {card.race}
-                  </p>
-
-                  <div className="flex items-center justify-between text-[10px] text-slate-400 font-mono mt-2 pt-1.5 border-t border-slate-800">
-                    <span className="flex items-center gap-0.5 text-slate-300">
-                      <Swords className="w-3 h-3 text-rose-400" />
-                      {card.power !== null ? `${(card.power / 1000).toFixed(0)}k` : '—'}
-                    </span>
-                    <span className="flex items-center gap-0.5 text-slate-300">
-                      <Shield className="w-3 h-3 text-sky-400" />
-                      {card.shield !== null ? `${(card.shield / 1000).toFixed(0)}k` : '0k'}
-                    </span>
+                {/* Art Count Chip */}
+                {card.artVariants && card.artVariants.length > 1 && (
+                  <div className="absolute bottom-1.5 left-1.5 px-1.5 py-0.2 rounded bg-black/80 backdrop-blur-md border border-white/20 text-[9px] font-mono text-amber-300">
+                    {card.artVariants.length} Arts
                   </div>
+                )}
+              </div>
+
+              <div>
+                <p className="text-xs font-bold text-white truncate group-hover:text-amber-300 transition-colors">
+                  {card.name}
+                </p>
+                <div className="flex items-center justify-between text-[10px] font-mono text-slate-400 mt-1">
+                  <span>{card.cardNo}</span>
+                  <span className="text-amber-400">{card.power ? card.power.toLocaleString() : ''}</span>
                 </div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       ) : (
-        <div className="p-12 text-center rounded-2xl bg-slate-900/40 border border-slate-800">
-          <p className="text-lg font-bold text-slate-300 mb-2">No cards match your filter criteria.</p>
-          <p className="text-sm text-slate-500 mb-4">Try clearing some filters or searching with different keywords.</p>
+        /* Table View for Compact Browser Use */
+        <div className="rounded-2xl bg-[#0c101d] border border-white/[0.08] overflow-hidden shadow-xl">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-xs text-slate-200">
+              <thead className="bg-white/[0.03] border-b border-white/[0.08] text-slate-400 font-mono uppercase text-[10px]">
+                <tr>
+                  <th className="py-3 px-4">Card No</th>
+                  <th className="py-3 px-4">Name</th>
+                  <th className="py-3 px-3">Grade</th>
+                  <th className="py-3 px-3">Type</th>
+                  <th className="py-3 px-3">Power</th>
+                  <th className="py-3 px-3">Shield</th>
+                  <th className="py-3 px-4">Clan</th>
+                  <th className="py-3 px-4">Skill Icon</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-white/[0.04]">
+                {filteredCards.map((card) => (
+                  <tr
+                    key={card.cardNo}
+                    onClick={() => {
+                      playHapticClick(700);
+                      onSelectCard(card);
+                    }}
+                    className="hover:bg-white/[0.04] cursor-pointer transition"
+                  >
+                    <td className="py-2.5 px-4 font-mono text-amber-400">{card.cardNo}</td>
+                    <td className="py-2.5 px-4 font-bold text-white max-w-[200px] truncate">{card.name}</td>
+                    <td className="py-2.5 px-3 font-mono">
+                      {card.grade !== null ? (
+                        <span className={`px-2 py-0.5 rounded text-[10px] font-bold ${
+                          card.grade === 4 ? 'bg-red-950 text-red-300' :
+                          card.grade === 3 ? 'bg-amber-950 text-amber-300' :
+                          card.grade === 2 ? 'bg-blue-950 text-blue-300' :
+                          card.grade === 1 ? 'bg-emerald-950 text-emerald-300' : 'bg-slate-800 text-slate-300'
+                        }`}>
+                          G{card.grade}
+                        </span>
+                      ) : (
+                        <span className="px-2 py-0.5 rounded text-[10px] bg-purple-950 text-purple-300 font-bold">Crest</span>
+                      )}
+                    </td>
+                    <td className="py-2.5 px-3">
+                      {card.triggerType ? (
+                        <span className="text-rose-400 font-semibold">{card.triggerType} Trigger</span>
+                      ) : (
+                        card.cardType
+                      )}
+                    </td>
+                    <td className="py-2.5 px-3 font-mono text-amber-300">
+                      {card.power ? card.power.toLocaleString() : '-'}
+                    </td>
+                    <td className="py-2.5 px-3 font-mono text-cyan-300">
+                      {card.shield !== null && card.shield !== undefined ? `+${card.shield.toLocaleString()}` : '-'}
+                    </td>
+                    <td className="py-2.5 px-4 text-slate-400">{card.clan}</td>
+                    <td className="py-2.5 px-4 font-mono text-slate-400">
+                      {card.skillIcon || '-'}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
+      {/* Empty State */}
+      {filteredCards.length === 0 && (
+        <div className="text-center py-16 space-y-3 bg-white/[0.02] rounded-3xl border border-white/[0.06]">
+          <p className="text-slate-400 text-base">No cards match the specified filters.</p>
           <button
-            onClick={resetFilters}
-            className="px-4 py-2 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-xs transition shadow-lg shadow-purple-600/30"
+            onClick={handleResetFilters}
+            className="px-4 py-2 rounded-xl bg-amber-500/20 text-amber-300 border border-amber-500/40 text-xs font-mono pressable"
           >
             Clear All Filters
           </button>

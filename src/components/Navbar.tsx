@@ -1,99 +1,238 @@
 import React from 'react';
-import { Layers, Search, BookOpen, Sparkles, Cpu } from 'lucide-react';
+import { Layers, Search, BookOpen, Sparkles, Volume2, VolumeX, Keyboard, Filter } from 'lucide-react';
+import { playHapticClick } from '../utils/audio';
 
-export type ActiveTab = 'deck' | 'explorer' | 'guide';
+export type ActiveTab = 'deck' | 'decks' | 'explorer' | 'guide';
 
 interface NavbarProps {
   activeTab: ActiveTab;
   setActiveTab: (tab: ActiveTab) => void;
+  activeDeckId: string;
+  setActiveDeckId: (deckId: string) => void;
   totalCards: number;
+  soundEnabled: boolean;
+  onToggleSound: () => void;
+  onOpenShortcuts: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, totalCards }) => {
+export const Navbar: React.FC<NavbarProps> = ({
+  activeTab,
+  setActiveTab,
+  activeDeckId,
+  setActiveDeckId,
+  totalCards,
+  soundEnabled,
+  onToggleSound,
+  onOpenShortcuts
+}) => {
+  const getDeckColor = () => {
+    switch (activeDeckId) {
+      case 'd-ss03-chronojet':
+        return 'bg-gradient-to-tr from-amber-500 via-purple-600 to-amber-300';
+      case 'dz-ss14-blaster-blade':
+        return 'bg-gradient-to-tr from-blue-600 via-sky-400 to-amber-300';
+      case 'dz-ss15-dragonic-overlord':
+        return 'bg-gradient-to-tr from-rose-600 via-red-500 to-amber-400';
+      case 'dz-ss02-harri':
+        return 'bg-gradient-to-tr from-pink-600 via-purple-500 to-amber-300';
+      default:
+        return 'bg-gradient-to-tr from-amber-500 via-purple-600 to-amber-300';
+    }
+  };
+
   return (
-    <header className="sticky top-0 z-40 bg-slate-950/85 backdrop-blur-md border-b border-purple-900/30 shadow-2xl shadow-purple-950/20">
+    <header className="sticky top-0 z-40 bg-[#080a11]/90 backdrop-blur-xl border-b border-white/[0.08] shadow-2xl transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20 gap-4">
           
-          {/* Logo & Brand */}
-          <div className="flex items-center gap-3 cursor-pointer" onClick={() => setActiveTab('deck')}>
-            <div className="relative group">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-600 via-purple-600 to-cyan-500 p-[2px] transition duration-300 group-hover:scale-105 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.5)]">
-                <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
-                  <Cpu className="w-6 h-6 text-amber-400 group-hover:text-purple-300 transition-colors" />
+          {/* Brand & Home */}
+          <div className="flex items-center gap-4">
+            <div 
+              onClick={() => {
+                playHapticClick(650);
+                setActiveTab('deck');
+              }}
+              className="flex items-center gap-3 cursor-pointer group select-none"
+            >
+              <div className="relative">
+                <div className={`w-11 h-11 rounded-xl p-[2px] transition-all duration-300 group-hover:scale-105 ${getDeckColor()}`}>
+                  <div className="w-full h-full bg-[#090c15] rounded-[9px] flex items-center justify-center">
+                    <Sparkles className="w-5 h-5 text-amber-400" />
+                  </div>
                 </div>
               </div>
-              <span className="absolute -bottom-1 -right-1 flex h-4 w-4">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-4 w-4 bg-purple-600 text-[9px] font-bold text-white items-center justify-center">D</span>
-              </span>
+              <div className="hidden sm:block">
+                <div className="flex items-center gap-1.5">
+                  <span className="font-heading font-extrabold text-white text-lg tracking-wider">
+                    VANGUARD
+                  </span>
+                  <span className="text-[10px] font-mono font-bold px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                    DECKLIST
+                  </span>
+                </div>
+                <p className="text-[10px] font-mono text-slate-400 tracking-tight">
+                  High-Fidelity TCG Directory
+                </p>
+              </div>
             </div>
 
-            <div>
-              <div className="flex items-center gap-2">
-                <h1 className="text-xl sm:text-2xl font-extrabold tracking-wider bg-gradient-to-r from-amber-300 via-purple-200 to-cyan-300 bg-clip-text text-transparent font-heading">
-                  CARDFIGHT!! VANGUARD
-                </h1>
-                <span className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-mono font-bold uppercase rounded bg-purple-950/80 text-purple-300 border border-purple-800/50">
-                  D-SS03
-                </span>
-              </div>
-              <p className="text-xs text-slate-400 font-mono flex items-center gap-1.5">
-                <span className="text-amber-400">Stride Deckset Chronojet</span>
-                <span>•</span>
-                <span className="text-slate-400">Standard D-Series</span>
-              </p>
+            {/* Quick Deck Switcher Carousel in Navbar */}
+            <div className="hidden lg:flex items-center gap-1.5 bg-white/[0.03] p-1 rounded-2xl border border-white/[0.06]">
+              <button
+                onClick={() => {
+                  playHapticClick(700);
+                  setActiveDeckId('d-ss03-chronojet');
+                }}
+                className={`px-2.5 py-1 rounded-xl text-xs font-mono transition-all pressable ${
+                  activeDeckId === 'd-ss03-chronojet'
+                    ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40 font-bold shadow-sm'
+                    : 'text-slate-400 hover:text-slate-200'
+                }`}
+              >
+                Chronojet
+              </button>
+              <button
+                onClick={() => {
+                  playHapticClick(700);
+                  setActiveDeckId('dz-ss14-blaster-blade');
+                }}
+                className={`px-2.5 py-1 rounded-xl text-xs font-mono transition-all pressable ${
+                  activeDeckId === 'dz-ss14-blaster-blade'
+                    ? 'bg-sky-500/20 text-sky-300 border border-sky-500/40 font-bold shadow-sm'
+                    : 'text-slate-400 hover:text-slate-200'
+                }`}
+              >
+                Blaster Blade
+              </button>
+              <button
+                onClick={() => {
+                  playHapticClick(700);
+                  setActiveDeckId('dz-ss15-dragonic-overlord');
+                }}
+                className={`px-2.5 py-1 rounded-xl text-xs font-mono transition-all pressable ${
+                  activeDeckId === 'dz-ss15-dragonic-overlord'
+                    ? 'bg-rose-500/20 text-rose-300 border border-rose-500/40 font-bold shadow-sm'
+                    : 'text-slate-400 hover:text-slate-200'
+                }`}
+              >
+                Overlord
+              </button>
+              <button
+                onClick={() => {
+                  playHapticClick(700);
+                  setActiveDeckId('dz-ss02-harri');
+                }}
+                className={`px-2.5 py-1 rounded-xl text-xs font-mono transition-all pressable ${
+                  activeDeckId === 'dz-ss02-harri'
+                    ? 'bg-pink-500/20 text-pink-300 border border-pink-500/40 font-bold shadow-sm'
+                    : 'text-slate-400 hover:text-slate-200'
+                }`}
+              >
+                Harri
+              </button>
             </div>
           </div>
 
-          {/* Navigation Links */}
-          <nav className="flex items-center gap-1 sm:gap-2">
+          {/* Center Navigation Tabs (Deck View, Choose Deck / Filter, Card Explorer, Guide) */}
+          <nav className="flex items-center gap-1 sm:gap-2 bg-white/[0.04] p-1.5 rounded-2xl border border-white/[0.08] backdrop-blur-md">
+            
+            {/* Tab 1: Current Deck */}
             <button
-              onClick={() => setActiveTab('deck')}
-              className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${
+              onClick={() => {
+                playHapticClick(650);
+                setActiveTab('deck');
+              }}
+              className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all pressable ${
                 activeTab === 'deck'
-                  ? 'bg-gradient-to-r from-purple-700/80 to-amber-600/80 text-white shadow-lg shadow-purple-900/40 border border-purple-500/40'
-                  : 'text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent'
+                  ? 'bg-white/[0.1] text-white shadow-lg shadow-black/40 border border-white/[0.15]'
+                  : 'text-slate-400 hover:text-slate-200 hover:bg-white/[0.04]'
               }`}
             >
               <Layers className="w-4 h-4 text-amber-400" />
-              <span className="hidden md:inline">Chronojet Deckset</span>
-              <span className="md:hidden">Deck</span>
-              <span className="px-1.5 py-0.5 text-[10px] rounded-full bg-slate-900/80 text-slate-300 font-mono">
+              <span className="hidden sm:inline">Deck View</span>
+              <kbd className="hidden md:inline-block text-[10px] font-mono text-slate-500 bg-white/[0.05] px-1.5 py-0.2 rounded">1</kbd>
+            </button>
+
+            {/* Tab 2: Filter Decks / Choose Deck */}
+            <button
+              onClick={() => {
+                playHapticClick(650);
+                setActiveTab('decks');
+              }}
+              className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all pressable ${
+                activeTab === 'decks'
+                  ? 'bg-white/[0.1] text-white shadow-lg shadow-black/40 border border-white/[0.15]'
+                  : 'text-slate-400 hover:text-slate-200 hover:bg-white/[0.04]'
+              }`}
+            >
+              <Filter className="w-4 h-4 text-sky-400" />
+              <span>Filter Decks</span>
+              <span className="hidden sm:inline-block px-1.5 py-0.5 rounded-full text-[10px] font-mono bg-sky-500/20 text-sky-300 font-bold">
+                4
+              </span>
+              <kbd className="hidden md:inline-block text-[10px] font-mono text-slate-500 bg-white/[0.05] px-1.5 py-0.2 rounded">2</kbd>
+            </button>
+
+            {/* Tab 3: Card Explorer */}
+            <button
+              onClick={() => {
+                playHapticClick(650);
+                setActiveTab('explorer');
+              }}
+              className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all pressable ${
+                activeTab === 'explorer'
+                  ? 'bg-white/[0.1] text-white shadow-lg shadow-black/40 border border-white/[0.15]'
+                  : 'text-slate-400 hover:text-slate-200 hover:bg-white/[0.04]'
+              }`}
+            >
+              <Search className="w-4 h-4 text-blue-400" />
+              <span className="hidden sm:inline">Explorer</span>
+              <span className="px-1.5 py-0.5 rounded-full text-[10px] font-mono bg-white/[0.08] text-slate-300">
                 {totalCards}
               </span>
+              <kbd className="hidden md:inline-block text-[10px] font-mono text-slate-500 bg-white/[0.05] px-1.5 py-0.2 rounded">3</kbd>
             </button>
 
+            {/* Tab 4: Guide */}
             <button
-              onClick={() => setActiveTab('explorer')}
-              className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${
-                activeTab === 'explorer'
-                  ? 'bg-gradient-to-r from-purple-700/80 to-cyan-600/80 text-white shadow-lg shadow-purple-900/40 border border-purple-500/40'
-                  : 'text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent'
-              }`}
-            >
-              <Search className="w-4 h-4 text-cyan-400" />
-              <span className="hidden md:inline">Card Explorer</span>
-              <span className="md:hidden">Cards</span>
-            </button>
-
-            <button
-              onClick={() => setActiveTab('guide')}
-              className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${
+              onClick={() => {
+                playHapticClick(650);
+                setActiveTab('guide');
+              }}
+              className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all pressable ${
                 activeTab === 'guide'
-                  ? 'bg-gradient-to-r from-purple-700/80 to-pink-600/80 text-white shadow-lg shadow-purple-900/40 border border-purple-500/40'
-                  : 'text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent'
+                  ? 'bg-white/[0.1] text-white shadow-lg shadow-black/40 border border-white/[0.15]'
+                  : 'text-slate-400 hover:text-slate-200 hover:bg-white/[0.04]'
               }`}
             >
-              <BookOpen className="w-4 h-4 text-pink-400" />
-              <span className="hidden md:inline">Tips & Pre-con Guide</span>
-              <span className="md:hidden">Guides</span>
-              <span className="hidden lg:inline-flex items-center gap-1 px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-300 text-[10px] border border-amber-500/30">
-                <Sparkles className="w-2.5 h-2.5" />
-                Tutorial
-              </span>
+              <BookOpen className="w-4 h-4 text-emerald-400" />
+              <span className="hidden sm:inline">Piloting Guide</span>
+              <kbd className="hidden md:inline-block text-[10px] font-mono text-slate-500 bg-white/[0.05] px-1.5 py-0.2 rounded">4</kbd>
             </button>
           </nav>
+
+          {/* Controls: Audio Haptic Click & Keyboard Shortcuts */}
+          <div className="flex items-center gap-2">
+            <button
+              onClick={onToggleSound}
+              title={soundEnabled ? 'Disable UI Sound Effects' : 'Enable Mechanical Click Feedback'}
+              className="p-2 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] text-slate-300 border border-white/[0.08] transition pressable"
+            >
+              {soundEnabled ? (
+                <Volume2 className="w-4 h-4 text-amber-400" />
+              ) : (
+                <VolumeX className="w-4 h-4 text-slate-500" />
+              )}
+            </button>
+
+            <button
+              onClick={onOpenShortcuts}
+              title="Keyboard Shortcuts (? / D)"
+              className="p-2 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] text-slate-300 border border-white/[0.08] transition pressable"
+            >
+              <Keyboard className="w-4 h-4 text-slate-300" />
+            </button>
+          </div>
 
         </div>
       </div>

@@ -1,0 +1,133 @@
+{
+  "id": "dz-ss15-dragonic-overlord",
+  "name": "Break Away Start Deck - Dragonic Overlord",
+  "code": "DZ-SS15",
+  "nation": "Dragon Empire",
+  "description": "The violent dragon of the empire returns with blazing re-standing fury! Master the Kai Fighter Icon synergy, Energy Generator mechanics, and burn the opponent's entire board to ash with Dragonic Overlord.",
+  "rideDeck": [
+    {
+      "cardNo": "DZ-SS15/004",
+      "name": "Lizard Soldier, Conroe",
+      "grade": 0
+    },
+    {
+      "cardNo": "DZ-SS15/003",
+      "name": "Embodiment of Armor, Bahr",
+      "grade": 1
+    },
+    {
+      "cardNo": "DZ-SS15/002",
+      "name": "Dragon Knight, Nehalem",
+      "grade": 2
+    },
+    {
+      "cardNo": "DZ-SS15/001",
+      "name": "Dragonic Overlord",
+      "grade": 3
+    }
+  ],
+  "crest": {
+    "cardNo": "DZ-SS15/005",
+    "name": "Energy Generator",
+    "grade": null
+  },
+  "gDeck": [],
+  "mainDeck": [
+    {
+      "cardNo": "DZ-SS15/001",
+      "name": "Dragonic Overlord",
+      "count": 3,
+      "category": "Grade 3"
+    },
+    {
+      "cardNo": "DZ-SS15/006",
+      "name": "Vortex Dragon",
+      "count": 4,
+      "category": "Grade 3"
+    },
+    {
+      "cardNo": "DZ-SS15/002",
+      "name": "Dragon Knight, Nehalem",
+      "count": 3,
+      "category": "Grade 2"
+    },
+    {
+      "cardNo": "DZ-SS15/007",
+      "name": "Great Flame Axe of Ambitious Scales, Colgaflan",
+      "count": 1,
+      "category": "Grade 2"
+    },
+    {
+      "cardNo": "DZ-SS15/008",
+      "name": "Berserk Dragon",
+      "count": 4,
+      "category": "Grade 2"
+    },
+    {
+      "cardNo": "DZ-SS15/009",
+      "name": "Wyvern Strike, Tejas",
+      "count": 4,
+      "category": "Grade 2"
+    },
+    {
+      "cardNo": "DZ-SS15/003",
+      "name": "Embodiment of Armor, Bahr",
+      "count": 2,
+      "category": "Grade 1"
+    },
+    {
+      "cardNo": "DZ-SS15/010",
+      "name": "Dragon Monk, Gojo",
+      "count": 4,
+      "category": "Grade 1"
+    },
+    {
+      "cardNo": "DZ-SS15/011",
+      "name": "Wyvern Strike, Jarran",
+      "count": 4,
+      "category": "Grade 1"
+    },
+    {
+      "cardNo": "DZ-SS15/012",
+      "name": "Wyvern Guard, Barri",
+      "count": 4,
+      "category": "Grade 1 (Sentinel)"
+    },
+    {
+      "cardNo": "DZ-SS15/018",
+      "name": "Forbidoll Surrogate",
+      "count": 1,
+      "category": "Order (Regalis Piece)"
+    },
+    {
+      "cardNo": "DZ-SS15/013",
+      "name": "Dragon Deity King of Resurgence, Dragveda",
+      "count": 1,
+      "category": "Trigger (Over)"
+    },
+    {
+      "cardNo": "DZ-SS15/014",
+      "name": "Demonic Dragon Mage, Rakshasa",
+      "count": 4,
+      "category": "Trigger (Critical)"
+    },
+    {
+      "cardNo": "DZ-SS15/015",
+      "name": "Embodiment of Spear, Tahr",
+      "count": 4,
+      "category": "Trigger (Critical)"
+    },
+    {
+      "cardNo": "DZ-SS15/016",
+      "name": "Dragon Dancer, Monica",
+      "count": 3,
+      "category": "Trigger (Draw)"
+    },
+    {
+      "cardNo": "DZ-SS15/017",
+      "name": "Dragon Monk, Genjo",
+      "count": 4,
+      "category": "Trigger (Heal)"
+    }
+  ]
+}

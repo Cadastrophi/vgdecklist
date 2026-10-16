@@ -1,0 +1,96 @@
+{
+  "id": "dz-ss14-blaster-blade",
+  "name": "Break Away Start Deck - Blaster Blade",
+  "code": "VG-DZ-SS14",
+  "nation": "Keter Sanctuary",
+  "description": "The legendary Royal Paladin avatar Blaster Blade returns in the DZ era alongside King of Knights, Alfred and Soul Saver Dragon. Featuring the Aichi Icon mechanic, flexible Energy Generator Crest integration, Persona Ride pseudo-conversion, and explosive multi-column power boosts.",
+  "crest": "DZ-SS14/005",
+  "rideDeck": [
+    "DZ-SS14/004",
+    "DZ-SS14/003",
+    "DZ-SS14/002",
+    "DZ-SS14/001"
+  ],
+  "mainDeck": [
+    {
+      "cardNo": "DZ-SS14/001",
+      "count": 3,
+      "category": "Grade 3"
+    },
+    {
+      "cardNo": "DZ-SS14/006",
+      "count": 4,
+      "category": "Grade 3"
+    },
+    {
+      "cardNo": "DZ-SS14/002",
+      "count": 3,
+      "category": "Grade 2"
+    },
+    {
+      "cardNo": "DZ-SS14/007",
+      "count": 4,
+      "category": "Grade 2"
+    },
+    {
+      "cardNo": "DZ-SS14/008",
+      "count": 4,
+      "category": "Grade 2"
+    },
+    {
+      "cardNo": "DZ-SS14/003",
+      "count": 2,
+      "category": "Grade 1"
+    },
+    {
+      "cardNo": "DZ-SS14/009",
+      "count": 1,
+      "category": "Grade 1"
+    },
+    {
+      "cardNo": "DZ-SS14/010",
+      "count": 4,
+      "category": "Grade 1"
+    },
+    {
+      "cardNo": "DZ-SS14/011",
+      "count": 4,
+      "category": "Grade 1"
+    },
+    {
+      "cardNo": "DZ-SS14/012",
+      "count": 4,
+      "category": "Grade 1 (Sentinel)"
+    },
+    {
+      "cardNo": "DZ-SS14/018",
+      "count": 1,
+      "category": "Order (Regalis Piece)"
+    },
+    {
+      "cardNo": "DZ-SS14/013",
+      "count": 1,
+      "category": "Over Trigger"
+    },
+    {
+      "cardNo": "DZ-SS14/014",
+      "count": 4,
+      "category": "Critical Trigger"
+    },
+    {
+      "cardNo": "DZ-SS14/015",
+      "count": 4,
+      "category": "Critical Trigger"
+    },
+    {
+      "cardNo": "DZ-SS14/016",
+      "count": 3,
+      "category": "Draw Trigger"
+    },
+    {
+      "cardNo": "DZ-SS14/017",
+      "count": 4,
+      "category": "Heal Trigger"
+    }
+  ]
+}
