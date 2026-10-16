@@ -1,6 +1,8 @@
-import React, { useState, useMemo, useRef, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import { VanguardCard } from '../types/card';
-import { Search, RotateCcw, LayoutGrid, List } from 'lucide-react';
+import { 
+  Search, X, Grid, List
+} from 'lucide-react';
 import { playHapticClick } from '../utils/audio';
 
 interface CardExplorerProps {
@@ -9,41 +11,17 @@ interface CardExplorerProps {
 }
 
 export const CardExplorer: React.FC<CardExplorerProps> = ({ cards, onSelectCard }) => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedDeck, setSelectedDeck] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedGrade, setSelectedGrade] = useState<string>('all');
   const [selectedType, setSelectedType] = useState<string>('all');
   const [selectedClan, setSelectedClan] = useState<string>('all');
+  const [selectedDeck, setSelectedDeck] = useState<string>('all');
   const [viewMode, setViewMode] = useState<'grid' | 'table'>('grid');
 
-  const searchInputRef = useRef<HTMLInputElement>(null);
-
-  // Global hotkey '/' to focus search input
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === '/' && document.activeElement !== searchInputRef.current) {
-        e.preventDefault();
-        searchInputRef.current?.focus();
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
+  // Filtered Cards logic
   const filteredCards = useMemo(() => {
     return cards.filter(card => {
-      // Search query matches name, cardNo, skillText, race, clan
-      const q = searchQuery.toLowerCase().trim();
-      if (q) {
-        const matchName = card.name.toLowerCase().includes(q);
-        const matchNo = card.cardNo.toLowerCase().includes(q);
-        const matchSkill = card.skillText.toLowerCase().includes(q);
-        const matchRace = card.race.toLowerCase().includes(q);
-        const matchClan = card.clan.toLowerCase().includes(q);
-        if (!matchName && !matchNo && !matchSkill && !matchRace && !matchClan) return false;
-      }
-
-      // Deck Package filter
+      // Deck package filter
       if (selectedDeck !== 'all') {
         if (selectedDeck === 'chronojet' && !card.cardNo.startsWith('D-SS03')) return false;
         if (selectedDeck === 'blaster' && !card.cardNo.startsWith('DZ-SS14')) return false;
@@ -51,10 +29,25 @@ export const CardExplorer: React.FC<CardExplorerProps> = ({ cards, onSelectCard 
         if (selectedDeck === 'harri' && !card.cardNo.startsWith('DZ-SS02')) return false;
       }
 
+      // Search Query
+      if (searchQuery.trim()) {
+        const q = searchQuery.toLowerCase();
+        const matchName = card.name.toLowerCase().includes(q);
+        const matchNo = card.cardNo.toLowerCase().includes(q);
+        const matchClan = card.clan?.toLowerCase().includes(q) || false;
+        const matchNation = card.nation.toLowerCase().includes(q);
+        const matchSkill = card.skillText.toLowerCase().includes(q);
+        const matchRace = card.race?.toLowerCase().includes(q) || false;
+
+        if (!matchName && !matchNo && !matchClan && !matchNation && !matchSkill && !matchRace) {
+          return false;
+        }
+      }
+
       // Grade filter
       if (selectedGrade !== 'all') {
         if (selectedGrade === 'crest') {
-          if (!card.isCrest && card.grade !== null) return false;
+          if (card.cardType !== 'Crest') return false;
         } else {
           const gNum = parseInt(selectedGrade, 10);
           if (card.grade !== gNum) return false;
@@ -103,35 +96,37 @@ export const CardExplorer: React.FC<CardExplorerProps> = ({ cards, onSelectCard 
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6 animate-fade-in">
+    <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-6 space-y-5 animate-in fade-in slide-in-from-bottom">
       
       {/* Search and Filters Header */}
-      <div className="rounded-3xl bg-[#0c101d] border border-white/[0.08] p-5 sm:p-6 shadow-2xl space-y-4">
+      <div className="rounded-3xl bg-[#0c101d] border border-white/[0.08] p-3.5 sm:p-5 shadow-2xl space-y-3.5">
         
-        {/* Search input with '/' badge */}
+        {/* Search input */}
         <div className="relative">
-          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-slate-400" />
           <input
-            ref={searchInputRef}
             type="text"
-            placeholder="Search card by name, card number, ability text, clan, or race..."
+            placeholder="Search card by name, ability text, clan, or race..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-12 pr-16 py-3.5 rounded-2xl bg-white/[0.03] border border-white/[0.1] text-white placeholder-slate-400 focus:outline-none focus:border-amber-400/80 focus:bg-white/[0.05] transition-all text-sm sm:text-base font-normal"
+            className="w-full pl-10 sm:pl-11 pr-10 py-3 rounded-2xl bg-white/[0.03] border border-white/[0.1] text-white placeholder-slate-400 focus:outline-none focus:border-sky-400/80 focus:bg-white/[0.05] transition-all text-sm font-normal"
           />
-          <div className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center gap-1.5 pointer-events-none">
-            <kbd className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-mono text-slate-400 bg-white/[0.06] border border-white/[0.1] rounded shadow-sm">
-              /
-            </kbd>
-          </div>
+          {searchQuery && (
+            <button
+              onClick={() => setSearchQuery('')}
+              className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          )}
         </div>
 
-        {/* Filter Controls Bar */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 pt-2 border-t border-white/[0.06]">
+        {/* Filter dropdowns in responsive grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 sm:gap-2.5">
           
           {/* Deck Package Filter */}
           <div>
-            <label className="text-[10px] font-mono text-slate-400 block mb-1 uppercase">Decklist</label>
+            <label className="text-[10px] font-mono text-slate-400 block mb-1 uppercase">Deck</label>
             <select
               value={selectedDeck}
               onChange={(e) => {
@@ -208,7 +203,7 @@ export const CardExplorer: React.FC<CardExplorerProps> = ({ cards, onSelectCard 
           </div>
 
           {/* View Mode Toggle */}
-          <div>
+          <div className="col-span-2 sm:col-span-1">
             <label className="text-[10px] font-mono text-slate-400 block mb-1 uppercase">Layout</label>
             <div className="flex rounded-xl bg-white/[0.04] border border-white/[0.08] p-0.5">
               <button
@@ -218,11 +213,11 @@ export const CardExplorer: React.FC<CardExplorerProps> = ({ cards, onSelectCard 
                 }}
                 className={`flex-1 flex items-center justify-center gap-1 py-1.5 rounded-lg text-xs font-mono transition ${
                   viewMode === 'grid'
-                    ? 'bg-amber-500/20 text-amber-300 font-bold border border-amber-500/40 shadow-sm'
-                    : 'text-slate-400 hover:text-slate-200'
+                    ? 'bg-amber-500/20 text-amber-300 font-bold'
+                    : 'text-slate-400 hover:text-white'
                 }`}
               >
-                <LayoutGrid className="w-3.5 h-3.5" />
+                <Grid className="w-3.5 h-3.5" />
                 <span>Grid</span>
               </button>
               <button
@@ -232,44 +227,37 @@ export const CardExplorer: React.FC<CardExplorerProps> = ({ cards, onSelectCard 
                 }}
                 className={`flex-1 flex items-center justify-center gap-1 py-1.5 rounded-lg text-xs font-mono transition ${
                   viewMode === 'table'
-                    ? 'bg-amber-500/20 text-amber-300 font-bold border border-amber-500/40 shadow-sm'
-                    : 'text-slate-400 hover:text-slate-200'
+                    ? 'bg-amber-500/20 text-amber-300 font-bold'
+                    : 'text-slate-400 hover:text-white'
                 }`}
               >
                 <List className="w-3.5 h-3.5" />
-                <span>Table</span>
+                <span>List</span>
               </button>
             </div>
           </div>
 
-          {/* Reset Filters */}
-          <div className="flex items-end">
+        </div>
+
+        {/* Filter Status & Reset */}
+        <div className="flex items-center justify-between pt-2 border-t border-white/[0.06] text-xs text-slate-400">
+          <div>
+            Found <span className="text-amber-400 font-bold font-mono">{filteredCards.length}</span> cards
+          </div>
+          {(searchQuery || selectedDeck !== 'all' || selectedGrade !== 'all' || selectedType !== 'all' || selectedClan !== 'all') && (
             <button
               onClick={handleResetFilters}
-              className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] text-slate-300 border border-white/[0.08] text-xs font-mono transition pressable"
+              className="text-xs text-rose-400 hover:text-rose-300 font-mono transition pressable"
             >
-              <RotateCcw className="w-3 h-3 text-slate-400" />
-              <span>Reset</span>
+              Reset Filters
             </button>
-          </div>
-
+          )}
         </div>
-
-        {/* Results Counter */}
-        <div className="flex items-center justify-between pt-2 border-t border-white/[0.04] text-xs font-mono text-slate-400">
-          <div>
-            Showing <strong className="text-amber-400 font-bold">{filteredCards.length}</strong> of {cards.length} authentic cards
-          </div>
-          <div className="hidden sm:block text-[11px] text-slate-500">
-            Use arrow keys or click card for rulings & art switcher
-          </div>
-        </div>
-
       </div>
 
-      {/* Grid View */}
-      {viewMode === 'grid' ? (
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3.5 sm:gap-4">
+      {/* Grid View Mode */}
+      {viewMode === 'grid' && (
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2.5 sm:gap-3.5">
           {filteredCards.map((card) => (
             <div
               key={card.cardNo}
@@ -277,63 +265,72 @@ export const CardExplorer: React.FC<CardExplorerProps> = ({ cards, onSelectCard 
                 playHapticClick(700);
                 onSelectCard(card);
               }}
-              className="group cursor-pointer rounded-2xl bg-[#0f1322] border border-white/[0.08] hover:border-amber-400/50 p-2.5 space-y-2 card-foil pressable shadow-lg"
+              className="group cursor-pointer rounded-2xl bg-[#0f1322] border border-white/[0.08] hover:border-amber-400/50 p-2 space-y-1.5 card-foil pressable shadow-md"
             >
               <div className="relative aspect-[7/10] rounded-xl overflow-hidden bg-slate-900">
-                <img
-                  src={card.localImageUrl || card.imageUrl}
+                <img 
+                  src={card.localImageUrl || card.imageUrl} 
                   alt={card.name}
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 
                 {/* Grade Badge */}
-                <div className="absolute top-1.5 left-1.5 px-2 py-0.5 rounded bg-black/80 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold">
-                  {card.grade !== null ? `G${card.grade}` : 'CREST'}
+                <div className="absolute top-1 left-1 px-1.5 py-0.2 rounded bg-black/75 backdrop-blur-md border border-white/20 text-[9px] font-mono font-bold">
+                  {card.cardType === 'Crest' ? (
+                    <span className="text-purple-300">Crest</span>
+                  ) : card.triggerType ? (
+                    <span className="text-amber-300">{card.triggerType}</span>
+                  ) : (
+                    <span className="text-slate-200">G{card.grade}</span>
+                  )}
                 </div>
 
-                {/* Trigger Chip */}
-                {card.triggerType && (
-                  <div className="absolute top-1.5 right-1.5 px-1.5 py-0.5 rounded bg-rose-600/90 text-white text-[9px] font-mono font-bold">
-                    {card.triggerType}
-                  </div>
-                )}
+                {/* Nation badge */}
+                <div className="absolute top-1 right-1 px-1.5 py-0.2 rounded bg-black/75 backdrop-blur-md border border-white/20 text-[8px] font-mono text-slate-300">
+                  {card.clan || card.nation.split(' ')[0]}
+                </div>
 
-                {/* Art Count Chip */}
-                {card.artVariants && card.artVariants.length > 1 && (
-                  <div className="absolute bottom-1.5 left-1.5 px-1.5 py-0.2 rounded bg-black/80 backdrop-blur-md border border-white/20 text-[9px] font-mono text-amber-300">
-                    {card.artVariants.length} Arts
+                {/* Shield badge */}
+                {card.shield !== null && card.shield !== undefined && (
+                  <div className="absolute bottom-1 right-1 px-1 py-0.2 rounded bg-black/80 backdrop-blur-md border border-white/10 text-[8px] font-mono text-cyan-300">
+                    +{card.shield.toLocaleString()}
                   </div>
                 )}
               </div>
 
-              <div>
+              <div className="min-w-0">
                 <p className="text-xs font-bold text-white truncate group-hover:text-amber-300 transition-colors">
                   {card.name}
                 </p>
-                <div className="flex items-center justify-between text-[10px] font-mono text-slate-400 mt-1">
-                  <span>{card.cardNo}</span>
-                  <span className="text-amber-400">{card.power ? card.power.toLocaleString() : ''}</span>
+                <div className="flex items-center justify-between text-[10px] font-mono text-slate-400 mt-0.5">
+                  <span className="truncate mr-1">{card.cardNo}</span>
+                  {card.power ? (
+                    <span className="text-amber-400 font-semibold">{card.power.toLocaleString()}</span>
+                  ) : (
+                    <span className="text-slate-500">-</span>
+                  )}
                 </div>
               </div>
             </div>
           ))}
         </div>
-      ) : (
-        /* Table View for Compact Browser Use */
+      )}
+
+      {/* Table / List View Mode (Optimized for Mobile Scrolling) */}
+      {viewMode === 'table' && (
         <div className="rounded-2xl bg-[#0c101d] border border-white/[0.08] overflow-hidden shadow-xl">
           <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs text-slate-200">
-              <thead className="bg-white/[0.03] border-b border-white/[0.08] text-slate-400 font-mono uppercase text-[10px]">
+            <table className="w-full text-left text-xs">
+              <thead className="bg-white/[0.03] text-slate-400 font-mono text-[10px] uppercase border-b border-white/[0.06]">
                 <tr>
-                  <th className="py-3 px-4">Card No</th>
-                  <th className="py-3 px-4">Name</th>
-                  <th className="py-3 px-3">Grade</th>
-                  <th className="py-3 px-3">Type</th>
-                  <th className="py-3 px-3">Power</th>
-                  <th className="py-3 px-3">Shield</th>
-                  <th className="py-3 px-4">Clan</th>
-                  <th className="py-3 px-4">Skill Icon</th>
+                  <th className="py-2.5 px-3">Card</th>
+                  <th className="py-2.5 px-3">Grade</th>
+                  <th className="py-2.5 px-3">Type</th>
+                  <th className="py-2.5 px-3">Power</th>
+                  <th className="py-2.5 px-3">Shield</th>
+                  <th className="py-2.5 px-3">Clan / Nation</th>
+                  <th className="py-2.5 px-3">Card No.</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/[0.04]">
@@ -346,38 +343,33 @@ export const CardExplorer: React.FC<CardExplorerProps> = ({ cards, onSelectCard 
                     }}
                     className="hover:bg-white/[0.04] cursor-pointer transition"
                   >
-                    <td className="py-2.5 px-4 font-mono text-amber-400">{card.cardNo}</td>
-                    <td className="py-2.5 px-4 font-bold text-white max-w-[200px] truncate">{card.name}</td>
+                    <td className="py-2.5 px-3 flex items-center gap-2">
+                      <div className="w-7 h-9 rounded overflow-hidden bg-slate-900 flex-shrink-0">
+                        <img 
+                          src={card.localImageUrl || card.imageUrl} 
+                          alt={card.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <span className="font-bold text-white truncate max-w-[180px]">{card.name}</span>
+                    </td>
                     <td className="py-2.5 px-3 font-mono">
-                      {card.grade !== null ? (
-                        <span className={`px-2 py-0.5 rounded text-[10px] font-bold ${
-                          card.grade === 4 ? 'bg-red-950 text-red-300' :
-                          card.grade === 3 ? 'bg-amber-950 text-amber-300' :
-                          card.grade === 2 ? 'bg-blue-950 text-blue-300' :
-                          card.grade === 1 ? 'bg-emerald-950 text-emerald-300' : 'bg-slate-800 text-slate-300'
-                        }`}>
-                          G{card.grade}
-                        </span>
-                      ) : (
-                        <span className="px-2 py-0.5 rounded text-[10px] bg-purple-950 text-purple-300 font-bold">Crest</span>
-                      )}
+                      {card.grade !== null ? `G${card.grade}` : '—'}
                     </td>
-                    <td className="py-2.5 px-3">
-                      {card.triggerType ? (
-                        <span className="text-rose-400 font-semibold">{card.triggerType} Trigger</span>
-                      ) : (
-                        card.cardType
-                      )}
+                    <td className="py-2.5 px-3 text-slate-300">
+                      {card.triggerType ? `${card.triggerType} Trigger` : card.cardType}
                     </td>
-                    <td className="py-2.5 px-3 font-mono text-amber-300">
-                      {card.power ? card.power.toLocaleString() : '-'}
+                    <td className="py-2.5 px-3 font-mono text-amber-400">
+                      {card.power ? card.power.toLocaleString() : '—'}
                     </td>
                     <td className="py-2.5 px-3 font-mono text-cyan-300">
-                      {card.shield !== null && card.shield !== undefined ? `+${card.shield.toLocaleString()}` : '-'}
+                      {card.shield ? `+${card.shield.toLocaleString()}` : '—'}
                     </td>
-                    <td className="py-2.5 px-4 text-slate-400">{card.clan}</td>
-                    <td className="py-2.5 px-4 font-mono text-slate-400">
-                      {card.skillIcon || '-'}
+                    <td className="py-2.5 px-3 text-slate-400 truncate max-w-[120px]">
+                      {card.clan || card.nation}
+                    </td>
+                    <td className="py-2.5 px-3 font-mono text-slate-400">
+                      {card.cardNo}
                     </td>
                   </tr>
                 ))}
@@ -389,11 +381,11 @@ export const CardExplorer: React.FC<CardExplorerProps> = ({ cards, onSelectCard 
 
       {/* Empty State */}
       {filteredCards.length === 0 && (
-        <div className="text-center py-16 space-y-3 bg-white/[0.02] rounded-3xl border border-white/[0.06]">
-          <p className="text-slate-400 text-base">No cards match the specified filters.</p>
+        <div className="text-center py-16 space-y-3">
+          <p className="text-slate-400 text-sm">No cards found matching your current filters.</p>
           <button
             onClick={handleResetFilters}
-            className="px-4 py-2 rounded-xl bg-amber-500/20 text-amber-300 border border-amber-500/40 text-xs font-mono pressable"
+            className="px-4 py-2 rounded-xl bg-white/[0.06] hover:bg-white/[0.1] text-xs font-mono text-amber-300 border border-white/[0.1] transition pressable"
           >
             Clear All Filters
           </button>
