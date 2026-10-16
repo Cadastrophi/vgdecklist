@@ -2,6 +2,8 @@ import { VanguardCard } from './card';
 
 export type CardSlotCategory = 'Grade 4' | 'Grade 3' | 'Grade 2' | 'Grade 1' | 'Grade 0' | 'Trigger' | 'Order';
 
+export type DeckCategory = 'Aggro' | 'Control' | 'Midrange' | 'Combo';
+
 export interface DeckCardSlot {
   card: VanguardCard;
   count: number;
@@ -40,6 +42,9 @@ export interface DeckStructure {
   name: string;
   code: string;
   nation: string;
+  category?: DeckCategory;
+  categoryDescription?: string;
+  playstyle?: string;
   description: string;
   crest: VanguardCard | null;
   rideDeck: VanguardCard[];

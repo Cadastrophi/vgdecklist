@@ -1,5 +1,5 @@
 import { VanguardCard } from '../types/card';
-import { DeckStructure, DeckCardSlot, DeckStatistics, CardSlotCategory } from '../types/deck';
+import { DeckStructure, DeckCardSlot, DeckStatistics, CardSlotCategory, DeckCategory } from '../types/deck';
 import rawCards from '../data/cards.json';
 import rawChronojetDeck from '../data/chronojetDeck.json';
 import rawBlasterBladeDeck from '../data/blasterBladeDeck.json';
@@ -15,6 +15,9 @@ export interface DeckSummary {
   nation: string;
   clan: string;
   format: string;
+  category: DeckCategory;
+  categoryDescription: string;
+  playstyle: string;
   badgeColor: string;
   themeColor: 'purple' | 'blue' | 'red' | 'magenta';
   keyBoss: string;
@@ -29,6 +32,9 @@ export const AVAILABLE_DECKS: DeckSummary[] = [
     nation: 'Dark States',
     clan: 'Gear Chronicle',
     format: 'Standard (Stride / Stride Crest)',
+    category: 'Control',
+    categoryDescription: 'Disrupts the opponent by sending units to the bottom of the deck while scaling Stride Crest advantage.',
+    playstyle: 'Control / Stride Time-Leap',
     badgeColor: 'border-amber-500/50 bg-amber-500/10 text-amber-300',
     themeColor: 'purple',
     keyBoss: 'Chronojet Dragon & Chronodragon Nextage',
@@ -41,6 +47,9 @@ export const AVAILABLE_DECKS: DeckSummary[] = [
     nation: 'Keter Sanctuary',
     clan: 'Royal Paladin',
     format: 'Standard (Energy Generator / Aichi Icon)',
+    category: 'Midrange',
+    categoryDescription: 'Balanced aggression and board formation with Alfred, Blaster Blade retire, and Soul Saver power surge.',
+    playstyle: 'Midrange / Board Swarm',
     badgeColor: 'border-blue-500/50 bg-blue-500/10 text-sky-300',
     themeColor: 'blue',
     keyBoss: 'King of Knights, Alfred & Blaster Blade & Soul Saver Dragon',
@@ -53,6 +62,9 @@ export const AVAILABLE_DECKS: DeckSummary[] = [
     nation: 'Dragon Empire',
     clan: 'Kagero',
     format: 'Standard (Energy Generator / Kai Icon)',
+    category: 'Aggro',
+    categoryDescription: 'Relentless offensive pressure with Dragonic Overlord re-standing attacks and board-wiping blaze.',
+    playstyle: 'Aggro / Vanguard Re-stand',
     badgeColor: 'border-red-500/50 bg-red-500/10 text-red-300',
     themeColor: 'red',
     keyBoss: 'Dragonic Overlord & Vortex Dragon',
@@ -65,6 +77,9 @@ export const AVAILABLE_DECKS: DeckSummary[] = [
     nation: 'Dark States',
     clan: 'Pale Moon',
     format: 'Standard (Stride / Magia Crest)',
+    category: 'Combo',
+    categoryDescription: 'Explosive multi-attacks by performing Magia soul-calls in the battle phase and recalling them to safety.',
+    playstyle: 'Combo / Soul Multi-Attack',
     badgeColor: 'border-pink-500/50 bg-pink-500/10 text-pink-300',
     themeColor: 'magenta',
     keyBoss: 'Masked Magician, Harri & Dragon Masquerade, Harri',
@@ -225,11 +240,16 @@ function buildDeckStructure(rawDeck: any): DeckStructure {
     triggersSummary
   };
 
+  const summary = AVAILABLE_DECKS.find(d => d.id === rawDeck.id);
+
   return {
     id: rawDeck.id,
     name: rawDeck.name,
     code: rawDeck.code,
     nation: rawDeck.nation,
+    category: summary?.category || 'Midrange',
+    categoryDescription: summary?.categoryDescription || '',
+    playstyle: summary?.playstyle || '',
     description: rawDeck.description,
     crest,
     rideDeck,

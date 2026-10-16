@@ -7,7 +7,7 @@ import { TipsAndTricks } from './components/TipsAndTricks';
 import { CardModal } from './components/CardModal';
 import { ShortcutsModal } from './components/ShortcutsModal';
 import { VanguardCard } from './types/card';
-import { getDeckById, allCards, AVAILABLE_DECKS } from './utils/deckBuilder';
+import { getDeckById, allCards } from './utils/deckBuilder';
 import { ExternalLink, Keyboard } from 'lucide-react';
 
 export const App: React.FC = () => {
@@ -69,7 +69,7 @@ export const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-[100dvh] bg-[#09090b] text-zinc-100 flex flex-col font-sans selection:bg-white/15 selection:text-white">
+    <div className="min-h-[100dvh] w-full max-w-full overflow-x-hidden bg-[#09090b] text-zinc-100 flex flex-col font-sans selection:bg-white/15 selection:text-white">
       
       {/* Top Navbar */}
       <Navbar 
@@ -80,7 +80,7 @@ export const App: React.FC = () => {
       />
 
       {/* Main Content Area */}
-      <main className="flex-1 pb-safe">
+      <main className="flex-1 pb-safe w-full max-w-full overflow-x-hidden">
         {activeTab === 'deck' && (
           <DeckViewer 
             deck={deck} 
@@ -129,40 +129,33 @@ export const App: React.FC = () => {
         onClose={() => setShowShortcuts(false)} 
       />
 
-      {/* Minimal Editorial Footer */}
-      <footer className="mt-16 border-t border-white/[0.06] bg-[#09090b] py-8 pb-safe">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
-          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-            <span className="font-semibold text-zinc-300 tracking-tight">VG DECKLIST</span>
-            <span className="text-zinc-600">/</span>
-            <span>Cardfight!! Vanguard D & DZ Series</span>
-            <span className="text-zinc-600">/</span>
-            <span className="font-mono text-zinc-400">{allCards.length} Cards Indexed</span>
+      {/* Footer */}
+      <footer className="border-t border-white/[0.06] bg-[#09090b] py-6 text-zinc-500 text-xs w-full max-w-full overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <span className="font-semibold text-zinc-400">VG DECKLIST</span>
+            <span>·</span>
+            <span>Cardfight!! Vanguard Standard (D & DZ Series)</span>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 text-zinc-400">
+          <div className="flex items-center gap-4 text-zinc-400">
             <button
               onClick={() => setShowShortcuts(true)}
-              className="hover:text-zinc-200 flex items-center gap-1.5 transition-colors pressable"
-              title="Keyboard Shortcuts"
+              className="flex items-center gap-1.5 hover:text-zinc-200 transition-colors pressable"
             >
               <Keyboard className="w-3.5 h-3.5" />
               <span>Shortcuts</span>
-              <kbd className="text-[10px] font-mono px-1 rounded bg-white/[0.06] text-zinc-400 border border-white/[0.08]">?</kbd>
+              <kbd className="hidden sm:inline-block px-1.5 py-0.5 rounded text-[10px] font-mono bg-white/[0.04] border border-white/[0.08]">?</kbd>
             </button>
-            <button
-              onClick={() => setActiveTab('decks')}
-              className="hover:text-zinc-200 transition-colors pressable"
-            >
-              All Decks ({AVAILABLE_DECKS.length})
-            </button>
-            <a 
-              href="https://cardfight.fandom.com/wiki/Cardfight!!_Vanguard_Wiki"
+            <span>·</span>
+            <a
+              href="https://en.cf-vanguard.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-zinc-200 flex items-center gap-1 transition-colors"
+              className="flex items-center gap-1 hover:text-zinc-200 transition-colors"
             >
-              Wiki <ExternalLink className="w-3 h-3 text-zinc-500" />
+              <span>Official Site</span>
+              <ExternalLink className="w-3 h-3" />
             </a>
           </div>
         </div>
