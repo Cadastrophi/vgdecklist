@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #030712;
+    color: #f3f4f6;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Cinzel', Georgia, serif;
+    letter-spacing: 0.03em;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Card Holographic & Glow Effects */
+.card-glow-gear {
+  box-shadow: 0 0 25px -5px rgba(217, 119, 6, 0.25), 0 0 10px -3px rgba(168, 85, 247, 0.2);
+}
+
+.card-glow-stride {
+  box-shadow: 0 0 30px -5px rgba(239, 68, 68, 0.3), 0 0 15px -3px rgba(234, 179, 8, 0.25);
+}
+
+.card-glow-crest {
+  box-shadow: 0 0 35px -5px rgba(168, 85, 247, 0.4), 0 0 15px -2px rgba(59, 130, 246, 0.3);
+}
+
+.card-glow-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-glow-hover:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 30px -5px rgba(139, 92, 246, 0.3), 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Skill Keyword Badges */
+.badge-auto {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  color: #eff6ff;
+  border: 1px solid #3b82f6;
+}
+
+.badge-act {
+  background: linear-gradient(135deg, #065f46 0%, #059669 100%);
+  color: #ecfdf5;
+  border: 1px solid #10b981;
+}
+
+.badge-cont {
+  background: linear-gradient(135deg, #831843 0%, #db2777 100%);
+  color: #fdf2f8;
+  border: 1px solid #f472b6;
+}
+
+.badge-stride {
+  background: linear-gradient(135deg, #7c2d12 0%, #ea580c 100%);
+  color: #fff7ed;
+  border: 1px solid #f97316;
+}
+
+.badge-cost {
+  background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+  color: #fbbf24;
+  border: 1px solid #eab308;
+}
+
+.badge-crest {
+  background: linear-gradient(135deg, #581c87 0%, #9333ea 100%);
+  color: #faf5ff;
+  border: 1px solid #c084fc;
+}

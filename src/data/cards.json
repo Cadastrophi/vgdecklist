@@ -1,0 +1,829 @@
+[
+  {
+    "cardNo": "D-SS03/001",
+    "name": "Chronojet Dragon",
+    "kana": "クロノジェット・ドラゴン",
+    "rarity": "TD",
+    "grade": 3,
+    "power": 13000,
+    "shield": null,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Gear Chronicle",
+    "race": "Gear Colossus / Zodiac Time Beast",
+    "cardType": "Normal Unit",
+    "skillIcon": "Twin Drive",
+    "skillText": "[AUTO]: When this unit is placed on [V], choose 1 \"Chronojet Dragon\" Crest from your crest zone, and put it into your crest zone.\n[AUTO](V): When you [Stride] a G unit, COST [Counter Blast (1)], choose one of your opponent's rear-guards, and put it on the bottom of their deck.\n[CONT](V) Generation Break 2: During the battle that this unit attacks, this unit gets [Power]+5000, and your opponent cannot call grade 1 or greater cards from hand to [G].",
+    "flavorText": "The roaring gear will surpass all dimensions and carve out a new era!",
+    "package": "D-SS03: Stride Deckset Chronojet",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/a/a9/D-SS03-001EN_%28Sample%29.png/revision/latest",
+    "artVariants": [
+      {
+        "rarity": "TD",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/a/a9/D-SS03-001EN_%28Sample%29.png/revision/latest",
+        "source": "English Official",
+        "localImageUrl": "/cards/D-SS03-001_EN.png"
+      },
+      {
+        "rarity": "JP Sample",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/e/ea/D-SS03-001R_%28Sample%29.png/revision/latest",
+        "source": "Japanese Release",
+        "localImageUrl": "/cards/D-SS03-001_JP.png"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can I use the on-stride Stride skill if my heart is Chronojet Dragon?",
+        "answer": "Yes! The [AUTO] skill triggers when you Stride a G unit while Chronojet Dragon is on the Vanguard circle. You pay Counter Blast 1 to spin an opponent's rear-guard to the bottom of the deck."
+      },
+      {
+        "question": "Does Generation Break 2 activate when Chronojet restands after Chronodragon Nextage's attack?",
+        "answer": "Yes! If you have two or more face-up G units in your G-Zone (Nextage turns face-up when it goes back to G-zone, plus any previously face-up G cards), GB2 is active for Chronojet's follow-up attack, giving it +5000 Power and locking grade 1+ guards from hand."
+      }
+    ],
+    "isRideDeck": true,
+    "isGUnit": false,
+    "isCrest": false,
+    "rideDeckOrder": 3,
+    "localImageUrl": "/cards/D-SS03-001_EN.png"
+  },
+  {
+    "cardNo": "D-SS03/002",
+    "name": "Smokegear Dragon",
+    "kana": "スモークギア・ドラゴン",
+    "rarity": "TD",
+    "grade": 2,
+    "power": 10000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Gear Chronicle",
+    "race": "Gear Dragon",
+    "cardType": "Normal Unit",
+    "skillIcon": "Intercept",
+    "skillText": "[AUTO]: When this unit is rode upon by a grade 3 card with \"Chronojet\" in its card name, look at the top five cards of your deck, choose up to one grade 3 or greater card from among them, reveal it and put it into your hand, and shuffle your deck.\n[CONT](R): If you have a grade 4 or greater vanguard, this unit gets \"Boost\", and [Power]+5000.",
+    "flavorText": "The smoke signals the start of the time leap.",
+    "package": "D-SS03: Stride Deckset Chronojet",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/6/63/D-SS03-002EN_%28Sample%29.png/revision/latest",
+    "artVariants": [
+      {
+        "rarity": "TD",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/6/63/D-SS03-002EN_%28Sample%29.png/revision/latest",
+        "source": "English Official",
+        "localImageUrl": "/cards/D-SS03-002_EN.png"
+      },
+      {
+        "rarity": "JP Sample",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/7/7e/D-SS03-002_%28Sample%29.png/revision/latest",
+        "source": "Japanese Release",
+        "localImageUrl": "/cards/D-SS03-002_JP.png"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can I search for G units with Smokegear's ride upon effect?",
+        "answer": "No. G units are kept in your G-Zone, not inside your main deck. Smokegear searches the top 5 cards of your main deck for grade 3 or greater cards like additional Chronojet Dragon or Steam Fighter Balih."
+      }
+    ],
+    "isRideDeck": true,
+    "isGUnit": false,
+    "isCrest": false,
+    "rideDeckOrder": 2,
+    "localImageUrl": "/cards/D-SS03-002_EN.png"
+  },
+  {
+    "cardNo": "D-SS03/003",
+    "name": "Masergear Dragon",
+    "kana": "メーザーギア・ドラゴン",
+    "rarity": "TD",
+    "grade": 1,
+    "power": 8000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Gear Chronicle",
+    "race": "Gear Dragon",
+    "cardType": "Normal Unit",
+    "skillIcon": "Boost",
+    "skillText": "[AUTO]: When this unit is rode upon by \"Smokegear Dragon\", COST [discard a card from hand], and draw a card.\n[AUTO](R): When this unit boosts, if you have a grade 4 or greater vanguard, COST [Counter Blast (1)], choose one of your opponent's rear-guards in the front row, and put it on the bottom of their deck.",
+    "flavorText": "The light it emits cuts open the very fabric of space.",
+    "package": "D-SS03: Stride Deckset Chronojet",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/1/18/D-SS03-003EN_%28Sample%29.png/revision/latest",
+    "artVariants": [
+      {
+        "rarity": "TD",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/1/18/D-SS03-003EN_%28Sample%29.png/revision/latest",
+        "source": "English Official",
+        "localImageUrl": "/cards/D-SS03-003_EN.png"
+      },
+      {
+        "rarity": "JP Sample",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/d/db/D-SS03-003_%28Sample%29.png/revision/latest",
+        "source": "Japanese Release",
+        "localImageUrl": "/cards/D-SS03-003_JP.png"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can Masergear Dragon remove an interceptor during battle?",
+        "answer": "Yes! When Masergear boosts an attacking unit, you can Counter Blast 1 to bottom-deck an opponent's front row rear-guard, removing their interceptor or threat before they can guard."
+      }
+    ],
+    "isRideDeck": true,
+    "isGUnit": false,
+    "isCrest": false,
+    "rideDeckOrder": 1,
+    "localImageUrl": "/cards/D-SS03-003_EN.png"
+  },
+  {
+    "cardNo": "D-SS03/004",
+    "name": "Chrono Dran",
+    "kana": "クロノ・ドラン",
+    "rarity": "TD",
+    "grade": 0,
+    "power": 6000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Gear Chronicle",
+    "race": "Gear Dragon",
+    "cardType": "Normal Unit",
+    "skillIcon": "Boost",
+    "skillText": "[AUTO]: When this unit is rode upon, if you went second, draw a card.",
+    "flavorText": "A small dragon holding the potential to command all timelines.",
+    "package": "D-SS03: Stride Deckset Chronojet",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/a/ae/D-SS03-004EN_%28Sample%29.png/revision/latest",
+    "artVariants": [
+      {
+        "rarity": "TD",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/a/ae/D-SS03-004EN_%28Sample%29.png/revision/latest",
+        "source": "English Official",
+        "localImageUrl": "/cards/D-SS03-004_EN.png"
+      },
+      {
+        "rarity": "JP Sample",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/1/13/D-SS03-004_%28Sample%29.png/revision/latest",
+        "source": "Japanese Release",
+        "localImageUrl": "/cards/D-SS03-004_JP.png"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Chrono Dran go to the soul when ridden upon from the ride deck?",
+        "answer": "Yes, standard ride deck rules apply: when Masergear Dragon is ridden over Chrono Dran, Chrono Dran moves to the soul, and if you went second, you draw a card."
+      }
+    ],
+    "isRideDeck": true,
+    "isGUnit": false,
+    "isCrest": false,
+    "rideDeckOrder": 0,
+    "localImageUrl": "/cards/D-SS03-004_EN.png"
+  },
+  {
+    "cardNo": "D-SS03/005",
+    "name": "Steam Fighter, Balih",
+    "kana": "スチームファイター バリフ",
+    "rarity": "TD",
+    "grade": 3,
+    "power": 13000,
+    "shield": null,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Gear Chronicle",
+    "race": "Gearoid",
+    "cardType": "Normal Unit",
+    "skillIcon": "Twin Drive",
+    "skillText": "[AUTO]: When this card is discarded from hand for the cost of [Stride], draw a card.\n[AUTO](R): When this unit's attack hits a vanguard, look at the top five cards of your deck, choose up to one grade 3 or greater card from among them, reveal it and put it into your hand, and shuffle your deck.",
+    "flavorText": "A reliable veteran warrior who keeps the gears turning.",
+    "package": "D-SS03: Stride Deckset Chronojet",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/6/63/D-SS03-005EN_%28Sample%29.png/revision/latest",
+    "artVariants": [
+      {
+        "rarity": "TD",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/6/63/D-SS03-005EN_%28Sample%29.png/revision/latest",
+        "source": "English Official",
+        "localImageUrl": "/cards/D-SS03-005_EN.png"
+      },
+      {
+        "rarity": "JP Sample",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/5/53/D-SS03-005_%28Sample%29.png/revision/latest",
+        "source": "Japanese Release",
+        "localImageUrl": "/cards/D-SS03-005_JP.png"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How does Balih make Stride free in terms of card advantage?",
+        "answer": "Discarding Balih alone satisfies the Stride cost (Grade 3), and Balih's AUTO immediately triggers to draw a card, making your Stride discard cost +0 in card economy!"
+      }
+    ],
+    "isRideDeck": false,
+    "isGUnit": false,
+    "isCrest": false,
+    "localImageUrl": "/cards/D-SS03-005_EN.png"
+  },
+  {
+    "cardNo": "D-SS03/006",
+    "name": "Upstream Dragon",
+    "kana": "アップストリーム・ドラゴン",
+    "rarity": "TD",
+    "grade": 2,
+    "power": 10000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Gear Chronicle",
+    "race": "Gear Dragon",
+    "cardType": "Normal Unit",
+    "skillIcon": "Intercept",
+    "skillText": "[AUTO](R): When this unit attacks a vanguard, if you have a grade 3 or greater vanguard with \"Chronojet\" in its card name, this unit gets [Power]+4000 until end of that battle. At the end of that battle, put this unit on the bottom of your deck, search your deck for up to one grade 1 card, call it to [R] as [Rest], and shuffle your deck.",
+    "flavorText": "Swimming against the tides of time to bring reinforcement.",
+    "package": "D-SS03: Stride Deckset Chronojet",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/4/42/D-SS03-006EN_%28Sample%29.png/revision/latest",
+    "artVariants": [
+      {
+        "rarity": "TD",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/4/42/D-SS03-006EN_%28Sample%29.png/revision/latest",
+        "source": "English Official",
+        "localImageUrl": "/cards/D-SS03-006_EN.png"
+      },
+      {
+        "rarity": "JP Sample",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/b/bf/D-SS03-006R_%28Sample%29.png/revision/latest",
+        "source": "Japanese Release",
+        "localImageUrl": "/cards/D-SS03-006_JP.png"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can I call Steam Scara Gigi with Upstream Dragon?",
+        "answer": "Yes! Upstream Dragon searches for any Grade 1 card. Calling Steam Scara Gigi triggers Gigi's SB2 draw effect, cycling a card and replacing the attacker."
+      },
+      {
+        "question": "Does Upstream Dragon return itself to the deck even if it gets guarded?",
+        "answer": "Yes, the condition is 'When this unit attacks a vanguard', not on hit. At the end of the battle, it bottom-decks and tutor calls a Grade 1."
+      }
+    ],
+    "isRideDeck": false,
+    "isGUnit": false,
+    "isCrest": false,
+    "localImageUrl": "/cards/D-SS03-006_EN.png"
+  },
+  {
+    "cardNo": "D-SS03/007",
+    "name": "Steam Fighter, Argandia",
+    "kana": "スチームファイター アルガンディア",
+    "rarity": "TD",
+    "grade": 2,
+    "power": 10000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Gear Chronicle",
+    "race": "Gearoid",
+    "cardType": "Normal Unit",
+    "skillIcon": "Intercept",
+    "skillText": "[AUTO]: When this unit is put on [G], if you have a grade 3 or greater vanguard, this unit gets [Shield]+5000 until end of that battle.\n[AUTO](R): When your opponent's card is put on the bottom of their deck by your card's ability, this unit gets [Power]+5000 until end of turn.",
+    "flavorText": "Heavy steam propulsion defends the temporal gates.",
+    "package": "D-SS03: Stride Deckset Chronojet",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/d/d1/D-SS03-007EN_%28Sample%29.png/revision/latest",
+    "artVariants": [
+      {
+        "rarity": "TD",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/d/d1/D-SS03-007EN_%28Sample%29.png/revision/latest",
+        "source": "English Official",
+        "localImageUrl": "/cards/D-SS03-007_EN.png"
+      },
+      {
+        "rarity": "JP Sample",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/9/95/D-SS03-007R_%28Sample%29.png/revision/latest",
+        "source": "Japanese Release",
+        "localImageUrl": "/cards/D-SS03-007_JP.png"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Argandia get shield boost when intercepting?",
+        "answer": "Yes! Putting Argandia on [G] from hand or via Intercept gives it [Shield]+5000 (making it a 10,000 shield guardian) as long as your vanguard is Grade 3 or greater."
+      }
+    ],
+    "isRideDeck": false,
+    "isGUnit": false,
+    "isCrest": false,
+    "localImageUrl": "/cards/D-SS03-007_EN.png"
+  },
+  {
+    "cardNo": "D-SS03/008",
+    "name": "Steam Maiden, Arlim",
+    "kana": "スチームメイデン アルリム",
+    "rarity": "TD",
+    "grade": 1,
+    "power": 6000,
+    "shield": 0,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Gear Chronicle",
+    "race": "Gearoid",
+    "cardType": "Normal Unit",
+    "skillIcon": "Boost",
+    "skillText": "[CONT]: Sentinel (You may only have up to four cards with \"[CONT]: Sentinel\" in a deck.)\n[AUTO]: When this unit is put on [G], choose one of your units, and it cannot be hit until end of that battle. If your hand has two or more cards, choose a card from your hand, and discard it.",
+    "flavorText": "The timeless shield deflects any catastrophe.",
+    "package": "D-SS03: Stride Deckset Chronojet",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/4/4a/D-SS03-008EN_%28Sample%29.png/revision/latest",
+    "artVariants": [
+      {
+        "rarity": "TD",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/4/4a/D-SS03-008EN_%28Sample%29.png/revision/latest",
+        "source": "English Official",
+        "localImageUrl": "/cards/D-SS03-008_EN.png"
+      },
+      {
+        "rarity": "JP Sample",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/a/ab/D-SS03-008R_%28Sample%29.png/revision/latest",
+        "source": "Japanese Release",
+        "localImageUrl": "/cards/D-SS03-008_JP.png"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Do I have to discard if Arlim is the only card in my hand?",
+        "answer": "No! If you have only 1 card in hand (Arlim itself which was placed onto G), your remaining hand is 0 cards (< 2 cards), so no discard is required!"
+      }
+    ],
+    "isRideDeck": false,
+    "isGUnit": false,
+    "isCrest": false,
+    "localImageUrl": "/cards/D-SS03-008_EN.png"
+  },
+  {
+    "cardNo": "D-SS03/009",
+    "name": "Steam Breath Dragon",
+    "kana": "スチームブレス・ドラゴン",
+    "rarity": "TD",
+    "grade": 1,
+    "power": 8000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Gear Chronicle",
+    "race": "Gear Dragon",
+    "cardType": "Normal Unit",
+    "skillIcon": "Boost",
+    "skillText": "[CONT](Hand): When this card would be discarded for the cost of [Stride], this card may be discarded as a grade 3.\n[AUTO]: When this unit is placed on [R] from hand, COST [discard a card from hand], search your deck for up to one grade 3 card with \"Chronojet\" in its card name, reveal it and put it into your hand, and shuffle your deck.",
+    "flavorText": "Its fiery breath calibrates the great temporal engine.",
+    "package": "D-SS03: Stride Deckset Chronojet",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/c/c0/D-SS03-009EN_%28Sample%29.png/revision/latest",
+    "artVariants": [
+      {
+        "rarity": "TD",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/c/c0/D-SS03-009EN_%28Sample%29.png/revision/latest",
+        "source": "English Official",
+        "localImageUrl": "/cards/D-SS03-009_EN.png"
+      },
+      {
+        "rarity": "JP Sample",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/0/04/D-SS03-009_%28Sample%29.png/revision/latest",
+        "source": "Japanese Release",
+        "localImageUrl": "/cards/D-SS03-009_JP.png"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can I discard Steam Breath Dragon alone for Stride?",
+        "answer": "Yes! Its continuous effect in hand allows it to count as a Grade 3 card when paying the Stride cost."
+      }
+    ],
+    "isRideDeck": false,
+    "isGUnit": false,
+    "isCrest": false,
+    "localImageUrl": "/cards/D-SS03-009_EN.png"
+  },
+  {
+    "cardNo": "D-SS03/010",
+    "name": "Gear Serow of Magnetic Resonance",
+    "kana": "磁気共鳴のギアセロウ",
+    "rarity": "TD",
+    "grade": 1,
+    "power": 8000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Gear Chronicle",
+    "race": "Gear Beast",
+    "cardType": "Normal Unit",
+    "skillIcon": "Boost",
+    "skillText": "[AUTO](R): When your card is put on the bottom of your deck from [R] or drop, this unit gets [Power]+5000 until end of turn.",
+    "flavorText": "The magnetic resonance synchronizes clockwork gears perfectly.",
+    "package": "D-SS03: Stride Deckset Chronojet",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/c/c9/D-SS03-010EN_%28Sample%29.png/revision/latest",
+    "artVariants": [
+      {
+        "rarity": "TD",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/c/c9/D-SS03-010EN_%28Sample%29.png/revision/latest",
+        "source": "English Official",
+        "localImageUrl": "/cards/D-SS03-010_EN.png"
+      },
+      {
+        "rarity": "JP Sample",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/c/c2/D-SS03-010R_%28Sample%29.png/revision/latest",
+        "source": "Japanese Release",
+        "localImageUrl": "/cards/D-SS03-010_JP.png"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Gear Serow gain power multiple times if multiple cards return?",
+        "answer": "Yes! Each time a card is placed on the bottom of your deck from R or drop (e.g. from Upstream Dragon or Faterider Dragon), Serow gets +5000 Power, turning it into a 13k or 18k booster."
+      }
+    ],
+    "isRideDeck": false,
+    "isGUnit": false,
+    "isCrest": false,
+    "localImageUrl": "/cards/D-SS03-010_EN.png"
+  },
+  {
+    "cardNo": "D-SS03/011",
+    "name": "Steam Scara, Gigi",
+    "kana": "スチームスカラー ジジ",
+    "rarity": "TD",
+    "grade": 1,
+    "power": 8000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Gear Chronicle",
+    "race": "Gearoid",
+    "cardType": "Normal Unit",
+    "skillIcon": "Boost",
+    "skillText": "[AUTO]: When this unit is placed on [R], if you have a grade 3 or greater vanguard with \"Chronojet\" in its card name, COST [Soul Blast (2)], and draw a card.",
+    "flavorText": "A brilliant scholar cataloging the anomalies of time.",
+    "package": "D-SS03: Stride Deckset Chronojet",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/d/d4/D-SS03-011EN_%28Sample%29.png/revision/latest",
+    "artVariants": [
+      {
+        "rarity": "TD",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/d/d4/D-SS03-011EN_%28Sample%29.png/revision/latest",
+        "source": "English Official",
+        "localImageUrl": "/cards/D-SS03-011_EN.png"
+      },
+      {
+        "rarity": "JP Sample",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/6/65/D-SS03-011_%28Sample%29.png/revision/latest",
+        "source": "Japanese Release",
+        "localImageUrl": "/cards/D-SS03-011_JP.png"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can Gigi be called with Upstream Dragon to draw on the same turn?",
+        "answer": "Yes! Upstream Dragon attacks, puts itself on the bottom of the deck, and calls Gigi from deck. Gigi's AUTO triggers immediately on placement, letting you Soul Blast 2 to draw a card."
+      }
+    ],
+    "isRideDeck": false,
+    "isGUnit": false,
+    "isCrest": false,
+    "localImageUrl": "/cards/D-SS03-011_EN.png"
+  },
+  {
+    "cardNo": "D-SS03/012",
+    "name": "Hades Dragon Deity of Resentment, Gallmageheld",
+    "kana": "怨恨の冥竜神 ガルマゴール",
+    "rarity": "TD",
+    "grade": 0,
+    "power": 5000,
+    "shield": 50000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Dark Irregulars",
+    "race": "Abyss Dragon",
+    "cardType": "Trigger Unit",
+    "triggerType": "Over",
+    "triggerEffect": "+100,000,000 Power, Draw 1, Remove from game on trigger. Additional Dark States effect: Critical+1 / Drive+1, and all front row units get [Power]+10000 until end of turn.",
+    "skillIcon": "Boost",
+    "skillText": "[Over Trigger] (You may only have one Over Trigger in a deck. When revealed as a trigger, remove this card, draw a card, choose one of your units, and it gets [Power]+100 Million until end of turn! If revealed during drive check, activate its additional effect: [CONT]: During this turn, your vanguard gets Critical+1 / Drive+1, and all of your front row units get [Power]+10000.)",
+    "flavorText": "The wrath of Hades incarnate, annihilating all resistance.",
+    "package": "D-SS03: Stride Deckset Chronojet",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/7/7f/D-BT01-016EN-ORR_%28Sample%29.png/revision/latest",
+    "artVariants": [
+      {
+        "rarity": "TD",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/7/7f/D-BT01-016EN-ORR_%28Sample%29.png/revision/latest",
+        "source": "English Official",
+        "localImageUrl": "/cards/D-SS03-012_EN.png"
+      },
+      {
+        "rarity": "JP Sample",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/9/96/D-BT01-SP16-SP_%28Sample%29.png/revision/latest",
+        "source": "Japanese Release",
+        "localImageUrl": "/cards/D-SS03-012_JP.png"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What happens if Gallmageheld is checked during Chronodragon Nextage's Triple Drive?",
+        "answer": "Nextage gains +100M power, draws 1, gets +1 Critical and +1 Drive (becoming Quadruple Drive!), and all front row units gain +10000 power. Combined with restanding Chronojet, it almost always ends the match!"
+      }
+    ],
+    "isRideDeck": false,
+    "isGUnit": false,
+    "isCrest": false,
+    "localImageUrl": "/cards/D-SS03-012_EN.png"
+  },
+  {
+    "cardNo": "D-SS03/013",
+    "name": "Lively Breath Dragon",
+    "kana": "ライブリーブレス・ドラゴン",
+    "rarity": "TD",
+    "grade": 0,
+    "power": 5000,
+    "shield": 15000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Gear Chronicle",
+    "race": "Gear Dragon",
+    "cardType": "Trigger Unit",
+    "triggerType": "Critical",
+    "triggerEffect": "[Power]+10000 until end of turn, choose 1 unit and it gets [Critical]+1.",
+    "skillIcon": "Boost",
+    "skillText": "[Critical Trigger]: Choose one of your units, and it gets [Power]+10000 until end of turn. Choose one of your units, and it gets [Critical]+1 until end of turn.",
+    "flavorText": "A warm breath restoring vitality to the gears.",
+    "package": "D-SS03: Stride Deckset Chronojet",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/3/3f/D-BT06-075EN-C_%28Sample%29.png/revision/latest",
+    "artVariants": [
+      {
+        "rarity": "TD",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/3/3f/D-BT06-075EN-C_%28Sample%29.png/revision/latest",
+        "source": "English Official",
+        "localImageUrl": "/cards/D-SS03-013_EN.png"
+      },
+      {
+        "rarity": "JP Sample",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/f/f0/D-BT06-075-C_%28Sample%29.png/revision/latest",
+        "source": "Japanese Release",
+        "localImageUrl": "/cards/D-SS03-013_JP.png"
+      }
+    ],
+    "isRideDeck": false,
+    "isGUnit": false,
+    "isCrest": false,
+    "localImageUrl": "/cards/D-SS03-013_EN.png"
+  },
+  {
+    "cardNo": "D-SS03/014",
+    "name": "Advanced Clock Dragon",
+    "kana": "アドバンスドクロック・ドラゴン",
+    "rarity": "TD",
+    "grade": 0,
+    "power": 5000,
+    "shield": 5000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Gear Chronicle",
+    "race": "Gear Dragon",
+    "cardType": "Trigger Unit",
+    "triggerType": "Draw",
+    "triggerEffect": "[Power]+10000 until end of turn, draw 1 card.",
+    "skillIcon": "Boost",
+    "skillText": "[Draw Trigger]: Choose one of your units, and it gets [Power]+10000 until end of turn. Draw a card.",
+    "flavorText": "Rewinding seconds into fresh possibilities.",
+    "package": "D-SS03: Stride Deckset Chronojet",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/a/a3/D-BT06-076EN-C_%28Sample%29.png/revision/latest",
+    "artVariants": [
+      {
+        "rarity": "TD",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/a/a3/D-BT06-076EN-C_%28Sample%29.png/revision/latest",
+        "source": "English Official",
+        "localImageUrl": "/cards/D-SS03-014_EN.png"
+      },
+      {
+        "rarity": "JP Sample",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/4/44/D-BT06-076-C_%28Sample%29.png/revision/latest",
+        "source": "Japanese Release",
+        "localImageUrl": "/cards/D-SS03-014_JP.png"
+      }
+    ],
+    "isRideDeck": false,
+    "isGUnit": false,
+    "isCrest": false,
+    "localImageUrl": "/cards/D-SS03-014_EN.png"
+  },
+  {
+    "cardNo": "D-SS03/015",
+    "name": "Steam Gunner, Ilushma",
+    "kana": "スチームガンナー イルシュマ",
+    "rarity": "TD",
+    "grade": 0,
+    "power": 5000,
+    "shield": 15000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Gear Chronicle",
+    "race": "Gearoid",
+    "cardType": "Trigger Unit",
+    "triggerType": "Front",
+    "triggerEffect": "[Power]+10000 to all units in your front row until end of turn.",
+    "skillIcon": "Boost",
+    "skillText": "[Front Trigger]: All of your front row units get [Power]+10000 until end of turn.",
+    "flavorText": "Frontline suppression in full barrage!",
+    "package": "D-SS03: Stride Deckset Chronojet",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/2/23/D-BT06-077EN-C_%28Sample%29.png/revision/latest",
+    "artVariants": [
+      {
+        "rarity": "TD",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/2/23/D-BT06-077EN-C_%28Sample%29.png/revision/latest",
+        "source": "English Official",
+        "localImageUrl": "/cards/D-SS03-015_EN.png"
+      },
+      {
+        "rarity": "JP Sample",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/2/2d/D-BT06-077-C_%28Sample%29.png/revision/latest",
+        "source": "Japanese Release",
+        "localImageUrl": "/cards/D-SS03-015_JP.png"
+      }
+    ],
+    "isRideDeck": false,
+    "isGUnit": false,
+    "isCrest": false,
+    "localImageUrl": "/cards/D-SS03-015_EN.png"
+  },
+  {
+    "cardNo": "D-SS03/016",
+    "name": "Direful Doll, Alexandra",
+    "kana": "ダイアフルドール アレクサンドラ",
+    "rarity": "TD",
+    "grade": 0,
+    "power": 5000,
+    "shield": 15000,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Pale Moon",
+    "race": "Workeroid",
+    "cardType": "Trigger Unit",
+    "triggerType": "Heal",
+    "triggerEffect": "[Power]+10000 until end of turn. If damage is equal or greater than opponent, heal 1 damage.",
+    "skillIcon": "Boost",
+    "skillText": "[Heal Trigger]: Choose one of your units, and it gets [Power]+10000 until end of turn. If you have equal or more cards in your damage zone than your opponent, choose a card from your damage zone, and heal it.",
+    "flavorText": "Healing needles stitch back the broken soul.",
+    "package": "D-SS03: Stride Deckset Chronojet",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/7/7b/D-BT06-078EN-C_%28Sample%29.png/revision/latest",
+    "artVariants": [
+      {
+        "rarity": "TD",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/7/7b/D-BT06-078EN-C_%28Sample%29.png/revision/latest",
+        "source": "English Official",
+        "localImageUrl": "/cards/D-SS03-016_EN.png"
+      },
+      {
+        "rarity": "JP Sample",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/5/5c/D-BT06-078-C_%28Sample%29.png/revision/latest",
+        "source": "Japanese Release",
+        "localImageUrl": "/cards/D-SS03-016_JP.png"
+      }
+    ],
+    "isRideDeck": false,
+    "isGUnit": false,
+    "isCrest": false,
+    "localImageUrl": "/cards/D-SS03-016_EN.png"
+  },
+  {
+    "cardNo": "D-SS03/017",
+    "name": "Chronodragon Nextage",
+    "kana": "クロノドラゴン・ネクステージ",
+    "rarity": "TD",
+    "grade": 4,
+    "power": 15000,
+    "shield": null,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Gear Chronicle",
+    "race": "Gear Dragon",
+    "cardType": "G Unit",
+    "skillIcon": "Triple Drive",
+    "skillText": "[Stride]-Stride Step-COST [Choose cards with the sum of their grades being 3 or greater from your hand, and discard them], [Stride] this card on your [V] from face down.\n[AUTO](V): At the end of the battle that this unit attacked, if you have a heart card with \"Chronojet\" in its card name, COST [Counter Blast (1) & discard two cards from your hand & turn a card from your G zone face up], put this unit into your G zone face up, choose one of your heart cards, and [Stand] it. During that turn, that unit gets drive -1.",
+    "flavorText": "Fly towards the future beyond time itself!",
+    "package": "D-SS03: Stride Deckset Chronojet",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/2/2d/D-SS03-017EN_%28Sample%29.png/revision/latest",
+    "artVariants": [
+      {
+        "rarity": "TD",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/2/2d/D-SS03-017EN_%28Sample%29.png/revision/latest",
+        "source": "English Official",
+        "localImageUrl": "/cards/D-SS03-017_EN.png"
+      },
+      {
+        "rarity": "JP Sample",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/5/54/D-SS03-017R_%28Sample%29.png/revision/latest",
+        "source": "Japanese Release",
+        "localImageUrl": "/cards/D-SS03-017_JP.png"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How many total drive checks do I get when attacking with Nextage?",
+        "answer": "Nextage performs Triple Drive (3 drive checks). After the battle, it turns face up to Stand Chronojet Dragon. Chronojet attacks with Twin Drive (default 2 drives minus 1 from Nextage is 1, but Chronojet original is Twin Drive, giving 2-1 = 1 check; with Crest power and GB2 active, that gives a total of 4-5 drive checks across the two attacks!)."
+      },
+      {
+        "question": "Does Chronojet get Crest power after Nextage goes back to the G zone?",
+        "answer": "Yes! When Nextage returns face-up and you also flip another G-unit for cost, your face-up G zone count increases by 2 immediately, giving your Chronojet and front row +10,000 power more!"
+      }
+    ],
+    "isRideDeck": false,
+    "isGUnit": true,
+    "isCrest": false,
+    "localImageUrl": "/cards/D-SS03-017_EN.png"
+  },
+  {
+    "cardNo": "D-SS03/018",
+    "name": "Interdimensional Dragon, Faterider Dragon",
+    "kana": "時空竜 フェイトライダー・ドラゴン",
+    "rarity": "TD",
+    "grade": 4,
+    "power": 15000,
+    "shield": null,
+    "critical": 1,
+    "nation": "Dark States",
+    "clan": "Gear Chronicle",
+    "race": "Gear Dragon",
+    "cardType": "G Unit",
+    "skillIcon": "Triple Drive",
+    "skillText": "[Stride]-Stride Step-COST [Choose cards with the sum of their grades being 3 or greater from your hand, and discard them], [Stride] this card on your [V] from face down.\n[ACT](V)[1/Turn]: COST [turn a card from your G zone face up], choose one of your rear-guards, put it on the bottom of your deck, search your deck for up to one card with grade equal to that card's grade +1, call it to [R], and shuffle your deck. Choose one of your units, and it gets [Power]+10000 until end of turn for each face up card in your G zone.",
+    "flavorText": "The destiny rider who reshapes history with every stride.",
+    "package": "D-SS03: Stride Deckset Chronojet",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/0/02/D-SS03-018EN_%28Sample%29.png/revision/latest",
+    "artVariants": [
+      {
+        "rarity": "TD",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/0/02/D-SS03-018EN_%28Sample%29.png/revision/latest",
+        "source": "English Official",
+        "localImageUrl": "/cards/D-SS03-018_EN.png"
+      },
+      {
+        "rarity": "JP Sample",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/f/f3/D-SS03-018R_%28Sample%29.png/revision/latest",
+        "source": "Japanese Release",
+        "localImageUrl": "/cards/D-SS03-018_JP.png"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can Faterider Dragon turn a Grade 1 into Upstream Dragon (Grade 2)?",
+        "answer": "Yes! You can put a Grade 1 rear-guard (or even a rested unit) to the bottom of the deck, tutor out Upstream Dragon, and give Upstream or your Vanguard massive power (+10k per face up G unit!)."
+      },
+      {
+        "question": "Does Faterider count itself if it's currently on the Vanguard circle?",
+        "answer": "No, Faterider is currently on [V], not in the G-zone. However, the COST turns another card in your G-Zone face up, which immediately counts as 1 (giving +10,000 power on your very first Stride!)."
+      }
+    ],
+    "isRideDeck": false,
+    "isGUnit": true,
+    "isCrest": false,
+    "localImageUrl": "/cards/D-SS03-018_EN.png"
+  },
+  {
+    "cardNo": "D-SS03/T03",
+    "name": "Chronojet Dragon Crest",
+    "kana": "クロノジェット・ドラゴン (クレスト)",
+    "rarity": "TD",
+    "grade": null,
+    "power": null,
+    "shield": null,
+    "critical": null,
+    "nation": "Dark States",
+    "clan": "Gear Chronicle",
+    "race": "Crest",
+    "cardType": "Crest",
+    "skillIcon": "Crest",
+    "skillText": "[CONT]: You can [Stride] G units. (Stride cost must be paid)\n[CONT]: The original [Power] of your grade 3 vanguard with \"Chronojet\" in its card name becomes 13000 during your turn.\n[CONT]: During your turn, your vanguard and all of your front row rear-guards get [Power]+5000 for each face up card in your G zone.",
+    "flavorText": "The ancient emblem of the Gear Colossus, channeling temporal energy across eras.",
+    "package": "D-SS03: Stride Deckset Chronojet",
+    "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/3/3e/D-SS03-T01EN_%28Sample%29.png/revision/latest",
+    "artVariants": [
+      {
+        "rarity": "TD",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/3/3e/D-SS03-T01EN_%28Sample%29.png/revision/latest",
+        "source": "English Official",
+        "localImageUrl": "/cards/D-SS03-T03_EN.png"
+      },
+      {
+        "rarity": "JP Sample",
+        "imageUrl": "https://static.wikia.nocookie.net/cardfight/images/b/b8/D-SS03-T03R_%28Sample%29.png/revision/latest",
+        "source": "Japanese Release",
+        "localImageUrl": "/cards/D-SS03-T03_JP.png"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Where does the Crest card start the game?",
+        "answer": "In standard D-Series rules, the Crest begins the game face down in your Crest Zone (outside the deck). When Chronojet Dragon is placed on [V], its skill puts this Crest face up into your Crest Zone."
+      },
+      {
+        "question": "How does the power scaling work?",
+        "answer": "Every face up card in your G-Zone gives your Vanguard and both front row rear-guards +5,000 Power during your turn. With 2 face-up cards, that's +10,000 to the entire front row! With 4 face-up cards, +20,000 power to all three front row circles!"
+      }
+    ],
+    "isRideDeck": false,
+    "isGUnit": false,
+    "isCrest": true,
+    "localImageUrl": "/cards/D-SS03-T03_EN.png"
+  }
+]

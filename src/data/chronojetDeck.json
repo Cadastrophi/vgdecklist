@@ -1,0 +1,93 @@
+{
+  "id": "d-ss03-chronojet",
+  "name": "Stride Deckset Chronojet",
+  "code": "VG-D-SS03",
+  "nation": "Dark States",
+  "description": "The pioneer Stride Deckset featuring the return of Gear Chronicle's iconic protagonist Chrono Shindou and Chronojet Dragon. Dominate the late game through explosive Stride turns, Crest power escalation, unit tutoring, and high-velocity multi-attacks.",
+  "crest": "D-SS03/T03",
+  "rideDeck": [
+    "D-SS03/004",
+    "D-SS03/003",
+    "D-SS03/002",
+    "D-SS03/001"
+  ],
+  "gDeck": [
+    {
+      "cardNo": "D-SS03/017",
+      "count": 4,
+      "role": "Finisher Stride / Restanding Vanguard"
+    },
+    {
+      "cardNo": "D-SS03/018",
+      "count": 4,
+      "role": "First Stride / Board Scaling & Grade Promotion"
+    }
+  ],
+  "mainDeck": [
+    {
+      "cardNo": "D-SS03/001",
+      "count": 3,
+      "category": "Grade 3"
+    },
+    {
+      "cardNo": "D-SS03/005",
+      "count": 4,
+      "category": "Grade 3"
+    },
+    {
+      "cardNo": "D-SS03/006",
+      "count": 4,
+      "category": "Grade 2"
+    },
+    {
+      "cardNo": "D-SS03/007",
+      "count": 4,
+      "category": "Grade 2"
+    },
+    {
+      "cardNo": "D-SS03/008",
+      "count": 4,
+      "category": "Grade 1"
+    },
+    {
+      "cardNo": "D-SS03/009",
+      "count": 4,
+      "category": "Grade 1"
+    },
+    {
+      "cardNo": "D-SS03/010",
+      "count": 3,
+      "category": "Grade 1"
+    },
+    {
+      "cardNo": "D-SS03/011",
+      "count": 4,
+      "category": "Grade 1"
+    },
+    {
+      "cardNo": "D-SS03/013",
+      "count": 4,
+      "category": "Trigger"
+    },
+    {
+      "cardNo": "D-SS03/014",
+      "count": 4,
+      "category": "Trigger"
+    },
+    {
+      "cardNo": "D-SS03/015",
+      "count": 3,
+      "category": "Trigger"
+    },
+    {
+      "cardNo": "D-SS03/016",
+      "count": 4,
+      "category": "Trigger"
+    },
+    {
+      "cardNo": "D-SS03/012",
+      "count": 1,
+      "category": "Trigger"
+    }
+  ]
+}
