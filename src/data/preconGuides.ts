@@ -57,8 +57,8 @@ export const PRECON_DECKS: PreconDeckInfo[] = [
     keyBoss: 'King of Knights, Alfred & Blaster Blade & Soul Saver Dragon',
     iconColor: 'from-blue-600 via-sky-500 to-amber-400',
     bannerImage: 'https://static.wikia.nocookie.net/cardfight/images/3/30/DZ-SS14-002_%28Sample%29.png/revision/latest',
-    tagline: 'Stand up, my avatar! Call your allies, trigger universal Persona Ride, and deliver justice with Holy Charging Roar.',
-    overview: 'Break Away Start Deck - Blaster Blade marks the historic return of Royal Paladin\'s iconic vanguard in the DZ Standard format. Centered around the Aichi Icon mechanic and the modern Energy Generator Crest, this deck combines King of Knights Alfred\'s twin-call offensive, Blaster Blade\'s pinpoint retire and draw for either Counter Blast 1 or Energy Blast 3, and Soul Saver Dragon\'s crushing +10,000 multi-column power surge.',
+    tagline: 'Stand up, my avatar! Call your allies, trigger universal Persona Ride, and deliver justice with Soul Saver Dragon.',
+    overview: 'Break Away Start Deck - Blaster Blade marks the historic return of Royal Paladin\'s iconic vanguard in the DZ Standard format. Centered around the Aichi Icon mechanic and the modern Energy Generator Crest, this deck combines King of Knights Alfred\'s twin-call offensive, Blaster Blade\'s pinpoint retire and draw for either Counter Blast 1 or Energy Blast 3, and Soul Saver Dragon\'s multi-column restanding assault.',
     difficulty: 'Beginner',
     mechanics: [
       {
@@ -67,11 +67,11 @@ export const PRECON_DECKS: PreconDeckInfo[] = [
       },
       {
         title: 'Energy Generator Crest (EB Engine)',
-        description: 'Earn 3 Energy per turn up to 10 max. Spend Energy Blast 3 on Blaster Blade to retire and draw without burning Counter Blast, or Energy Blast 5 on Soul Saver Dragon.'
+        description: 'Earn 3 Energy per turn up to 10 max. Spend Energy Blast 3 on Blaster Blade to retire and draw without burning Counter Blast, keeping resources open for Alfred.'
       },
       {
-        title: 'Holy Charging Roar (+50,000 Total Power)',
-        description: 'Soul Saver Dragon grants +10,000 power to up to five rear-guards by blasting 5 Soul or 5 Energy, creating explosive 3-column kill turns.'
+        title: 'Multi-Column Restand Offensive',
+        description: 'Soul Saver Dragon stands an entire rear-guard column (or two columns with Persona Ride!) and grants front-row +5,000 power by paying Counter Blast 1 & Soul Blast 1 Grade 3 card.'
       },
       {
         title: 'Superior Calling & Column Formation',
@@ -82,7 +82,7 @@ export const PRECON_DECKS: PreconDeckInfo[] = [
       'Extremely beginner-friendly with linear, explosive royal knight combat',
       'Dual-cost economy allows flexible use of Energy Blast to save Counter Blast for Alfred',
       'High persona ride frequency thanks to Alfred\'s universal ride condition',
-      'Massive field-wide burst numbers through Soul Saver Dragon and Wingal'
+'Massive multi-attack turns through Soul Saver Dragon and Alfred'
     ],
     cons: [
       'Board-dependent: Alfred and Soul Saver skills require maintaining rear-guards',
@@ -101,13 +101,14 @@ export const PRECON_DECKS: PreconDeckInfo[] = [
         ]
       },
       {
-        name: 'Soul Saver Dragon Holy Charging Roar Finisher',
-        cards: ['Soul Saver Dragon', 'Energy Generator', 'Little Sage, Marron'],
+        name: 'Soul Saver Multi-Column Restand Onslaught',
+        cards: ['Soul Saver Dragon', 'King of Knights, Alfred', 'Blaster Blade'],
         steps: [
-          'Fill all rear-guard circles with units across left, center, and right columns.',
-          'Ride or call Soul Saver Dragon.',
-          'Pay Soul Blast (5) or Energy Blast (5): Grant +10,000 Power to up to five rear-guards!',
-          'All columns swing with lethal numbers, forcing massive shields or game-ending damage.'
+          'Ride Soul Saver Dragon over King of Knights, Alfred to trigger Persona Ride (+10,000 power to front row and draw 1).',
+          'Activate Soul Saver ACT: Pay CB1 & SB1 Grade 3 with Aichi icon to grant front row +5,000 and the restand ability.',
+          'Attack with left and right rear-guards first.',
+          'Attack with Vanguard Soul Saver Dragon. On attack: Stand TWO columns and grant them +5,000 Power!',
+          'Attack again with the restood rear-guards for a lethal 5-attack barrage!'
         ]
       }
     ],
@@ -115,7 +116,7 @@ export const PRECON_DECKS: PreconDeckInfo[] = [
       {
         cardName: 'Knight of Heavenly Sword, Fort',
         role: 'Soul Accumulator & Column Booster',
-        why: 'Accelerates soul to easily pay Soul Saver Dragon\'s 5-soul requirement without depleting Energy.'
+        why: 'Soul charges consistently and provides solid column boost to support soul requirements.'
       },
       {
         cardName: 'Protection: Twincast',
@@ -152,7 +153,7 @@ export const PRECON_DECKS: PreconDeckInfo[] = [
       },
       {
         title: 'Dual Vanguard Attack (Nextage Restand)',
-        description: 'Nextage attacks with Triple Drive, flips a G-card, discards 2, then stands Chronojet Dragon for a second Vanguard attack with Twin Drive and GB2 guard restriction.'
+        description: 'Nextage attacks with Triple Drive, discards 2, pays CB1, and returns itself face up to the G zone to stand Chronojet Dragon for a second Vanguard attack with Twin Drive and GB2 guard restriction.'
       }
     ],
     pros: [
@@ -172,9 +173,9 @@ export const PRECON_DECKS: PreconDeckInfo[] = [
         cards: ['Upstream Dragon', 'Steam Scara, Gigi'],
         steps: [
           'Call Upstream Dragon to front row rear-guard circle.',
-          'Attack opponent vanguard (gets +4,000 power from skill).',
-          'At end of battle, return Upstream to bottom of deck and search deck for Gigi, calling it at Rest.',
-          'Trigger Gigi on-call: SB2 to draw 1 card. You gained an attacker swing, drew a fresh card, and preserved deck synergy!'
+          'Attack opponent vanguard (gets +5,000 power from GB1 skill).',
+          'At end of battle, return Upstream to bottom of deck and search deck for Gigi, calling it to a back row (RC).',
+          'Trigger Gigi on-call: SB2 to draw 1 card (and Gigi gains +5,000 power since placed by ability). You gained an attacker swing, drew a fresh card, and prepared a 13k booster!'
         ]
       },
       {
@@ -182,10 +183,10 @@ export const PRECON_DECKS: PreconDeckInfo[] = [
         cards: ['Chronodragon Nextage', 'Chronojet Dragon', 'Steam Fighter, Balih'],
         steps: [
           'Discard Balih to Stride Nextage (Balih triggers: draw 1 card).',
-          'Swing with Rear-guards first with Crest power boost.',
+          'Swing with rear-guards first with Crest power boost.',
           'Attack with Chronodragon Nextage (Triple Drive check!).',
-          'At end of battle: CB1, discard 2 cards, and flip a G-unit face up.',
-          'Stand Chronojet Dragon! Chronojet attacks with Twin Drive, +5,000 Power, and opponent cannot guard with Grade 1+ cards from hand!'
+          'At end of battle: COST [Counter Blast (1) & discard two cards from hand], put Nextage into G zone face up.',
+          'Stand Chronojet Dragon! Chronojet attacks with Twin Drive, +5,000 Power from GB2, and opponent cannot guard with Grade 1+ cards from hand!'
         ]
       }
     ],
@@ -544,33 +545,33 @@ export const CHRONOJET_PILOTING_MASTERCLASS: PilotingStep[] = [
     step: 1,
     phase: 'Ride Line & Setup',
     title: 'Guaranteed Ride Deck & Crest Activation',
-    summary: 'Never miss a ride! Set up your Ride Deck and place the Chronojet Dragon Crest as soon as you hit Grade 3.',
+    summary: 'Never miss a ride! Set up your Ride Deck and deploy the Chronojet Dragon Crest right from Grade 1.',
     cardsInvolved: ['Chrono Dran', 'Masergear Dragon', 'Smokegear Dragon', 'Chronojet Dragon', 'Chronojet Dragon Crest'],
     bulletPoints: [
       'Ride Deck contains 4 cards: Chrono Dran (G0), Masergear Dragon (G1), Smokegear Dragon (G2), Chronojet Dragon (G3).',
       'During your Ride Phase, discard 1 card from hand to ride the next grade from your ride deck with 100% certainty.',
-      'G1 Masergear: Discard 1 to draw 1 when ridden by Smokegear (hand filtering).',
-      'G2 Smokegear: When ridden by Chronojet, check top 5 cards of deck for a Grade 3+ card (e.g. Steam Fighter Balih or extra Chronojet) and add to hand!',
-      'G3 Chronojet: When placed on [V], place the "Chronojet Dragon Crest" face-up into your Crest zone.'
+      'G1 Masergear: When placed by riding from Chrono Dran, draw a card and put the "Chronojet Dragon" Crest into your Crest Zone!',
+      'G2 Smokegear: When ridden upon by Chronojet Dragon, COST [Soul Blast (1)] to search your deck for up to one Grade 3 unit card (like Steam Fighter Balih or an extra Chronojet) and put it into hand!',
+      'G3 Chronojet: Features on-stride removal (CB1 to spin an opponent rear-guard to bottom of deck) and Generation Break 2 guard restriction.'
     ],
-    proTip: 'Always check if you have Steam Fighter Balih in hand. If not, use Smokegear’s top 5 search to hunt for Balih so your next turn Stride discard is completely free!',
+    proTip: 'Always use Smokegear\'s deck search to tutor Steam Fighter, Balih! Balih can be discarded alone next turn to pay the Stride cost and immediately refunds the card by drawing 1.',
     interactiveScenario: {
-      question: 'You ride Chronojet Dragon from the ride deck onto Smokegear Dragon. What triggers immediately in sequence?',
+      question: 'When is the "Chronojet Dragon" Crest placed into your Crest Zone?',
       options: [
         {
-          text: 'Smokegear top 5 search for G3+, Chronojet places Crest in Crest Zone, and you may Stride immediately.',
-          isCorrect: false,
-          explanation: 'Incorrect: You cannot Stride on the turn you ride Grade 3 unless the opponent is already at Grade 3 (or at the start of your subsequent turn).'
-        },
-        {
-          text: 'Smokegear top 5 search for G3+ resolves, and Chronojet places Chronojet Dragon Crest face-up in Crest Zone.',
+          text: 'On Turn 1 when riding Masergear Dragon over Chrono Dran.',
           isCorrect: true,
-          explanation: 'Correct! Both AUTO skills trigger upon riding Chronojet. You resolve the search and deploy the Crest, establishing your Stride permissions and power scaling engine.'
+          explanation: 'Correct! Masergear Dragon\'s [AUTO] skill draws a card and puts the "Chronojet Dragon" crest into your crest zone immediately upon riding from Chrono Dran.'
         },
         {
-          text: 'You perform Persona Ride to give all front row +10,000 power.',
+          text: 'On Turn 3 when you ride Chronojet Dragon from the ride deck.',
           isCorrect: false,
-          explanation: 'Incorrect: Riding Chronojet from Ride Deck for the first time is a normal ride, not a Persona Ride. Furthermore, Stride decks do not rely on Persona Ride; they use Stride and Crest power!'
+          explanation: 'Incorrect: The Crest is deployed early on Grade 1 by Masergear Dragon, not Chronojet!'
+        },
+        {
+          text: 'When you perform your first Stride on Turn 4.',
+          isCorrect: false,
+          explanation: 'Incorrect: The Crest is already active from Grade 1, establishing your Stride permissions and scaling power as G-units turn face up.'
         }
       ]
     }
@@ -634,9 +635,9 @@ export const CHRONOJET_PILOTING_MASTERCLASS: PilotingStep[] = [
           explanation: 'Incorrect: You forgot the Crest effect! 3 face-up G-cards give +15,000 power to all front-row units.'
         },
         {
-          text: 'Upstream Dragon is 25,000 and Nextage is 43,000.',
+          text: 'Upstream Dragon is 25,000 (30,000 on attack) and Nextage is 43,000.',
           isCorrect: true,
-          explanation: 'Correct! 3 face-up cards = +15,000 power. 10k + 15k = 25k for Upstream; 28k + 15k = 43k for Nextage! When Upstream attacks, it gets another +4,000 (hitting 29,000 solo!).'
+          explanation: 'Correct! 3 face-up cards = +15,000 power. 10k + 15k = 25k for Upstream; 28k + 15k = 43k for Nextage! When Upstream attacks, its GB1 gives another +5,000 (hitting 30,000 solo!).'
         },
         {
           text: 'Only Chronojet Dragon gets the power, Nextage does not.',
@@ -654,13 +655,13 @@ export const CHRONOJET_PILOTING_MASTERCLASS: PilotingStep[] = [
     cardsInvolved: ['Upstream Dragon', 'Steam Scara, Gigi', 'Gear Serow of Magnetic Resonance'],
     bulletPoints: [
       'Step 1: Declare attack with Upstream Dragon (Front Row) against the opponent Vanguard.',
-      'Step 2: Upstream skill activates: Gains +4,000 Power for the battle (hitting 14k + Crest power + Booster).',
-      'Step 3: At the end of that battle, Upstream puts itself on the bottom of your deck.',
-      'Step 4: Search deck for any Grade 1 card (such as Steam Scara, Gigi or Gear Serow) and call it at [Rest].',
-      'Step 5: If you call Gigi, activate Gigi on-call: COST [Soul Blast 2] -> Draw 1 card!',
-      'Step 6: If Gear Serow is on the board, its AUTO triggers when Upstream returns to deck, gaining +5,000 Power!'
+      'Step 2: Upstream skill activates: Gains +5,000 Power for the battle via Generation Break 1 (hitting 15k + Crest power + Booster).',
+      'Step 3: At the end of that battle, COST [put this unit on the bottom of your deck].',
+      'Step 4: Search deck for up to one Grade 1 card (such as Steam Scara, Gigi) and call it to a back row (RC).',
+      'Step 5: If you call Gigi, activate Gigi on-call: COST [Soul Blast 2] -> Draw 1 card, and Gigi gains +5,000 Power until end of turn since it was placed by a card ability!',
+      'Step 6: If Gear Serow is on the board, its CONT skill gives it +5,000 Power because a rear-guard was put on the bottom of the deck this turn!'
     ],
-    proTip: 'Calling Gigi in [Rest] is fine because Gigi is not meant to attack that turn; it serves as a booster for subsequent turns or intercept/shield in later rounds.',
+    proTip: 'Upstream calls Gigi to the back row in Stand, giving you an immediate 13,000 booster (+5k on top of 8k base) while drawing a card!',
     interactiveScenario: {
       question: 'When Upstream Dragon returns to the deck at the end of battle, where does it go?',
       options: [
@@ -670,7 +671,7 @@ export const CHRONOJET_PILOTING_MASTERCLASS: PilotingStep[] = [
           explanation: 'Upstream specifies "put this unit on the bottom of your deck", recycling itself into the deck rather than the drop zone.'
         },
         {
-          text: 'To the bottom of your deck, then you search your deck for a Grade 1 card and call it as [Rest].',
+          text: 'To the bottom of your deck, then you search your deck for a Grade 1 card and call it to a back row (RC).',
           isCorrect: true,
           explanation: 'Correct! This keeps your deck full of attackers and recruits utility Grade 1s like Gigi or Serow.'
         }
@@ -685,10 +686,10 @@ export const CHRONOJET_PILOTING_MASTERCLASS: PilotingStep[] = [
     cardsInvolved: ['Interdimensional Dragon, Faterider Dragon', 'Chronodragon Nextage', 'Chronojet Dragon'],
     bulletPoints: [
       'Turn 3 - Stride 1: Interdimensional Dragon, Faterider Dragon.',
-      'Why Faterider first? Turn a G-card face up in G-Zone (activating Crest +5,000). Put a rested G1 or G0 on bottom of deck, search for Upstream Dragon (Grade 1 -> Grade 2 promotion!), and give +10,000 power to any unit.',
+      'Why Faterider first? When Faterider attacks, pay CB1, turn a G-card face up in G-Zone (activating Crest +5,000), and put a rear-guard on the bottom of the deck. Search for a unit with grade +1 (promoting a G1 into Upstream Dragon!), and give any unit +5,000 power for each face-up G-card!',
       'Turn 4 - Stride 2: Chronodragon Nextage (The Kill Turn).',
       'Order of attack: Attack with rear-guards first so trigger power from Nextage can be assigned to remaining units.',
-      'Nextage attacks with Triple Drive! At end of battle: CB1, discard 2 cards, and flip a G-unit face up.',
+      'Nextage attacks with Triple Drive! At end of battle: COST [Counter Blast (1) & discard two cards from hand], put Nextage into G zone face up.',
       'Chronojet Dragon RESTANDS! It performs a second Vanguard attack with Twin Drive, +5,000 Power from GB2, and the opponent CANNOT call Grade 1 or greater cards from hand to guard!'
     ],
     proTip: 'Because Chronojet’s GB2 restricts Grade 1+ guards from hand, the opponent CANNOT use Sentinels/Perfect Guards from hand! They must guard with Grade 0 triggers or blitz orders/intercepts!',
@@ -715,24 +716,24 @@ export const CHRONOJET_PILOTING_MASTERCLASS: PilotingStep[] = [
     summary: 'Maintain Counter Blast and Soul while surviving opponent kill turns with high-efficiency shields.',
     cardsInvolved: ['Steam Maiden, Arlim', 'Steam Fighter, Argandia', 'Advanced Clock Dragon', 'Direful Doll, Alexandra'],
     bulletPoints: [
-      'Steam Fighter Argandia: Gains +5,000 Shield when placed on [G] (making it a 10,000 shield from front-row intercept).',
+      'Steam Fighter Argandia: When placed on (GC), COST [Soul Blast 1] for +5,000 Shield (10k shield total); if you have a face-up card in G zone, it gets +10,000 Shield instead (15k total!).',
       'Steam Maiden, Arlim (Sentinel): Discards 1 if you have 2+ cards in hand. Completely negates any single massive attack.',
-      'Resource check: Chronojet on-stride spin takes CB1, Masergear takes CB1, Nextage takes CB1. Always protect at least 1 open Counter Blast for Nextage turn!',
-      'Soul management: Do not spam Gigi if your soul has only 2 cards unless you are guaranteed to ride/stride and replenish soul.'
+      'Resource check: Chronojet on-stride spin takes CB1, Nextage restand takes CB1, Faterider takes CB1. Always protect at least 1 open Counter Blast for Nextage\'s kill turn!',
+      'Soul management: Do not spam Gigi if your soul has only 2 cards unless you are guaranteed to replenish soul.'
     ],
     proTip: 'If your opponent attacks with an Over Trigger boosted unit (100 Million power), never waste normal shield cards; use Arlim (Sentinel) or take the damage if at low damage count.',
     interactiveScenario: {
-      question: 'You have 1 open Counter Blast and 2 Soul. Next turn is your Nextage Stride turn. Should you use Masergear Dragon’s CB1 skill during the opponent’s turn?',
+      question: 'You have 1 open Counter Blast and 2 Soul. Next turn is your Nextage Stride turn. Should you spend your last Counter Blast on Chronojet\'s on-stride spin skill when Striding Nextage?',
       options: [
         {
-          text: 'Yes, remove any opponent unit immediately regardless of resources.',
-          isCorrect: false,
-          explanation: 'No! If you spend your last Counter Blast, you will not have CB1 for Nextage’s restand skill next turn!'
+          text: 'No, conserve that 1 Counter Blast so Nextage can pay its CB1 restand cost at the end of its battle.',
+          isCorrect: true,
+          explanation: 'Correct! Chronodragon Nextage requires Counter Blast 1 to restand Chronojet Dragon. Spending your only Counter Blast on the stride bonus prevents your restand finisher!'
         },
         {
-          text: 'No, conserve that 1 Counter Blast so Nextage can activate its restand finisher on your turn.',
-          isCorrect: true,
-          explanation: 'Correct! Chronodragon Nextage requires Counter Blast 1 to restand Chronojet Dragon. Resource foresight wins matches!'
+          text: 'Yes, always spin an opponent\'s rear-guard immediately regardless of your remaining Counter Blast.',
+          isCorrect: false,
+          explanation: 'Incorrect: If you spend your last Counter Blast, you will not have CB1 for Nextage\'s restand skill, severely reducing your lethal pressure!'
         }
       ]
     }
@@ -751,7 +752,7 @@ export const BLASTER_BLADE_PILOTING_MASTERCLASS: PilotingStep[] = [
       'Ride Deck setup: Barcgal (G0) -> Wingal (G1) -> Blaster Blade (G2) -> King of Knights, Alfred (G3).',
       'When you ride Barcgal (G0), place the Energy Generator Crest in your Crest Zone.',
       'Energy generation: At the start of your ride phase (and going second on Turn 1), gain 3 Energy counters up to 10 maximum.',
-      'Wingal (G1): When ridden by Blaster Blade, look at top 7 cards of your deck for a G2+ card with an Aichi icon and add it to hand.',
+      'Wingal (G1): When placed on (VC), COST [reveal a G3 with an Aichi icon from ride deck], call Barcgal from soul to (RC), and Barcgal gains an ACT ability to Rest itself and call Flogal from deck!',
       'Blaster Blade (G2): When placed on [V] or [R], reveal a G3 Aichi icon card from your ride deck, pay CB1 or EB3, retire an opponent\'s rear-guard, and DRAW a card!'
     ],
     proTip: 'Blaster Blade\'s on-ride skill is hand-positive! Discarding to ride is completely refunded because Blaster Blade draws 1 card upon retiring an opponent rear-guard.',
@@ -786,7 +787,7 @@ export const BLASTER_BLADE_PILOTING_MASTERCLASS: PilotingStep[] = [
       'Universal Persona Ride: Normally you can only Persona Ride the identical card name. Alfred\'s [CONT] skill allows normal riding from ANY Grade 3 card with an Aichi icon (e.g. Soul Saver Dragon) to trigger Persona Ride!',
       'Front row units get +10,000 Power, and you draw 1 card upon Persona Ride.',
       'Call rear-guards: Fill back-row circles with boosters like Marron and Wingal.',
-      'Marron (G1) skill: When called, if you have an Aichi icon vanguard, draw 1 card and place 1 card from hand into soul, filtering your hand and fueling Soul Blast!'
+      'Marron (G1) skill: When placed on (VC), COST [SB1 & reveal G3 with an Aichi icon from ride deck], ride next turn without discarding! When placed on (RC), return a Royal Paladin normal unit from drop to bottom of deck for +5,000 Power!'
     ],
     proTip: 'Never hold back Grade 3 cards in hand: whether you have another Alfred or Soul Saver Dragon, both will trigger Persona Ride and draw you an extra card every single turn.',
     interactiveScenario: {
@@ -848,33 +849,34 @@ export const BLASTER_BLADE_PILOTING_MASTERCLASS: PilotingStep[] = [
   {
     step: 4,
     phase: 'Finishing Turn',
-    title: 'Holy Charging Roar & Overwhelming Finish',
-    summary: 'Close out the match by placing Soul Saver Dragon and buffing up to five units with +10,000 power each!',
-    cardsInvolved: ['Soul Saver Dragon', 'Knight of Truth, Gordon', 'Knight of Silence, Gallatin'],
+    title: 'Multi-Column Restand & Dual Persona Ride',
+    summary: 'Close out the match with Soul Saver Dragon, activating its persona ride and restanding rear-guard columns for a 5-attack onslaught!',
+    cardsInvolved: ['Soul Saver Dragon', 'King of Knights, Alfred', 'Blaster Blade'],
     bulletPoints: [
-      'Soul Saver Dragon skill: When placed on [V] or [R], pay Soul Blast (5) OR Energy Blast (5).',
-      'Target selection: Choose up to FIVE of your rear-guards; each chosen unit gets [Power]+10,000 until end of turn!',
-      'Total power output: Distributes +50,000 raw power across your board, turning 10k/13k units into 30k+ threats before triggers.',
-      'Flexible cost: If you don\'t have 5 cards in soul, you can pay 5 Energy from your Energy Generator Crest!'
+      'Universal Persona Ride: Normal riding Soul Saver Dragon over King of Knights, Alfred triggers Persona Ride (+10,000 to front row and draw 1)!',
+      'ACT Skill: Pay Counter Blast (1) and Soul Blast (1) Grade 3 card with an Aichi icon (such as Alfred in soul).',
+      'Column Restand: When Soul Saver attacks, choose a column and [Stand] all rear-guards in that column with +5,000 Power (choose TWO columns if you Persona Rode this turn!).',
+      'Front-row buff: All front row units also get [Power]+5,000 until end of turn!',
+      'Defensive bonus: While you have an Aichi icon vanguard, Soul Saver gets [Shield]+10,000 on (GC)!'
     ],
-    proTip: 'Soul Saver Dragon\'s Holy Charging Roar triggers when placed on (VC) OR (RC)! You can call Soul Saver to a rear-guard circle during an Alfred turn, buff the whole board, and still benefit from Alfred\'s superior calls.',
+    proTip: 'Always attack with both of your rear-guard columns BEFORE attacking with Soul Saver Dragon. When Soul Saver swings, both columns stand back up with +5,000 power for a crushing 5-attack wave!',
     interactiveScenario: {
-      question: 'Can you activate Soul Saver Dragon\'s Holy Charging Roar if it is called to a rear-guard circle?',
+      question: 'When you Persona Ride Soul Saver Dragon over King of Knights, Alfred and activate Soul Saver\'s ACT skill, how many rear-guard columns can you restand when Soul Saver attacks?',
       options: [
         {
-          text: 'Yes! The skill specifies "When placed on (VC) or (RC)", so it functions on either circle.',
+          text: 'Two columns! Because you persona rode this turn, Soul Saver restands all rear-guards in two columns with +5,000 power each.',
           isCorrect: true,
-          explanation: 'Correct! This gives the deck tremendous versatility as Soul Saver can act as either a boss Vanguard or a rear-guard finisher.'
+          explanation: 'Correct! Soul Saver\'s skill specifically grants restand to two columns instead of one if you persona rode this turn, generating a 5-attack kill turn.'
         },
         {
-          text: 'No, Soul Saver Dragon only works on the Vanguard circle.',
+          text: 'Only one column, regardless of persona ride.',
           isCorrect: false,
-          explanation: 'Incorrect: D-Series Soul Saver Dragon triggers on both (VC) and (RC).'
+          explanation: 'Incorrect: If you persona rode this turn, you choose two columns instead of one!'
         },
         {
-          text: 'Only if your vanguard is also Soul Saver Dragon.',
+          text: 'Zero columns, it only buffs power.',
           isCorrect: false,
-          explanation: 'Incorrect: It works with King of Knights, Alfred as vanguard.'
+          explanation: 'Incorrect: Soul Saver Dragon\'s DZ-SS14 skill stands columns upon attack.'
         }
       ]
     }
